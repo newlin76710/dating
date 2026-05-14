@@ -4,147 +4,116 @@ import { SiteShell } from '@/components/site-shell';
 export const metadata: Metadata = {
   title: '找對象',
   description: '戀愛小秘書娜米提供真實會員配對，以數據驅動的智慧配對系統，協助未婚男女找到理想對象。',
-  openGraph: {
-    title: '找對象 — 戀愛小秘書娜米',
-    description: '真實會員徵婚，找女友找男友找對象，優質男女配對交友。超過100,000名驗證會員資料庫。',
-  },
 };
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
-const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
+const IMG = 'https://ek21.com/dating/wp-content/uploads/';
 
-const features = [
-  {
-    icon: '🔒',
-    title: '實名認證保護',
-    desc: '所有會員均通過身份驗證，確保配對品質與安全性，讓你放心認識真實的對象。',
-  },
-  {
-    icon: '📊',
-    title: '數據驅動配對',
-    desc: '透過個人資料分析與配對數據，精準推薦最適合的對象，提高成功率。',
-  },
-  {
-    icon: '💬',
-    title: '專業顧問陪伴',
-    desc: '戀愛小秘書娜米全程陪伴，從認識到交往，給你最專業的感情建議。',
-  },
-  {
-    icon: '🎯',
-    title: '客製化配對服務',
-    desc: '根據你的條件、個性與喜好，量身打造專屬配對方案，找到真正合適的另一半。',
-  },
+interface Member {
+  name: string;
+  img: string;
+  meta: string;
+  desc: string;
+  url: string;
+}
+
+const members: Member[] = [
+  { name: '周小姐', img: IMG+'2024/07/圖片_20240705165748.jpg', meta: '血型 O型 ｜ 身高 160cm', desc: '甜甜的微笑能融化人心。性格開朗活潑，喜歡戶外活動和美食探索，希望找到一個體貼溫柔的另一半。', url: 'https://ek21.com/dating/72324/' },
+  { name: '李小姐', img: IMG+'2024/07/圖片_20240705164903.jpg', meta: '血型 A型 ｜ 身高 160cm', desc: '從事會計工作，個性文靜嫻雅，做事細心有條理。平時喜歡閱讀和看電影，希望找到一個成熟穩重的對象。', url: 'https://ek21.com/dating/72317/' },
+  { name: '吳小姐', img: IMG+'2024/07/圖片_20240705161359.jpg', meta: '血型 A型 ｜ 身高 158cm', desc: '會說話的眼睛靈巧動人，個性溫柔體貼。工作認真負責，業餘喜歡烹飪和旅行，希望找到有責任感的男性。', url: 'https://ek21.com/dating/72311/' },
+  { name: '章小姐', img: IMG+'2024/07/圖片_20240705153950.jpg', meta: '血型 AB型 ｜ 身高 157cm', desc: '美術編輯，富有創意和藝術氣息。喜歡烹飪和唱歌，性格活潑開朗，希望找到一個懂得欣賞藝術的伴侶。', url: 'https://ek21.com/dating/72304/' },
+  { name: '王小姐', img: IMG+'2024/07/圖片_20240705150950.jpg', meta: '血型 A型 ｜ 身高 156cm', desc: '從事行政助理工作，個性溫和有禮。愛看電視劇和品嚐美食，生活品味高，希望找到一個有共同話題的男性。', url: 'https://ek21.com/dating/72297/' },
 ];
 
-const memberTypes = [
-  { type: '男性會員', desc: '25-45歲，工作穩定，認真交往', count: '50,000+' },
-  { type: '女性會員', desc: '22-40歲，各行各業，個性獨特', count: '50,000+' },
+interface Feature {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+const features: Feature[] = [
+  { icon: '🔒', title: '實名認證保護', desc: '所有會員均通過身份驗證，確保配對品質與安全性。' },
+  { icon: '📊', title: '數據驅動配對', desc: '透過個人資料分析與配對數據，精準推薦最適合的對象。' },
+  { icon: '💬', title: '專業顧問陪伴', desc: '戀愛小秘書全程陪伴，從認識到交往，給你最專業的感情建議。' },
 ];
 
 export default function MatchPage() {
   return (
     <SiteShell>
       <main>
-        <section className="bg-plum py-16">
-          <div className="mx-auto max-w-6xl px-6 text-center sm:px-8 lg:px-10">
+        {/* Banner */}
+        <section style={{ background: '#049089' }} className="py-16">
+          <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10 text-center">
             <h1 className="text-4xl font-bold text-white">找對象</h1>
             <p className="mt-4 text-lg text-white/80">真實會員 × 數據配對 × 專業陪伴</p>
-            <p className="mt-2 text-white/60">超過 100,000 名驗證會員 × 4,000+ 成功配對</p>
+          </div>
+        </section>
+
+        {/* Members Grid */}
+        <section className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10 py-12 lg:py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {members.map((member) => (
+              <div
+                key={member.url}
+                className="group overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition hover:shadow-lg"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-4">
+                  <h2 className="text-lg font-bold" style={{ color: '#049089' }}>{member.name}</h2>
+                  <p className="mt-1 text-sm text-gray-500">{member.meta}</p>
+                  <p className="mt-2 text-sm text-gray-600 line-clamp-3">{member.desc}</p>
+                  <a
+                    href={member.url}
+                    className="mt-4 inline-block rounded-full px-5 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+                    style={{ background: '#049089' }}
+                  >
+                    了解更多
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* How it works */}
+        <section className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10 pb-12 lg:pb-16">
+          <h2 className="text-2xl font-bold text-center" style={{ color: '#049089' }}>
+            如何找到你的理想對象？
+          </h2>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] p-6 flex flex-col items-center text-center"
+              >
+                <span className="text-4xl">{feature.icon}</span>
+                <h3 className="mt-4 text-base font-semibold text-[#1a1a1a]">{feature.title}</h3>
+                <p className="mt-2 text-sm text-gray-500 leading-6">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Banner */}
+        <section style={{ background: '#049089' }} className="py-16">
+          <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10 text-center">
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">準備好開始找對象了嗎？</h2>
+            <p className="mt-3 text-white/70">
+              加入官方LINE，開始你的配對流程，讓娜米為你安排最合適的對象！
+            </p>
             <a
               href={LINE_URL}
-              className="mt-8 inline-flex rounded-full bg-rose px-8 py-4 text-sm font-semibold text-white transition hover:opacity-90"
+              className="mt-6 inline-flex items-center rounded-full px-8 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+              style={{ background: '#06C755' }}
             >
-              立刻加LINE諮詢
+              加LINE開始配對
             </a>
-          </div>
-        </section>
-
-        {/* 配對特色 */}
-        <section className="mx-auto max-w-6xl px-6 py-16 sm:px-8 lg:px-10 lg:py-24">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-plum md:text-4xl">為什麼選擇娜米幫你找對象？</h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((f) => (
-              <article key={f.title} className="flex flex-col items-center rounded-2xl bg-white p-6 text-center shadow-soft">
-                <span className="text-4xl">{f.icon}</span>
-                <h3 className="mt-4 text-lg font-bold text-plum">{f.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-plum/70">{f.desc}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* 無法找到心儀對象？ */}
-        <section className="bg-white/70 py-16 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
-            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-plum md:text-4xl">無法找到心儀的那個她/他？</h2>
-                <p className="mt-4 text-lg text-plum/70">娜米會根據您的喜好和理想條件，幫您安排一對一/聯誼/交友。</p>
-                <ul className="mt-6 space-y-3 text-base text-plum/75">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-rose">✓</span>
-                    <span>透過彩虹數字分析你的戀愛密碼與速配對象</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-rose">✓</span>
-                    <span>根據個人特質與生活習慣精準配對</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-rose">✓</span>
-                    <span>安排自然輕鬆的見面環境，降低相親壓力</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-rose">✓</span>
-                    <span>提供戀愛顧問服務，陪伴你走過每個感情階段</span>
-                  </li>
-                </ul>
-                <a href={LINE_URL} className="mt-8 inline-flex rounded-full bg-rose px-8 py-4 text-sm font-semibold text-white transition hover:opacity-90">
-                  免費配對諮詢
-                </a>
-              </div>
-              <div className="relative aspect-square max-w-md mx-auto overflow-hidden rounded-[2rem] shadow-soft">
-                <img
-                  src={BASE + '2023/10/nami-main.jpg'}
-                  alt="戀愛小秘書娜米配對服務"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 會員規模 */}
-        <section className="mx-auto max-w-6xl px-6 py-16 sm:px-8 lg:px-10 lg:py-24">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-plum md:text-4xl">優質會員等你來認識</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {memberTypes.map((m) => (
-              <article key={m.type} className="rounded-2xl bg-white p-8 text-center shadow-soft">
-                <p className="text-5xl font-bold text-rose">{m.count}</p>
-                <h3 className="mt-3 text-xl font-bold text-plum">{m.type}</h3>
-                <p className="mt-2 text-sm text-plum/60">{m.desc}</p>
-                <a href={LINE_URL} className="mt-6 inline-flex rounded-full border border-rose px-6 py-2.5 text-sm font-semibold text-rose transition hover:bg-rose hover:text-white">
-                  加入認識
-                </a>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="bg-plum py-16">
-          <div className="mx-auto max-w-6xl px-6 text-center sm:px-8 lg:px-10">
-            <h2 className="text-3xl font-bold text-white">準備好開始找對象了嗎？</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-white/75">
-              加入官方LINE，開始你的配對流程、查看活動，或直接預約戀愛諮詢。
-            </p>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <a href={LINE_URL} className="rounded-full bg-rose px-8 py-4 text-sm font-semibold text-white transition hover:opacity-90">
-                加 LINE 開始配對
-              </a>
-              <a href="/party" className="rounded-full border border-white/30 px-8 py-4 text-sm font-semibold text-white transition hover:bg-white/10">
-                參加聯誼活動
-              </a>
-            </div>
           </div>
         </section>
       </main>

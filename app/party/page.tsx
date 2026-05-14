@@ -11,196 +11,200 @@ export const metadata: Metadata = {
 };
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
-const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
+const IMG = 'https://ek21.com/dating/wp-content/uploads/';
 
-const categories = [
-  {
-    id: '手作體驗',
-    icon: '✂️',
-    activities: [
-      { title: '彩繪馬卡龍｜玩美巴黎風', img: BASE + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg' },
-      { title: '手作玫瑰蘋果塔｜護理師之約', img: BASE + '2023/09/baking-01.jpg' },
-      { title: '浮游花手作趣｜療癒的浪漫小物', img: BASE + '2023/09/baking-01.jpg' },
-    ],
-  },
-  {
-    id: '娛樂遊戲',
-    icon: '🎮',
-    activities: [
-      { title: 'Game START 派對｜電玩對對碰', img: BASE + '2024/01/gamestart.png' },
-      { title: '桌遊派對｜天生絕配', img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg' },
-      { title: '密室逃脫聯誼｜燒腦刺激', img: BASE + '2023/09/baking-01.jpg' },
-    ],
-  },
-  {
-    id: '廚藝美食',
-    icon: '🍳',
-    activities: [
-      { title: '濃情蜜意巧克力蛋糕', img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg' },
-      { title: '鮭魚料理｜吃心絕對', img: BASE + '2024/03/wine2.jpg' },
-      { title: '壽司DIY｜和風創意', img: BASE + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg' },
-    ],
-  },
-  {
-    id: '微醺派對',
-    icon: '🍷',
-    activities: [
-      { title: '愛情調酒派對｜微醺午後時光', img: BASE + '2024/03/wine2.jpg' },
-      { title: '品酒交流派對', img: BASE + '2024/03/wine2.jpg' },
-      { title: '咖啡拉花體驗', img: BASE + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg' },
-    ],
-  },
-  {
-    id: '舞蹈音樂',
-    icon: '💃',
-    activities: [
-      { title: '浪漫探戈派對｜阿根廷之夜', img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg' },
-      { title: 'K歌派對｜情聲綿綿', img: BASE + '2023/12/5428FC8C-F122-41da-9737-D5FA3F69EA5A.png' },
-      { title: '非誠勿擾｜Speed Dating', img: BASE + '2024/04/S__18202927_0.jpg' },
-    ],
-  },
-  {
-    id: '戶外郊遊',
-    icon: '⛰️',
-    activities: [
-      { title: '淡水河畔騎車趣', img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg' },
-      { title: '水上騎馬打仗｜泳池Party', img: BASE + '2023/09/baking-01.jpg' },
-      { title: '七夕の園遊祭', img: BASE + '2024/04/S__18202927_0.jpg' },
-    ],
-  },
-  {
-    id: '寵物主題',
-    icon: '🐱',
-    activities: [
-      { title: '喵星人派對｜貓咪咖啡廳', img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg' },
-      { title: '多肉植物｜愛在蔓延時', img: BASE + '2023/09/baking-01.jpg' },
-      { title: '花藝體驗｜玫瑰情人', img: BASE + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg' },
-    ],
-  },
-  {
-    id: '形象提升',
-    icon: '👑',
-    activities: [
-      { title: '1對1 形象風格打造', img: BASE + '2024/04/image-consult-1v1.jpg' },
-      { title: '社群形象照服務', img: BASE + '2024/04/image-photo.webp' },
-      { title: '內在涵養提升課程', img: BASE + '2024/04/image-course.webp' },
-    ],
-  },
-];
+interface Article {
+  title: string;
+  img: string;
+  excerpt: string;
+  date: string;
+  cat: string;
+  url: string;
+}
 
-const regions = ['台北', '新竹', '台中', '台南', '高雄'];
-
-const steps = [
-  { num: '01', title: '加入官方LINE', desc: '加入戀愛小秘書的官方LINE帳號\nLINE ID：@datenami' },
-  { num: '02', title: '填寫個人資料', desc: '依照流程填寫個人資料，等候戀愛小秘書進行資料驗證與配對數據分析' },
-  { num: '03', title: '參加單身聯誼活動', desc: '資料驗證完成，開始安排約會，參加各種有趣的單身聯誼活動！' },
+const articles: Article[] = [
+  {
+    title: '單身聯誼活動：推理冒險｜身臨其境的角色扮演遊戲',
+    img: IMG + '2025/02/劇本殺-scaled.jpg',
+    excerpt: '「解謎 × 戀愛」沉浸式角色扮演遊戲，在謎題中認識彼此，建立獨特的感情連結！',
+    date: '2025/02',
+    cat: '室內活動',
+    url: 'https://ek21.com/dating/72511/',
+  },
+  {
+    title: '單身聯誼活動：酒精墨水畫｜藝術過程浪漫的節奏',
+    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    excerpt: '藝術與愛情的邂逅：用酒精墨水畫創作屬於你們的獨特作品，在藝術中找到共鳴。',
+    date: '2025/02',
+    cat: '手作體驗',
+    url: 'https://ek21.com/dating/72505/',
+  },
+  {
+    title: '單身聯誼活動：動感閃動格子｜未來科技派對遊戲',
+    img: IMG + '2025/02/閃動格娜米_男.png',
+    excerpt: '速度 × 戀愛 × 科技！動感科技派對，在互動遊戲中展現你的魅力，快速認識異性。',
+    date: '2025/02',
+    cat: '娛樂遊戲',
+    url: 'https://ek21.com/dating/72502/',
+  },
+  {
+    title: '單身聯誼活動：攝影聯誼｜鏡頭下的愛情曝光',
+    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    excerpt: '首創攝影聯誼，拒當攝影白癡，快來參加我們的攝影聯誼活動，用鏡頭記錄愛情。',
+    date: '2024/09',
+    cat: '藝術創作',
+    url: 'https://ek21.com/dating/72406/',
+  },
+  {
+    title: '單身聯誼活動：浪漫咖啡香｜咖啡不可',
+    img: IMG + '2024/09/咖啡聯誼.jpg',
+    excerpt: '你所不知的咖啡秘密，手沖咖啡體驗，靜謐午後的愉悅時光，在咖啡香中相遇。',
+    date: '2024/09',
+    cat: '微醺派對',
+    url: 'https://ek21.com/dating/72398/',
+  },
+  {
+    title: '單身聯誼活動：夏日創意芬芳｜手作乾涸花香蠟燭',
+    img: IMG + '2024/08/香氛盲測.jpg',
+    excerpt: '愛上手作的美好，一起來參加我們的「手作乾涸花香蠟燭」聯誼活動，在香氛中創造浪漫。',
+    date: '2024/08',
+    cat: '手作體驗',
+    url: 'https://ek21.com/dating/72382/',
+  },
+  {
+    title: '單身聯誼活動：浪漫探戈派對｜阿根廷之夜',
+    img: IMG + '2023/07/MTXX_MR20230715_180309740-scaled.jpg',
+    excerpt: '女孩們穿上美麗洋裝，男生們西裝筆挺，在這歡樂的氛圍中共舞探戈，感受浪漫！',
+    date: '2024/05',
+    cat: '舞蹈音樂',
+    url: 'https://ek21.com/dating/66339/',
+  },
+  {
+    title: '單身聯誼活動【與護理師聯誼】｜手作玫瑰蘋果塔',
+    img: IMG + '2023/09/20231014手作蘋果塔.jpg',
+    excerpt: '一起玩手作、揮灑甜蜜，與護理師們共度美好時光，在甜蜜中認識另一半。',
+    date: '2024/05',
+    cat: '手作體驗',
+    url: 'https://ek21.com/dating/70407/',
+  },
+  {
+    title: '單身聯誼活動：彩繪馬卡龍｜玩美巴黎風',
+    img: IMG + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg',
+    excerpt: '微風輕輕拂過，在這浪漫的馬卡龍彩繪時光中，共度甜蜜的巴黎風情。',
+    date: '2024/01',
+    cat: '手作體驗',
+    url: 'https://ek21.com/dating/66276/',
+  },
+  {
+    title: '單身聯誼活動：浪漫Swing Dance｜讓我們舞在一起',
+    img: IMG + '2023/07/ev_f567e1223d_1521796535.jpg',
+    excerpt: '想要尋找浪漫與愛情的邂逅？加入我們的Swing Dance，讓我們在舞池中共舞！',
+    date: '2024/01',
+    cat: '舞蹈音樂',
+    url: 'https://ek21.com/dating/66319/',
+  },
+  {
+    title: '單身聯誼活動：Game START 派對｜電玩對對碰',
+    img: IMG + '2023/12/5428FC8C-F122-41da-9737-D5FA3F69EA5A.png',
+    excerpt: '挑戰感十足的電玩積分賽狂歡派對！在電玩中找到心動對象，輕鬆脫單！',
+    date: '2024/01',
+    cat: '娛樂遊戲',
+    url: 'https://ek21.com/dating/71168/',
+  },
+  {
+    title: '單身聯誼活動：療癒的浪漫小物｜浮遊花手作趣',
+    img: IMG + '2023/07/195087_副本.jpg',
+    excerpt: '療癒的浪漫小物，永恆不朽的小花永遠為你盛開，手作DIY樂趣無窮。',
+    date: '2024/01',
+    cat: '手作體驗',
+    url: 'https://ek21.com/dating/66689/',
+  },
+  {
+    title: '單身聯誼活動：愛情調酒派對-微醺午後時光',
+    img: IMG + '2023/07/1.webp',
+    excerpt: 'Cocktail Time！品酒交友，在微醺的午後時光中輕鬆相識，找到心中那個他。',
+    date: '2024/01',
+    cat: '微醺派對',
+    url: 'https://ek21.com/dating/66690/',
+  },
+  {
+    title: "單身聯誼活動：KTV 情歌對唱 – Let's Sing 愛情點唱機",
+    img: IMG + '2023/07/222225-scaled.jpg',
+    excerpt: '你愛唱歌，她愛聽，想要找個和你一樣愛唱歌的另一半？來KTV情歌對唱！',
+    date: '2024/01',
+    cat: '舞蹈音樂',
+    url: 'https://ek21.com/dating/66428/',
+  },
 ];
 
 export default function PartyPage() {
   return (
     <SiteShell>
       <main>
-        {/* Hero */}
-        <section>
-          <a href={LINE_URL} className="relative block w-full overflow-hidden aspect-[16/6]">
-            <img
-              src={BASE + '2023/09/baking-01.jpg'}
-              alt="單身聯誼活動"
-              className="absolute inset-0 h-full w-full object-cover object-center"
-              loading="eager"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-plum/50">
-              <h1 className="text-4xl font-bold text-white md:text-5xl">單身聯誼活動</h1>
-              <p className="mt-3 text-lg text-white/90">多元主題 × 精彩有趣 × 輕鬆脫單</p>
-            </div>
-          </a>
+        {/* Banner */}
+        <section style={{ background: '#049089' }} className="py-14 text-center">
+          <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10">
+            <h1 className="text-4xl font-bold text-white">單身聯誼</h1>
+            <p className="mt-3 text-lg text-white/85">多元主題 × 精彩有趣 × 輕鬆脫單</p>
+          </div>
+        </section>
 
-          <div className="sticky top-[57px] z-20 border-b border-plum/10 bg-white/95 backdrop-blur sm:top-[65px]">
-            <div className="mx-auto grid max-w-6xl grid-cols-4 gap-2 px-3 py-2.5 sm:flex sm:justify-center sm:gap-2 sm:px-6 sm:py-3">
-              {categories.map((cat) => (
+        {/* Article Grid */}
+        <section className="py-12 lg:py-16 bg-gray-50">
+          <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {articles.map((article) => (
                 <a
-                  key={cat.id}
-                  href={`#${cat.id}`}
-                  className="flex flex-col items-center gap-0.5 rounded-xl border border-plum/10 bg-white/60 px-1 py-2 text-center text-plum/70 transition hover:border-rose hover:bg-rose/5 hover:text-rose sm:flex-row sm:gap-1.5 sm:rounded-full sm:px-4 sm:py-2"
+                  key={article.url}
+                  href={article.url}
+                  className="group overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition hover:shadow-lg"
                 >
-                  <span className="text-lg leading-none sm:text-base">{cat.icon}</span>
-                  <span className="text-[10px] font-semibold leading-tight sm:text-sm">{cat.id}</span>
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={article.img}
+                      alt={article.title}
+                      className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <span
+                      className="inline-block rounded-full px-3 py-0.5 text-xs font-semibold text-white"
+                      style={{ background: '#07C3BA' }}
+                    >
+                      {article.cat}
+                    </span>
+                    <h2 className="mt-2 text-sm font-semibold leading-6 text-gray-900 line-clamp-2">
+                      {article.title}
+                    </h2>
+                    <p className="mt-1.5 text-xs leading-5 text-gray-500 line-clamp-2">
+                      {article.excerpt}
+                    </p>
+                    <div className="mt-3 flex items-center justify-between">
+                      <span className="text-xs text-gray-400">{article.date}</span>
+                      <span className="text-xs font-semibold" style={{ color: '#FF93A6' }}>
+                        閱讀更多 »
+                      </span>
+                    </div>
+                  </div>
                 </a>
               ))}
             </div>
           </div>
         </section>
 
-        {/* 活動類別 */}
-        <section className="mx-auto max-w-6xl px-4 py-8 sm:px-8 sm:py-12 lg:px-10 lg:py-16">
-          <div className="space-y-10 sm:space-y-14">
-            {categories.map((cat) => (
-              <div key={cat.id} id={cat.id} className="scroll-mt-28 sm:scroll-mt-32">
-                <div className="flex items-center gap-2 border-b border-plum/10 pb-3">
-                  <span className="text-lg">{cat.icon}</span>
-                  <h2 className="text-xl font-bold text-plum sm:text-2xl">{cat.id}</h2>
-                </div>
-                <div className="mt-4 grid grid-cols-2 gap-3 sm:mt-6 sm:grid-cols-3 sm:gap-5">
-                  {cat.activities.map((act) => (
-                    <a key={act.title} href={LINE_URL} className="group overflow-hidden rounded-xl bg-white shadow-soft transition hover:shadow-lg sm:rounded-2xl">
-                      <div className="relative aspect-[4/3] overflow-hidden">
-                        <img src={act.img} alt={act.title} className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105" />
-                      </div>
-                      <div className="p-3 sm:p-4">
-                        <p className="text-xs font-semibold leading-5 text-plum sm:text-sm">{act.title}</p>
-                        <p className="mt-1 text-[10px] font-medium text-rose sm:mt-2 sm:text-xs">查看活動詳情 »</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* 地區選擇 */}
-        <section className="bg-white/70 py-16 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
-            <h2 className="text-center text-3xl font-bold tracking-tight text-plum md:text-4xl">現在就預約參加活動吧！</h2>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {regions.map((r) => (
-                <a key={r} href={LINE_URL} className="rounded-full border border-plum/20 bg-white px-8 py-2.5 text-sm font-semibold text-plum transition hover:border-rose hover:text-rose">
-                  {r}
-                </a>
-              ))}
-            </div>
-            <div className="mt-10 text-center">
-              <a href={LINE_URL} className="inline-flex rounded-full bg-rose px-10 py-4 text-sm font-semibold text-white transition hover:opacity-90">
-                我要參加
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* 3步驟 */}
-        <section className="py-16 lg:py-24">
-          <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
-            <h2 className="text-center text-3xl font-bold tracking-tight text-plum">只要 3 步驟 輕鬆認識異性</h2>
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
-              {steps.map((s) => (
-                <article key={s.num} className="rounded-3xl bg-white p-8 shadow-soft">
-                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-rose">{s.num}</p>
-                  <h3 className="mt-4 text-xl font-semibold text-plum">{s.title}</h3>
-                  <p className="mt-4 whitespace-pre-line text-sm leading-7 text-plum/75">{s.desc}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-plum py-16">
-          <div className="mx-auto max-w-6xl px-6 text-center sm:px-8 lg:px-10">
-            <h2 className="text-3xl font-bold text-white">戀愛的事更要讓專業的來！</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-white/75">
-              積極參加活動，輕鬆突破單身圈！小秘書幫您策劃活動，人來就好免煩惱～讓您專注在深度交流，獲得高品質互動經驗。馬上聯絡戀愛小秘書娜米，今年穩交不是夢！
+        {/* CTA Banner */}
+        <section style={{ background: '#049089' }} className="py-14">
+          <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10 text-center">
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">想參加單身聯誼活動？</h2>
+            <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-white/80">
+              加入官方LINE，了解最新活動資訊，戀愛小秘書為你安排最適合的聯誼活動！
             </p>
-            <a href={LINE_URL} className="mt-8 inline-flex rounded-full bg-rose px-8 py-4 text-sm font-semibold text-white transition hover:opacity-90">
-              加LINE洽詢單身聯誼活動
+            <a
+              href={LINE_URL}
+              className="mt-8 inline-flex rounded-full bg-white px-10 py-4 text-sm font-semibold transition hover:opacity-90"
+              style={{ color: '#049089' }}
+            >
+              加LINE諮詢活動
             </a>
           </div>
         </section>

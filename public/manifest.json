@@ -1,0 +1,21 @@
+{
+  "name": "戀愛小秘書娜米",
+  "short_name": "戀愛小秘書",
+  "description": "台灣最專業的紅娘，協助超過 4,000 位未婚男女配對成功！",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7fb",
+  "theme_color": "#ff5c8a",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

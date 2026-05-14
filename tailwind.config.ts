@@ -9,13 +9,14 @@ const config: Config = {
     extend: {
       colors: {
         blush: '#fff7fb',
-        rose: '#ff5c8a',
-        plum: '#5b2145',
+        rose: '#FF93A6',
+        plum: '#049089',
         sand: '#f7efe8',
         gold: '#f5b971',
         teal: '#07C3BA',
         'dark-teal': '#049089',
         'line-green': '#2DC861',
+        sage: '#D2E0DE',
       },
       boxShadow: {
         soft: '0 18px 60px rgba(0, 0, 0, 0.10)',

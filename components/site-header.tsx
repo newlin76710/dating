@@ -17,9 +17,9 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
-        <a href="/" className="relative block h-10 w-[140px] shrink-0 sm:h-12 sm:w-[168px]">
+    <header className="sticky top-0 z-30 border-b border-gray-200 bg-white">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
+        <a href="/" className="relative block h-10 w-[150px] shrink-0 sm:h-[52px] sm:w-[180px]">
           <img
             src="/images/logo.png"
             alt="戀愛小秘書娜米"
@@ -28,12 +28,12 @@ export function SiteHeader() {
           />
         </a>
 
-        <nav className="hidden items-center gap-5 lg:flex" aria-label="主導航">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="主導航">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-gray-700 transition hover:text-teal"
+              className="text-sm font-medium text-gray-800 transition hover:text-[#07C3BA]"
             >
               {item.label}
             </a>
@@ -45,7 +45,7 @@ export function SiteHeader() {
             href={LINE_URL}
             className="hidden rounded-md bg-line-green px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90 sm:inline-flex"
           >
-            加 LINE 免費諮詢
+            加 line 免費諮詢
           </a>
 
           <button
@@ -68,13 +68,13 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div id="mobile-menu" className="border-t border-gray-100 bg-white lg:hidden" role="navigation" aria-label="手機版導航">
-          <nav className="mx-auto max-w-6xl px-6 py-4">
+        <div id="mobile-menu" className="border-t border-gray-200 bg-white lg:hidden" role="navigation" aria-label="手機版導航">
+          <nav className="mx-auto max-w-[1200px] px-6 py-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="block py-3 text-sm font-medium text-gray-700 transition hover:text-teal"
+                className="block py-3 text-sm font-medium text-gray-800 transition hover:text-[#07C3BA]"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -85,7 +85,7 @@ export function SiteHeader() {
               className="mt-3 block rounded-md bg-line-green px-5 py-3 text-center text-sm font-semibold text-white transition hover:opacity-90"
               onClick={() => setOpen(false)}
             >
-              加 LINE 免費諮詢
+              加 line 免費諮詢
             </a>
           </nav>
         </div>

@@ -5,7 +5,7 @@ export function CtaBanner() {
     <section className="mx-auto max-w-6xl px-6 pb-16 sm:px-8 lg:px-10 lg:pb-24">
       <div className="overflow-hidden rounded-[2rem] bg-plum px-8 py-12 text-white shadow-soft md:px-12 md:py-14">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">別再為繼續單身找藉口！</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">追求脫單，先勇敢跨出你的第一步吧！</h2>
             <p className="mt-4 text-base leading-7 text-white/75 md:text-lg">

@@ -4,6 +4,28 @@ const LINE_URL = 'https://lin.ee/iweaTucb';
 const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
 const IMG = 'https://ek21.com/dating/wp-content/uploads/';
 
+// 3 most-recent events shown on homepage — linked to local article pages
+const homeEvents = [
+  {
+    title: '單身聯誼活動：推理冒險｜身臨其境的角色扮演遊戲',
+    img: IMG + '2025/02/劇本殺-scaled.jpg',
+    desc: '「解謎 × 戀愛」沉浸式角色扮演遊戲，在謎題中認識彼此，建立獨特的感情連結！',
+    url: '/party/mystery-adventure',
+  },
+  {
+    title: '單身聯誼活動：酒精墨水畫｜藝術過程浪漫的節奏',
+    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    desc: '藝術與愛情的邂逅：用酒精墨水畫創作屬於你們的獨特作品，在藝術中找到共鳴。',
+    url: '/party/alcohol-ink-art',
+  },
+  {
+    title: '單身聯誼活動：動感閃動格子｜未來科技派對遊戲',
+    img: IMG + '2025/02/閃動格娜米_男.png',
+    desc: '速度 × 戀愛 × 科技！動感科技派對，在互動遊戲中展現你的魅力，快速認識異性。',
+    url: '/party/flash-grid-party',
+  },
+];
+
 const steps = [
   {
     num: '01',
@@ -22,26 +44,6 @@ const steps = [
   },
 ];
 
-const events = [
-  {
-    title: '單身聯誼活動：推理冒險｜身臨其境的角色扮演遊戲',
-    img: IMG + '2025/02/劇本殺-scaled.jpg',
-    desc: '「解謎 × 戀愛」沉浸式角色扮演遊戲，在謎題中認識彼此，建立獨特的感情連結！',
-    url: 'https://ek21.com/dating/72511/',
-  },
-  {
-    title: '單身聯誼活動：酒精墨水畫｜藝術過程浪漫的節奏',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
-    desc: '藝術與愛情的邂逅：用酒精墨水畫創作屬於你們的獨特作品，在藝術中找到共鳴。',
-    url: 'https://ek21.com/dating/72505/',
-  },
-  {
-    title: '單身聯誼活動：動感閃動格子｜未來科技派對遊戲',
-    img: IMG + '2025/02/閃動格娜米_男.png',
-    desc: '速度 × 戀愛 × 科技！動感科技派對，在互動遊戲中展現你的魅力，快速認識異性。',
-    url: 'https://ek21.com/dating/72502/',
-  },
-];
 
 const consultServices = [
   {
@@ -390,7 +392,7 @@ export default function HomePage() {
 
             {/* 3-col grid */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 35 }}>
-              {events.map((ev) => (
+              {homeEvents.map((ev) => (
                 <a
                   key={ev.title}
                   href={ev.url}

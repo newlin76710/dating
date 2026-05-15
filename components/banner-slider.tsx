@@ -48,10 +48,10 @@ export function BannerSlider() {
       ))}
 
       <button onClick={prev} aria-label="上一張" className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/70 p-2 shadow transition hover:bg-white">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 15l-5-5 5-5" stroke="#5b2145" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 15l-5-5 5-5" stroke="#049089" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
       </button>
       <button onClick={next} aria-label="下一張" className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/70 p-2 shadow transition hover:bg-white">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 5l5 5-5 5" stroke="#5b2145" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 5l5 5-5 5" stroke="#049089" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
       </button>
 
       <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-2">

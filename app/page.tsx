@@ -2,6 +2,7 @@ import { SiteShell } from '@/components/site-shell';
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
 const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
+const IMG = 'https://ek21.com/dating/wp-content/uploads/';
 
 const steps = [
   {
@@ -23,19 +24,22 @@ const steps = [
 
 const events = [
   {
-    title: '單身聯誼活動：浪漫探戈派對｜阿根廷之夜',
-    img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg',
-    desc: '女孩們穿上美麗洋裝，男生們西裝筆挺，在這歡樂的氛圍中共舞探戈，感受浪漫！',
+    title: '單身聯誼活動：推理冒險｜身臨其境的角色扮演遊戲',
+    img: IMG + '2025/02/劇本殺-scaled.jpg',
+    desc: '「解謎 × 戀愛」沉浸式角色扮演遊戲，在謎題中認識彼此，建立獨特的感情連結！',
+    url: 'https://ek21.com/dating/72511/',
   },
   {
-    title: '單身聯誼活動：彩繪馬卡龍｜玩美巴黎風',
-    img: BASE + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg',
-    desc: '微風輕輕拂過，滿樹綻放的玫瑰花瓣如詩如夢地飄落。在這浪漫的馬卡龍彩繪時光中與你共度。',
+    title: '單身聯誼活動：酒精墨水畫｜藝術過程浪漫的節奏',
+    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    desc: '藝術與愛情的邂逅：用酒精墨水畫創作屬於你們的獨特作品，在藝術中找到共鳴。',
+    url: 'https://ek21.com/dating/72505/',
   },
   {
-    title: '單身聯誼活動：Game START 派對｜電玩對對碰',
-    img: BASE + '2023/12/5428FC8C-F122-41da-9737-D5FA3F69EA5A.png',
-    desc: '挑戰感十足的電玩積分賽狂歡派對就要登場了！戀愛小秘書帶你在電玩中找到心動對象！',
+    title: '單身聯誼活動：動感閃動格子｜未來科技派對遊戲',
+    img: IMG + '2025/02/閃動格娜米_男.png',
+    desc: '速度 × 戀愛 × 科技！動感科技派對，在互動遊戲中展現你的魅力，快速認識異性。',
+    url: 'https://ek21.com/dating/72502/',
   },
 ];
 
@@ -120,57 +124,64 @@ export default function HomePage() {
       <main>
 
         {/* ── Hero ────────────────────────────────────────────────────────── */}
-        {/*
-          Layout: left col 33% = 0330home.jpg, right col 66% = gradient + content
-          Right col gradient: transparent (0-60%) → white (hard stop at 60%)
-          Content column: min-height 500px, padding 0% 22% 0% 15%, centered vertically
-        */}
-        <section className="overflow-hidden bg-white" style={{ maxWidth: '100%' }}>
-          <div style={{ display: 'flex', overflow: 'hidden' }}>
-            {/* Left col: 33% — photo */}
-            <div
-              className="hidden md:block"
-              style={{
-                width: '33.333%',
-                flexShrink: 0,
-                minHeight: 500,
-                backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
-                backgroundPosition: 'top center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-              }}
-            />
+        <section className="overflow-hidden bg-white" style={{ position: 'relative' }}>
+          {/* Photo: absolutely positioned, fills left ~40% so it bleeds into gradient zone */}
+          <div
+            className="hidden md:block"
+            style={{
+              position: 'absolute',
+              top: 0, left: 0, bottom: 0,
+              width: '40%',
+              backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
+              backgroundPosition: 'top center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+            }}
+          />
+          {/* Gradient overlay: blends photo into white content area */}
+          <div
+            className="hidden md:block"
+            style={{
+              position: 'absolute',
+              top: 0, left: 0, bottom: 0,
+              width: '65%',
+              background: 'linear-gradient(to right, transparent 0%, transparent 28%, rgba(255,255,255,0.5) 40%, white 55%)',
+              pointerEvents: 'none',
+            }}
+          />
 
-            {/* Right col: 66% — gradient overlay + content */}
-            <div
-              style={{
-                flex: 1,
-                backgroundImage: 'linear-gradient(90deg, rgba(255,255,255,0) 60%, #FFFFFF 40%)',
-                backgroundColor: 'transparent',
-                position: 'relative',
-              }}
-            >
-              {/* Mobile: show hero image at top */}
-              <div
-                className="block md:hidden"
-                style={{
-                  width: '100%',
-                  height: 240,
-                  backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
-                  backgroundPosition: 'top center',
-                  backgroundSize: 'cover',
-                }}
-              />
+          {/* Mobile: stacked image */}
+          <div
+            className="block md:hidden"
+            style={{
+              width: '100%',
+              height: 240,
+              backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
+              backgroundPosition: 'top center',
+              backgroundSize: 'cover',
+            }}
+          />
 
-              {/* Content column */}
+          {/* Content: max-width 1200px, with spacer matching left 33% */}
+          <div
+            style={{
+              position: 'relative',
+              maxWidth: 1200,
+              margin: '0 auto',
+              display: 'flex',
+              alignItems: 'stretch',
+            }}
+          >
+            <div className="hidden md:block" style={{ width: '33.333%', flexShrink: 0, minHeight: 500 }} />
+            <div style={{ flex: 1 }}>
               <div
+                className="hero-content-col"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   minHeight: 500,
                   padding: '0 22% 0 15%',
                 }}
-                className="hero-content-col"
               >
                 <div style={{ width: '100%' }}>
                   {/* Teal spacer */}
@@ -382,7 +393,9 @@ export default function HomePage() {
               {events.map((ev) => (
                 <a
                   key={ev.title}
-                  href={LINE_URL}
+                  href={ev.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ textDecoration: 'none', color: 'inherit', display: 'block', borderRadius: 4, overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.12)', backgroundColor: '#fff' }}
                 >
                   <div style={{ position: 'relative', paddingBottom: '50%', overflow: 'hidden' }}>
@@ -395,6 +408,9 @@ export default function HomePage() {
                   <div style={{ padding: '16px 20px 20px' }}>
                     <h3 style={{ ...roboto, fontSize: 15, fontWeight: 500, color: '#1a1a1a', margin: '0 0 8px', lineHeight: '1.4' }}>{ev.title}</h3>
                     <p style={{ ...roboto, fontSize: 14, color: '#666', margin: 0, lineHeight: '1.6' }}>{ev.desc}</p>
+                    <p style={{ ...roboto, fontSize: 13, fontWeight: 500, color: '#049089', margin: '8px 0 0', textAlign: 'right' }}>
+                      參加單身聯誼 »
+                    </p>
                   </div>
                 </a>
               ))}
@@ -604,8 +620,11 @@ export default function HomePage() {
             <h2 style={{ ...poppins, fontSize: 45, fontWeight: 400, textTransform: 'uppercase', lineHeight: '50px', letterSpacing: '1.18px', color: '#049089', textAlign: 'center', margin: 0, padding: 0 }}>
               媒體採訪報導
             </h2>
+            <p style={{ ...roboto, fontSize: 16, fontWeight: 300, color: '#666666', textAlign: 'center', margin: '12px 0 0' }}>
+              感謝媒體對戀愛小秘書及娜米的採訪報導
+            </p>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: 32, marginTop: 50 }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: 32, marginTop: 40 }}>
               {mediaLogos.map((m) => (
                 <div key={m.name} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <img

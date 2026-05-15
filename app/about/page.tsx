@@ -2,178 +2,175 @@ import type { Metadata } from 'next';
 import { SiteShell } from '@/components/site-shell';
 
 export const metadata: Metadata = {
-  title: '與娜米合作｜戀愛小秘書娜米',
-  description: '認識戀愛小秘書娜米：留美MBA企管碩士、彩虹數字諮詢師、交友聊天室第二代，10年以上兩性議題分析專家。',
+  title: '關於娜米｜戀愛小秘書娜米｜用數據幫你找對象',
+  description: '最專業的紅娘 / 兩性議題分析專家 / 留美MBA企管碩士 / 彩虹數字諮詢師',
   openGraph: {
-    title: '與娜米合作 — 戀愛小秘書娜米',
+    title: '關於娜米 — 戀愛小秘書娜米',
     description: '最專業的紅娘 / 兩性議題分析專家 / 留美MBA企管碩士 / 彩虹數字諮詢師',
   },
 };
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
-const IMG = 'https://ek21.com/dating/wp-content/uploads/';
+const BASE = 'https://ek21.com/dating/wp-content/uploads/';
 
 const brands = [
   {
-    img: IMG + '2023/04/256px.png',
+    img: BASE + '2023/04/256px.png',
     name: '尋夢園聊天室',
-    stat: '200 萬名會員',
-    desc: '台灣最大匿名聊天社群，100+ 個主題聊天室',
+    desc: '全台最大匿名聊天室，擁有200萬會員和上百間主題聊天室，唱歌競賽、匿名交友',
   },
   {
-    img: IMG + '2023/04/尋夢新聞.001.png',
+    img: BASE + '2023/04/尋夢新聞.001.png',
     name: '尋夢新聞',
-    stat: '月均 300 萬瀏覽',
-    desc: '娛樂、科技、遊戲、美食新聞平台',
+    desc: '最新最熱門的新聞 - 時尚、娛樂、科技、動漫、遊戲、健康、美食，每月瀏覽：300萬人次',
   },
   {
-    img: IMG + '2023/04/eros主題派對跨年版-02-1024x1024.png',
-    name: 'eros 主題派對',
-    stat: '10 萬名驗證會員',
-    desc: '主題派對活動平台，線下交友聯誼',
+    img: BASE + '2023/04/eros主題派對跨年版-02-1024x1024.png',
+    name: 'eros主題派對',
+    desc: '交友聯誼線下活動，10萬個實名認證會員，各種不同的主題活動，讓上班族輕鬆交友',
   },
   {
-    img: IMG + '2023/04/QQ20230411-123409@2x.png',
+    img: BASE + '2023/04/QQ20230411-123409@2x.png',
     name: '戀愛小秘書',
-    stat: '專業配對諮詢',
-    desc: '顧問諮詢、形象改造、內容創作',
+    desc: '戀愛疑難雜症諮詢，聯誼約會形象改造，自媒體、影音分享，異業合作代言',
   },
 ];
 
 const socials = [
   {
-    logo: IMG + '2023/09/Facebook-logo-500x313-1-300x188.png',
+    logo: BASE + '2023/09/20230714_娜米logo（無背景）.jpg',
+    name: '官方網站',
+    items: ['脫單秘笈', '戀愛數字', '男女會員'],
+    url: 'https://ek21.com/dating/',
+  },
+  {
+    logo: BASE + '2023/09/Facebook-logo-500x313-1-300x188.png',
     name: 'Facebook',
-    handle: 'datenami',
-    desc: '戀愛語錄、時事話題',
+    items: ['戀愛金句', '時事觀察', '生活圖文'],
     url: 'https://www.facebook.com/datenami/',
   },
   {
-    logo: IMG + '2023/09/Line-Logo-500x281-1.png',
+    logo: BASE + '2023/09/Line-Logo-500x281-1.png',
     name: 'LINE@',
-    handle: '@datenami',
-    desc: '一對一諮詢、會員活動',
+    items: ['諮詢服務', '會員活動', '活動分享'],
     url: LINE_URL,
   },
   {
-    logo: IMG + '2023/09/youtube-logo-2431-e1694234593807-80x60.png',
+    logo: BASE + '2023/09/youtube-logo-2431-e1694234593807-80x60.png',
     name: 'YouTube',
-    handle: '@datenami',
-    desc: '戀愛教學影片',
+    items: ['教學影片', '服務介紹', '留言導流'],
     url: 'https://www.youtube.com/@datenami',
   },
   {
-    logo: IMG + '2023/09/Instagram-Logo-500x281-1.png',
+    logo: BASE + '2023/09/Instagram-Logo-500x281-1.png',
     name: 'Instagram',
-    handle: 'datenami',
-    desc: '精選活動花絮',
+    items: ['教學影片', '生活圖文', '訊息導流'],
     url: 'https://www.instagram.com/datenami/',
   },
-];
-
-const stats = [
-  { value: '100,000+', label: '驗證會員' },
-  { value: '50,000+', label: '月均頁面瀏覽' },
-  { value: '10 年+', label: '兩性議題研究' },
-  { value: '4,000+', label: '成功配對案例' },
-];
-
-const timeline = [
-  { year: '2013', event: '留美取得MBA，回台接手尋夢園聊天室，打造台灣最大匿名聊天社群（200萬會員）' },
-  { year: '2014', event: '入選 AppWorks 加速器，創立 eros 主題派對交友平台，累積 100,000 驗證會員' },
-  { year: '2018', event: '創辦尋夢新聞，月均 300 萬瀏覽量的新聞平台' },
-  { year: '2020', event: '共同創辦彩虹數字學會，將數字學與兩性諮詢結合' },
-  { year: '2021', event: '正式創立「戀愛小秘書」品牌，提供系統化戀愛配對與諮詢服務' },
-  { year: '2023', event: '推出「戀愛會社」節目，用彩虹數字幫助更多人解析戀愛密碼' },
-];
-
-const endorsements = [
   {
-    name: '謝綸',
-    title: 'eDuo 執行長',
-    quote: '娜米對服務品質的堅持與優化令人欽佩，是真正用心經營的創業者。',
-    img: IMG + '2023/05/pexels-karolina-grabowska-7680143-1024x683.jpg',
-  },
-  {
-    name: 'Kevin Lin',
-    title: 'Fandora 行銷總監',
-    quote: '娜米提供有溫度、有耐心的服務，是業界難得的專業紅娘。',
-    img: IMG + '2023/05/pexels-samson-katt-5225483-1024x683.jpg',
-  },
-  {
-    name: '曾少甫',
-    title: '台灣好新聞創始人',
-    quote: '以使用者為核心的專業精神，讓戀愛小秘書脫穎而出。',
-    img: IMG + '2023/05/pexels-budgeron-bach-6532988-1024x683.jpg',
-  },
-  {
-    name: '麗子老師',
-    title: '彩虹數字學會理事長',
-    quote: '娜米親切又專業，是數字學與兩性諮詢完美結合的典範。',
-    img: IMG + '2023/05/pexels-inzmam-khan-1134204-1024x705.jpg',
+    logo: BASE + '2023/09/627bb8132bc3a3762a1d0b98-1024x438.png',
+    name: 'TikTok',
+    items: ['教學影片', '服務介紹', '訊息導流'],
+    url: 'https://www.tiktok.com/@datnami',
   },
 ];
 
-const collaborations = [
-  { icon: '📺', type: '媒體合作', desc: '邀請娜米接受媒體採訪、節目訪談，分享兩性關係與戀愛諮詢專業見解。' },
-  { icon: '🤝', type: '品牌合作', desc: '與品牌合作推廣，包含健身、美妝、健康、生活風格等相關領域。' },
-  { icon: '🎊', type: '活動合辦', desc: '與企業或品牌聯合舉辦單身聯誼活動、戀愛講座等主題活動。' },
-  { icon: '📣', type: '廣告投放', desc: '在戀愛小秘書平台及社群媒體上投放廣告，觸及精準的單身男女受眾。' },
+const services = [
+  { value: '實名會員超過10萬人' },
+  { value: '每月瀏覽數5萬人次' },
+  { value: '聯誼、約會、形象改造 撰寫專欄、拍攝影片' },
+  { value: '解決戀愛各式疑難雜症' },
+];
+
+const experienceImgs = [
+  BASE + '2023/04/截圖-2023-04-20-上午11.46.22-326x245.png',
+  BASE + '2023/04/50170532_10156997355297451_7520191897948651520_n-326x245.jpeg',
+  BASE + '2023/04/49840178_10156997355262451_8620086400584253440_n.jpeg',
+  BASE + '2023/04/QQ20230413-152348@2x.png',
+  BASE + '2023/04/QQ20230413-152207@2x.png',
+  BASE + '2023/04/QQ20230413-152321@2x.png',
+  BASE + '2023/04/IMG_1230-scaled.jpg',
+  BASE + '2023/04/IMG_9750-scaled.jpg',
+  BASE + '2023/04/2.jpg',
+];
+
+const products = [
+  { img: BASE + '2023/04/LINE_ALBUM_230411-852x1024.jpg', name: '男性馬卡' },
+  { img: BASE + '2023/04/IMG_7396.jpg', name: '蹦薏仁' },
+  { img: BASE + '2023/04/335834930_915559006252207_1753421793600142753_n.jpeg', name: '私密清潔' },
+  { img: BASE + '2023/04/IMG_7405.jpg', name: '鮮魷脆片' },
+  { img: BASE + '2023/04/IMG_7912.jpg', name: '男性洗面乳' },
+  { img: BASE + '2023/04/LINE_ALBUM_230320_67.jpg', name: '女性服飾' },
+  { img: BASE + '2023/04/nnnn.jpg', name: '運動內衣' },
+  { img: BASE + '2023/04/1.jpeg', name: '聊天機器人' },
 ];
 
 export default function AboutPage() {
   return (
     <SiteShell>
       <main>
-        {/* Hero Banner */}
-        <section style={{ background: '#049089' }} className="py-14 text-center">
-          <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
-            <img
-              src={IMG + '2023/09/20230714_娜米logo（無背景）.png'}
-              alt="戀愛小秘書娜米"
-              className="mx-auto mb-5 h-20 w-auto object-contain brightness-0 invert"
-            />
-            <h1 className="text-3xl font-bold text-white sm:text-4xl">戀愛小秘書 娜米</h1>
-            <p className="mt-3 text-lg text-white/85">用數據幫你找對象</p>
-            <div className="mt-5 flex flex-wrap justify-center gap-3">
-              {['留美MBA企管碩士', '交友聊天室第二代', '彩虹數字諮詢師', '花精療癒師'].map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-white/40 px-4 py-1.5 text-sm font-medium text-white"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Stats */}
-        <section className="bg-white py-12 lg:py-16">
+        {/* ── Hero ── */}
+        <section className="py-16 bg-white">
           <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-              {stats.map((s) => (
-                <div key={s.label} className="text-center">
-                  <p className="text-3xl font-bold" style={{ color: '#07C3BA' }}>{s.value}</p>
-                  <p className="mt-1 text-sm text-gray-500">{s.label}</p>
+            <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:gap-16">
+              {/* Photo */}
+              <div className="shrink-0">
+                <img
+                  src={BASE + '2023/03/500x500_4.jpg'}
+                  alt="戀愛小秘書娜米"
+                  className="h-64 w-64 rounded-full object-cover shadow-lg lg:h-80 lg:w-80"
+                />
+              </div>
+              {/* Text */}
+              <div className="text-center lg:text-left">
+                <p className="text-lg font-semibold" style={{ color: '#FF93A6' }}>最專業的紅娘</p>
+                <h1 className="mt-1 text-4xl font-bold lg:text-5xl" style={{ color: '#049089' }}>
+                  戀愛小秘書 娜米
+                </h1>
+                <div className="mt-5 flex flex-wrap justify-center gap-2 lg:justify-start">
+                  {['兩性議題分析專家', '留美MBA企管碩士', '交友聊天室第二代', '彩虹數字諮詢師', '花精療癒師'].map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full px-4 py-1.5 text-sm font-medium text-white"
+                      style={{ background: '#049089' }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-              ))}
+                <ul className="mt-6 space-y-2 text-sm leading-7 text-gray-600 text-left">
+                  <li>● 善於觀察，對於感性的情緒、感受很敏銳</li>
+                  <li>● 具有理性的管理、創新、數據分析能力</li>
+                  <li>● 喜歡分享生活中關於戀愛的小發現</li>
+                </ul>
+                <a
+                  href={LINE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+                  style={{ background: '#2DC861' }}
+                >
+                  加 LINE 免費諮詢
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Brand Portfolio */}
-        <section className="bg-gray-50 py-12 lg:py-16">
+        {/* ── 尋夢園品牌 ── */}
+        <section className="py-14 bg-gray-50">
           <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
-            <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>娜米的事業版圖</h2>
+            <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>
+              尋夢園品牌
+            </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {brands.map((b) => (
                 <div key={b.name} className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
-                  <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg">
+                  <div className="flex h-20 w-20 items-center justify-center overflow-hidden">
                     <img src={b.img} alt={b.name} className="h-full w-full object-contain" />
                   </div>
                   <h3 className="mt-4 text-base font-bold text-gray-900">{b.name}</h3>
-                  <p className="mt-1 text-sm font-semibold" style={{ color: '#07C3BA' }}>{b.stat}</p>
                   <p className="mt-2 text-xs leading-5 text-gray-500">{b.desc}</p>
                 </div>
               ))}
@@ -181,124 +178,147 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Social Media */}
-        <section className="bg-white py-12 lg:py-16">
+        {/* ── 社群平台 ── */}
+        <section className="py-14 bg-white">
           <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
-            <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>社群媒體</h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>
+              戀愛小秘書 社群平台
+            </h2>
+            <div className="grid gap-6 sm:grid-cols-3 lg:grid-cols-6">
               {socials.map((s) => (
                 <a
                   key={s.name}
                   href={s.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center rounded-xl border border-gray-100 bg-white p-6 text-center shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition hover:shadow-md"
+                  className="flex flex-col items-center rounded-xl border border-gray-100 bg-white p-5 text-center shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition hover:shadow-md"
                 >
-                  <div className="flex h-12 w-20 items-center justify-center overflow-hidden">
-                    <img src={s.logo} alt={s.name} className="h-full w-full object-contain" />
+                  <div className="flex h-10 w-full items-center justify-center overflow-hidden">
+                    <img src={s.logo} alt={s.name} className="h-full w-auto max-w-full object-contain" />
                   </div>
                   <h3 className="mt-3 text-sm font-bold text-gray-900">{s.name}</h3>
-                  <p className="text-xs text-gray-400">{s.handle}</p>
-                  <p className="mt-2 text-xs text-gray-500">{s.desc}</p>
+                  <ul className="mt-2 space-y-0.5">
+                    {s.items.map((item) => (
+                      <li key={item} className="text-xs text-gray-500">{item}</li>
+                    ))}
+                  </ul>
                 </a>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Career Timeline */}
-        <section className="bg-gray-50 py-12 lg:py-16">
+        {/* ── 團隊服務 ── */}
+        <section className="py-14" style={{ background: '#D2E0DE' }}>
           <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
-            <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>娜米的創業歷程</h2>
-            <div className="mx-auto max-w-2xl space-y-0">
-              {timeline.map((item, i) => (
-                <div key={item.year} className="flex gap-6">
-                  <div className="flex flex-col items-center">
-                    <div
-                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
-                      style={{ background: '#07C3BA' }}
-                    >
-                      {item.year.slice(2)}
-                    </div>
-                    {i < timeline.length - 1 && (
-                      <div className="mt-1 h-10 w-px" style={{ background: '#D2E0DE' }} />
-                    )}
-                  </div>
-                  <div className="pb-8">
-                    <p className="text-sm font-bold" style={{ color: '#049089' }}>{item.year}</p>
-                    <p className="mt-1 text-sm leading-7 text-gray-600">{item.event}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Endorsements */}
-        <section style={{ background: '#D2E0DE' }} className="py-12 lg:py-16">
-          <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
-            <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>業界推薦</h2>
+            <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>
+              戀愛小秘書團隊服務
+            </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {endorsements.map((e) => (
-                <div key={e.name} className="overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={e.img}
-                      alt={e.name}
-                      className="absolute inset-0 h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <p className="text-sm leading-6 text-gray-600">「{e.quote}」</p>
-                    <div className="mt-3 border-t border-gray-100 pt-3">
-                      <p className="text-sm font-bold text-gray-900">{e.name}</p>
-                      <p className="text-xs text-gray-400">{e.title}</p>
-                    </div>
-                  </div>
+              {services.map((s) => (
+                <div
+                  key={s.value}
+                  className="rounded-xl bg-white p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+                >
+                  <p className="text-base font-bold leading-7" style={{ color: '#049089' }}>{s.value}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Collaboration Types */}
-        <section className="bg-white py-12 lg:py-16">
+        {/* ── 娜米的經歷 ── */}
+        <section className="py-14 bg-white">
           <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
-            <h2 className="mb-4 text-center text-2xl font-bold" style={{ color: '#049089' }}>與娜米合作</h2>
-            <p className="mx-auto mb-10 max-w-xl text-center text-sm text-gray-500">
-              戀愛小秘書娜米擁有精準的單身男女受眾，歡迎各類品牌與企業洽談合作機會。
-            </p>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {collaborations.map((c) => (
-                <div key={c.type} className="rounded-xl bg-gray-50 p-6 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">{c.icon}</span>
-                    <h3 className="text-base font-bold text-gray-900">{c.type}</h3>
-                  </div>
-                  <p className="mt-3 text-sm leading-7 text-gray-600">{c.desc}</p>
-                  <a
-                    href="mailto:mkt@ek21.com"
-                    className="mt-4 inline-block text-sm font-semibold transition hover:opacity-80"
-                    style={{ color: '#FF93A6' }}
-                  >
-                    立即洽談 »
-                  </a>
+            <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>
+              娜米的經歷
+            </h2>
+            <div className="grid grid-cols-3 gap-3">
+              {experienceImgs.map((src, i) => (
+                <div key={i} className="overflow-hidden rounded-lg aspect-[4/3]">
+                  <img src={src} alt="" className="h-full w-full object-cover" />
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Contact CTA */}
+        {/* ── 代言經歷 ── */}
+        <section className="py-14 bg-gray-50">
+          <div className="mx-auto max-w-[900px] px-6 sm:px-8 lg:px-10 text-center">
+            <h2 className="mb-6 text-2xl font-bold" style={{ color: '#049089' }}>代言經歷</h2>
+            <p className="text-sm leading-8 text-gray-600">
+              娜米擔任共享電動機車代言人，身兼廣告模特兒，拍攝精彩的形象影片廣告、靜態看板廣告，以及參與記者發表會。
+            </p>
+          </div>
+        </section>
+
+        {/* ── 戀愛密碼生活館 ── */}
+        <section className="py-14 bg-white">
+          <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
+            <h2 className="mb-4 text-center text-2xl font-bold" style={{ color: '#049089' }}>
+              戀愛密碼生活館
+            </h2>
+            <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-7 text-gray-500">
+              娜米專注於提升個人魅力和愛情運勢，精選出一系列適合單身男女的商品，以異業合作的方式呈現給大家。省下尋找商品的時間，一起打造個人魅力，成就愛情！
+            </p>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+              {products.map((p) => (
+                <div key={p.name} className="overflow-hidden rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+                  <div className="aspect-square overflow-hidden">
+                    <img src={p.img} alt={p.name} className="h-full w-full object-cover" />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-gray-800">{p.name}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 主持經歷 ── */}
+        <section className="py-14 bg-gray-50">
+          <div className="mx-auto max-w-[900px] px-6 sm:px-8 lg:px-10 text-center">
+            <h2 className="mb-6 text-2xl font-bold" style={{ color: '#049089' }}>主持經歷</h2>
+            <p className="text-sm leading-8 text-gray-600">
+              娜米擁有豐富的主持經驗，曾主持過多場活動。其中包括 Facebook 在台灣舉辦的大型 Developer Circle 活動、資策會舉辦的 Ideas Show 競賽，以及無人機、機器人、智慧音箱等大小型產品發佈記者會等。
+            </p>
+          </div>
+        </section>
+
+        {/* ── 關於創辦人娜米 ── */}
+        <section className="py-14 bg-white">
+          <div className="mx-auto max-w-[900px] px-6 sm:px-8 lg:px-10">
+            <h2 className="mb-8 text-center text-2xl font-bold" style={{ color: '#049089' }}>
+              關於創辦人娜米
+            </h2>
+            <div className="prose prose-sm max-w-none text-gray-600 leading-8">
+              <p>
+                Hi！我是娜米，A型雙子座，美國丹佛大學MBA碩士，是「戀愛小秘書」與「eros主題派對」的創辦人。
+              </p>
+              <p className="mt-4">
+                在海外留學期間，我發現外國人真的熱愛交友，社交生活豐富，不管是跟人攀談、搭訕都很自然，很容易就散發自信跟魅力。相比之下，台灣上班族的生活圈比較小，私人社交活動也較少，較難認識新朋友與異性。
+              </p>
+              <p className="mt-4">
+                所以我決定創辦「戀愛小秘書」與「eros主題派對」，幫助大家更認識自己，找到自我魅力，透過真實的互動找到對的另一半。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Contact CTA ── */}
         <section style={{ background: '#049089' }} className="py-14">
           <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10 text-center">
-            <h2 className="text-2xl font-bold text-white sm:text-3xl">聯絡娜米</h2>
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">與娜米合作</h2>
             <p className="mx-auto mt-4 max-w-xl text-base text-white/80">
               商業合作請寄信至 mkt@ek21.com，或直接加官方 LINE 諮詢。
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a
                 href={LINE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-white px-8 py-3 text-sm font-semibold transition hover:opacity-90"
                 style={{ color: '#049089' }}
               >
@@ -313,6 +333,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
       </main>
     </SiteShell>
   );

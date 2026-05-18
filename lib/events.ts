@@ -1,4 +1,4 @@
-const IMG = 'https://ek21.com/dating/wp-content/uploads/';
+const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
 
 export interface EventArticle {
   slug: string;
@@ -18,7 +18,7 @@ export const events: EventArticle[] = [
   {
     slug: 'apple-tart-nurse',
     title: '單身聯誼花絮：手作玫瑰蘋果塔｜與護理師之約',
-    img: IMG + '2023/09/帶按鷲圖-情境圖-烘烙-01.jpg',
+    img: BASE + '2023/09/baking-01.jpg',
     excerpt: '一起玩手作、揮灑甜蜜，護理師主題聯誼帶來難忘體驗！',
     date: '2024/03',
     cat: '手作體驗',
@@ -34,7 +34,7 @@ export const events: EventArticle[] = [
   {
     slug: 'cocktail-party',
     title: '單身聯誼花絮：愛情調酒派對｜微醺午後時光',
-    img: IMG + '2024/03/wine2_副本.jpg',
+    img: BASE + '2024/03/wine2.jpg',
     excerpt: '在酒香四溢的午後，輕鬆微醺中自然互動，讓緣分悄然降臨。',
     date: '2024/03',
     cat: '微醺派對',
@@ -50,7 +50,7 @@ export const events: EventArticle[] = [
   {
     slug: 'game-start-party-highlight',
     title: '單身聯誼花絮：Game START 派對｜電動激情降低社交尷尬',
-    img: IMG + '2024/01/享樂21200x1200.png',
+    img: BASE + '2024/01/gamestart.png',
     excerpt: '在電玩聲效中打破距離，用遊戲分數找到心動對象！',
     date: '2024/01',
     cat: '娛樂遊戲',
@@ -66,7 +66,7 @@ export const events: EventArticle[] = [
   {
     slug: 'tango-party',
     title: '單身聯誼花絮：浪漫探戈派對｜阿根廷之夜',
-    img: IMG + '2023/07/MTXX_MR20230715_180309740-scaled.jpg',
+    img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg',
     excerpt: '阿根廷探戈的熱情舞步，讓心與心在音樂中靠近。',
     date: '2024/05',
     cat: '舞蹈音樂',
@@ -82,7 +82,7 @@ export const events: EventArticle[] = [
   {
     slug: 'photography-dating',
     title: '單身聯誼花絮：攝影聯誼｜鏡頭下的愛情曝光',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2024/04/image-photo-dalle.webp',
     excerpt: '首創攝影聯誼，在快門聲中留下美好邂逅的瞬間！',
     date: '2024/09',
     cat: '藝術創作',
@@ -98,7 +98,7 @@ export const events: EventArticle[] = [
   {
     slug: 'macaron-painting',
     title: '單身聯誼花絮：彩繪馬卡龍｜玩美巴黎風',
-    img: IMG + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg',
+    img: BASE + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg',
     excerpt: '在巴黎風情中共同彩繪馬卡龍，甜蜜時光讓人難忘。',
     date: '2024/01',
     cat: '手作體驗',
@@ -114,7 +114,7 @@ export const events: EventArticle[] = [
   {
     slug: 'floating-flower',
     title: '單身聯誼花絮：療癒浪漫小物｜浮遊花手作趣',
-    img: IMG + '2023/07/195087_副本.jpg',
+    img: BASE + '2023/08/pool-party.jpg',
     excerpt: '永恆盛開的浮遊花，讓這場相遇成為最美的紀念。',
     date: '2024/01',
     cat: '手作體驗',
@@ -130,7 +130,7 @@ export const events: EventArticle[] = [
   {
     slug: 'candle-making',
     title: '單身聯誼花絮：夏日芬芳｜手作乾涸花香蠟燭',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '獨特香氣融入浪漫燭光，在手作中感受心的溫度。',
     date: '2024/08',
     cat: '手作體驗',
@@ -146,7 +146,7 @@ export const events: EventArticle[] = [
   {
     slug: 'swing-dance',
     title: '單身聯誼花絮：浪漫Swing Dance｜讓我們舞在一起',
-    img: IMG + '2023/07/ev_f567e1223d_1521796535.jpg',
+    img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg',
     excerpt: '搖擺舞的輕盈步伐，讓心情跟著律動一起飛翔！',
     date: '2024/01',
     cat: '舞蹈音樂',
@@ -162,7 +162,7 @@ export const events: EventArticle[] = [
   {
     slug: 'coffee-dating',
     title: '單身聯誼花絮：浪漫咖啡香｜咖啡不可',
-    img: IMG + '2024/09/咖啡聯誼.jpg',
+    img: BASE + '2023/10/nami-consulting.jpg',
     excerpt: '手沖咖啡的靜謐時光，讓每一滴都是對美好的期待。',
     date: '2024/09',
     cat: '美食廚藝',
@@ -178,7 +178,7 @@ export const events: EventArticle[] = [
   {
     slug: 'mystery-game-highlight',
     title: '單身聯誼花絮：推理冒險｜劇本殺沉浸體驗',
-    img: IMG + '2025/02/劇本殺-scaled.jpg',
+    img: BASE + '2023/08/escape-room.jpg',
     excerpt: '在謎題與角色中找到真實的彼此，解謎同時解鎖心動！',
     date: '2025/02',
     cat: '娛樂遊戲',
@@ -194,7 +194,7 @@ export const events: EventArticle[] = [
   {
     slug: 'alcohol-ink-highlight',
     title: '單身聯誼花絮：酒精墨水畫｜色彩流動的浪漫邂逅',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    img: BASE + '2024/04/image-photo.webp',
     excerpt: '讓顏色自由流動，讓感情也在藝術中自然綻放。',
     date: '2025/02',
     cat: '藝術創作',
@@ -210,7 +210,7 @@ export const events: EventArticle[] = [
   {
     slug: 'flash-grid-highlight',
     title: '單身聯誼花絮：閃動格子｜未來科技派對夜',
-    img: IMG + '2025/02/閃動格娜米_男.png',
+    img: BASE + '2024/01/gamestart.png',
     excerpt: '科技遊戲打破社交距離，在光影閃動中找到心動的人！',
     date: '2025/02',
     cat: '娛樂遊戲',
@@ -226,7 +226,7 @@ export const events: EventArticle[] = [
   {
     slug: 'ukulele-party',
     title: '單身聯誼花絮：烏克麗麗音樂派對｜用音符訴說心意',
-    img: IMG + '2023/07/ev_f567e1223d_1521796535.jpg',
+    img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg',
     excerpt: '清脆的烏克麗麗聲，讓每個音符都成為傳情的使者。',
     date: '2024/04',
     cat: '舞蹈音樂',
@@ -242,7 +242,7 @@ export const events: EventArticle[] = [
   {
     slug: 'pottery-dating',
     title: '單身聯誼花絮：陶藝心動｜雙手塑造愛的形狀',
-    img: IMG + '2023/09/20231014手作蘋果塔.jpg',
+    img: BASE + '2023/09/baking-01.jpg',
     excerpt: '雙手捧著濕潤的陶土，感受最原始、最真實的心動。',
     date: '2024/06',
     cat: '手作體驗',
@@ -258,7 +258,7 @@ export const events: EventArticle[] = [
   {
     slug: 'wine-tasting',
     title: '單身聯誼花絮：品酒之夜｜在葡萄酒香中相遇',
-    img: IMG + '2024/03/wine2_副本.jpg',
+    img: BASE + '2024/03/wine2.jpg',
     excerpt: '每一款葡萄酒都有自己的故事，就像每段緣分都有獨特的味道。',
     date: '2024/06',
     cat: '微醺派對',
@@ -274,7 +274,7 @@ export const events: EventArticle[] = [
   {
     slug: 'japanese-cooking',
     title: '單身聯誼花絮：日式料理體驗｜一起做壽司的浪漫',
-    img: IMG + '2024/09/咖啡聯誼.jpg',
+    img: BASE + '2023/10/nami-consulting.jpg',
     excerpt: '雙手共同製作的壽司，每一口都是合作與默契的滋味。',
     date: '2024/07',
     cat: '美食廚藝',
@@ -290,7 +290,7 @@ export const events: EventArticle[] = [
   {
     slug: 'hiking-dating',
     title: '單身聯誼花絮：陽明山健行｜在自然中找到彼此',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '青山綠水間的同行，讓心靈也跟著舒展開來。',
     date: '2024/05',
     cat: '戶外郊遊',
@@ -306,7 +306,7 @@ export const events: EventArticle[] = [
   {
     slug: 'board-game-night',
     title: '單身聯誼花絮：桌遊社交之夜｜在策略中展現魅力',
-    img: IMG + '2024/01/享樂21200x1200.png',
+    img: BASE + '2024/01/gamestart.png',
     excerpt: '桌遊的策略與歡笑，讓認識彼此變得輕鬆有趣。',
     date: '2024/02',
     cat: '娛樂遊戲',
@@ -322,7 +322,7 @@ export const events: EventArticle[] = [
   {
     slug: 'chocolate-workshop',
     title: '單身聯誼花絮：情人節巧克力手作｜甜蜜滋味傳心意',
-    img: IMG + '2023/09/帶按鷲圖-情境圖-烘烙-01.jpg',
+    img: BASE + '2023/09/baking-01.jpg',
     excerpt: '親手製作的巧克力，包裹著滿滿的心意與期待。',
     date: '2024/02',
     cat: '手作體驗',
@@ -338,7 +338,7 @@ export const events: EventArticle[] = [
   {
     slug: 'cycling-dating',
     title: '單身聯誼花絮：河濱騎行｜並肩踩出愛情的節奏',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '沿著河岸並肩騎行，讓微風帶走所有的距離感。',
     date: '2024/04',
     cat: '戶外郊遊',
@@ -354,7 +354,7 @@ export const events: EventArticle[] = [
   {
     slug: 'speed-dating-highlight',
     title: '單身聯誼花絮：Speed Dating｜一對一心動限時配對',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2024/04/image-photo-dalle.webp',
     excerpt: '每三分鐘換一個對象，讓直覺告訴你誰是對的人。',
     date: '2024/08',
     cat: '活動花絮',
@@ -370,7 +370,7 @@ export const events: EventArticle[] = [
   {
     slug: 'salsa-night',
     title: '單身聯誼花絮：Salsa 熱情之夜｜拉丁節奏找對象',
-    img: IMG + '2023/07/MTXX_MR20230715_180309740-scaled.jpg',
+    img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg',
     excerpt: '熱情奔放的Salsa舞蹈，讓你在節奏中找到心跳加速的感覺！',
     date: '2024/10',
     cat: '舞蹈音樂',
@@ -386,7 +386,7 @@ export const events: EventArticle[] = [
   {
     slug: 'bread-baking',
     title: '單身聯誼花絮：歐式麵包烘焙｜麵香中的甜蜜時光',
-    img: IMG + '2023/09/帶按鷲圖-情境圖-烘烙-01.jpg',
+    img: BASE + '2023/09/baking-01.jpg',
     excerpt: '手揉麵糰的溫度，傳遞著最真實的用心與溫柔。',
     date: '2024/07',
     cat: '手作體驗',
@@ -402,7 +402,7 @@ export const events: EventArticle[] = [
   {
     slug: 'escape-room-highlight',
     title: '單身聯誼花絮：密室逃脫｜在壓力下看見彼此',
-    img: IMG + '2025/02/劇本殺-scaled.jpg',
+    img: BASE + '2023/08/escape-room.jpg',
     excerpt: '60分鐘的密室挑戰，讓你看見最真實、最勇敢的那個他。',
     date: '2024/11',
     cat: '娛樂遊戲',
@@ -418,7 +418,7 @@ export const events: EventArticle[] = [
   {
     slug: 'flower-arrangement',
     title: '單身聯誼花絮：花藝設計｜把愛意紮進每一枝花束',
-    img: IMG + '2023/07/195087_副本.jpg',
+    img: BASE + '2023/08/pool-party.jpg',
     excerpt: '在花香中學習花藝，讓每一枝花都訴說著心意。',
     date: '2024/03',
     cat: '手作體驗',
@@ -434,7 +434,7 @@ export const events: EventArticle[] = [
   {
     slug: 'night-market-dating',
     title: '單身聯誼花絮：夜市同遊｜在燈火中尋找你的心動',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '夜市的燈光與人聲，是最浪漫的約會背景。',
     date: '2024/09',
     cat: '戶外郊遊',
@@ -450,7 +450,7 @@ export const events: EventArticle[] = [
   {
     slug: 'tea-ceremony',
     title: '單身聯誼花絮：台灣茶道｜在茶香中沉澱相遇的心',
-    img: IMG + '2024/09/咖啡聯誼.jpg',
+    img: BASE + '2023/10/nami-consulting.jpg',
     excerpt: '一壺好茶，讓時間慢下來，讓相遇更加深刻。',
     date: '2024/10',
     cat: '文化體驗',
@@ -466,7 +466,7 @@ export const events: EventArticle[] = [
   {
     slug: 'cooking-class',
     title: '單身聯誼花絮：義式料理教室｜愛從廚房開始',
-    img: IMG + '2024/09/咖啡聯誼.jpg',
+    img: BASE + '2023/10/nami-consulting.jpg',
     excerpt: '一起動手做義大利麵，讓廚房成為愛情萌芽的地方。',
     date: '2024/11',
     cat: '美食廚藝',
@@ -482,7 +482,7 @@ export const events: EventArticle[] = [
   {
     slug: 'stargazing',
     title: '單身聯誼花絮：陽明山觀星｜仰望星空遇見你',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '滿天星斗下的相遇，讓浪漫成為最真實的感動。',
     date: '2024/08',
     cat: '戶外郊遊',
@@ -498,7 +498,7 @@ export const events: EventArticle[] = [
   {
     slug: 'yoga-dating',
     title: '單身聯誼花絮：雙人瑜珈｜在呼吸中感受彼此',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '同步的呼吸與動作，讓身體先感受到心的默契。',
     date: '2024/07',
     cat: '運動健身',
@@ -514,7 +514,7 @@ export const events: EventArticle[] = [
   {
     slug: 'lantern-festival',
     title: '單身聯誼花絮：手作天燈｜把願望送上天的相遇',
-    img: IMG + '2023/07/195087_副本.jpg',
+    img: BASE + '2023/08/pool-party.jpg',
     excerpt: '親手寫下心願，讓天燈帶著愛意飛向夜空。',
     date: '2024/02',
     cat: '文化體驗',
@@ -530,7 +530,7 @@ export const events: EventArticle[] = [
   {
     slug: 'painting-class',
     title: '單身聯誼花絮：水彩畫班｜用色彩描繪心中的你',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    img: BASE + '2024/04/image-photo.webp',
     excerpt: '每一筆色彩都是心情的表達，讓畫布成為認識彼此的窗口。',
     date: '2024/04',
     cat: '藝術創作',
@@ -546,7 +546,7 @@ export const events: EventArticle[] = [
   {
     slug: 'karaoke-night',
     title: '單身聯誼花絮：KTV歡唱之夜｜用歌聲傳遞心意',
-    img: IMG + '2023/07/ev_f567e1223d_1521796535.jpg',
+    img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg',
     excerpt: '麥克風一拿起，所有的緊張都隨著旋律一起消散。',
     date: '2024/05',
     cat: '舞蹈音樂',
@@ -562,7 +562,7 @@ export const events: EventArticle[] = [
   {
     slug: 'museum-dating',
     title: '單身聯誼花絮：美術館約會｜在藝術前感受心的共鳴',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    img: BASE + '2024/04/image-photo.webp',
     excerpt: '藝術作品前的對話，讓彼此的心靈得以相遇。',
     date: '2024/06',
     cat: '文化體驗',
@@ -578,7 +578,7 @@ export const events: EventArticle[] = [
   {
     slug: 'sushi-rolling',
     title: '單身聯誼花絮：手卷壽司同樂｜在食材中找到共同話題',
-    img: IMG + '2024/09/咖啡聯誼.jpg',
+    img: BASE + '2023/10/nami-consulting.jpg',
     excerpt: '一起捲出美味的手卷，捲出屬於兩人的美好故事。',
     date: '2024/09',
     cat: '美食廚藝',
@@ -594,7 +594,7 @@ export const events: EventArticle[] = [
   {
     slug: 'terrarium-workshop',
     title: '單身聯誼花絮：苔蘚生態瓶｜把自然帶回家的相遇',
-    img: IMG + '2023/07/195087_副本.jpg',
+    img: BASE + '2023/08/pool-party.jpg',
     excerpt: '一個小小的生態瓶，裝載了這場相遇最美的記憶。',
     date: '2024/10',
     cat: '手作體驗',
@@ -610,7 +610,7 @@ export const events: EventArticle[] = [
   {
     slug: 'archery-dating',
     title: '單身聯誼花絮：室內射箭｜專注的眼神最迷人',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '張弓搭箭的專注瞬間，是最真實的魅力展現。',
     date: '2024/11',
     cat: '運動健身',
@@ -626,7 +626,7 @@ export const events: EventArticle[] = [
   {
     slug: 'pottery-wheel',
     title: '單身聯誼花絮：拉坯體驗｜雙手之間的溫度',
-    img: IMG + '2023/09/20231014手作蘋果塔.jpg',
+    img: BASE + '2023/09/baking-01.jpg',
     excerpt: '轉動的陶輪上，雙手的相遇創造出最獨特的作品。',
     date: '2024/12',
     cat: '手作體驗',
@@ -642,7 +642,7 @@ export const events: EventArticle[] = [
   {
     slug: 'cooking-bento',
     title: '單身聯誼花絮：便當製作｜為你準備一份用心的餐盒',
-    img: IMG + '2024/09/咖啡聯誼.jpg',
+    img: BASE + '2023/10/nami-consulting.jpg',
     excerpt: '親手製作的便當，是最溫暖的心意表達。',
     date: '2025/01',
     cat: '美食廚藝',
@@ -658,7 +658,7 @@ export const events: EventArticle[] = [
   {
     slug: 'christmas-party',
     title: '單身聯誼花絮：聖誕交換禮物派對｜在驚喜中相遇',
-    img: IMG + '2024/01/享樂21200x1200.png',
+    img: BASE + '2024/01/gamestart.png',
     excerpt: '包裝在彩紙下的驚喜，和認識新朋友的心情一樣令人期待。',
     date: '2024/12',
     cat: '活動花絮',
@@ -674,7 +674,7 @@ export const events: EventArticle[] = [
   {
     slug: 'new-year-party',
     title: '單身聯誼花絮：跨年許願派對｜新的一年從遇見你開始',
-    img: IMG + '2024/03/wine2_副本.jpg',
+    img: BASE + '2024/03/wine2.jpg',
     excerpt: '在倒數聲中許下心願，新的一年從最美的相遇開始。',
     date: '2024/12',
     cat: '活動花絮',
@@ -690,7 +690,7 @@ export const events: EventArticle[] = [
   {
     slug: 'spring-outing',
     title: '單身聯誼花絮：春日野餐｜在花海中相遇的季節',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '陽光、花香與你，是這個春天最美好的記憶。',
     date: '2024/03',
     cat: '戶外郊遊',
@@ -706,7 +706,7 @@ export const events: EventArticle[] = [
   {
     slug: 'summer-bbq',
     title: '單身聯誼花絮：仲夏烤肉趴｜煙火氣息中的心動瞬間',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '炭火的溫度，讓夏夜的相遇更加火熱難忘。',
     date: '2024/07',
     cat: '美食廚藝',
@@ -722,7 +722,7 @@ export const events: EventArticle[] = [
   {
     slug: 'autumn-hike',
     title: '單身聯誼花絮：秋日賞楓健行｜金黃色的相遇',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '楓葉落下的那一刻，是秋天給你最浪漫的禮物。',
     date: '2024/11',
     cat: '戶外郊遊',
@@ -738,7 +738,7 @@ export const events: EventArticle[] = [
   {
     slug: 'calligraphy-dating',
     title: '單身聯誼花絮：書法體驗｜在筆墨間感受沉靜的美',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    img: BASE + '2024/04/image-photo.webp',
     excerpt: '筆尖觸碰紙面的那一刻，心也跟著沉靜下來。',
     date: '2024/06',
     cat: '文化體驗',
@@ -754,7 +754,7 @@ export const events: EventArticle[] = [
   {
     slug: 'perfume-workshop',
     title: '單身聯誼花絮：個人香水調製｜找到屬於你的專屬氣息',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '一款屬於自己的香水，是最獨特的個性宣言。',
     date: '2024/07',
     cat: '手作體驗',
@@ -770,7 +770,7 @@ export const events: EventArticle[] = [
   {
     slug: 'origami-dating',
     title: '單身聯誼花絮：摺紙藝術｜一千隻紙鶴背後的心意',
-    img: IMG + '2023/07/195087_副本.jpg',
+    img: BASE + '2023/08/pool-party.jpg',
     excerpt: '每一個摺痕都是專注與用心，摺紙中感受最細膩的溫柔。',
     date: '2024/05',
     cat: '手作體驗',
@@ -786,7 +786,7 @@ export const events: EventArticle[] = [
   {
     slug: 'movie-night',
     title: '單身聯誼花絮：露天電影之夜｜在星空下共賞電影',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '在星空下一起看電影，是最浪漫的約會方式。',
     date: '2024/09',
     cat: '活動花絮',
@@ -802,7 +802,7 @@ export const events: EventArticle[] = [
   {
     slug: 'balloon-art',
     title: '單身聯誼花絮：氣球藝術造型｜用笑聲打開心門',
-    img: IMG + '2024/01/享樂21200x1200.png',
+    img: BASE + '2024/01/gamestart.png',
     excerpt: '氣球的繽紛色彩，讓每一刻都充滿了歡笑與驚喜。',
     date: '2024/04',
     cat: '手作體驗',
@@ -818,7 +818,7 @@ export const events: EventArticle[] = [
   {
     slug: 'glass-painting',
     title: '單身聯誼花絮：彩繪玻璃杯｜用色彩描繪心中的你',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    img: BASE + '2024/04/image-photo.webp',
     excerpt: '親手彩繪的杯子，讓每一口飲料都是對相遇的紀念。',
     date: '2024/10',
     cat: '藝術創作',
@@ -834,7 +834,7 @@ export const events: EventArticle[] = [
   {
     slug: 'morning-market',
     title: '單身聯誼花絮：假日早市同遊｜在生活中認識彼此',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '早市的煙火氣，是認識一個人最真實的生活切片。',
     date: '2024/05',
     cat: '戶外郊遊',
@@ -850,7 +850,7 @@ export const events: EventArticle[] = [
   {
     slug: 'line-dance',
     title: '單身聯誼花絮：排舞同樂｜跟著節奏一起動起來',
-    img: IMG + '2023/07/ev_f567e1223d_1521796535.jpg',
+    img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg',
     excerpt: '整齊的舞步中，感受集體共鳴的美好力量。',
     date: '2024/06',
     cat: '舞蹈音樂',
@@ -866,7 +866,7 @@ export const events: EventArticle[] = [
   {
     slug: 'diy-soap',
     title: '單身聯誼花絮：手工皂製作｜把心意揉進每一塊香皂',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '帶著花香的手工皂，是最溫柔的一份心意。',
     date: '2024/08',
     cat: '手作體驗',
@@ -882,7 +882,7 @@ export const events: EventArticle[] = [
   {
     slug: 'rock-climbing',
     title: '單身聯誼花絮：攀岩挑戰｜在高處看見更好的彼此',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/04/image-consult-1v1.jpg',
     excerpt: '在挑戰高度的過程中，展現最勇敢的自己。',
     date: '2024/10',
     cat: '運動健身',
@@ -898,7 +898,7 @@ export const events: EventArticle[] = [
   {
     slug: 'drumming-circle',
     title: '單身聯誼花絮：非洲鼓同樂｜讓節奏帶動心的律動',
-    img: IMG + '2023/07/ev_f567e1223d_1521796535.jpg',
+    img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg',
     excerpt: '鼓聲震動著空氣，也震動著每一顆渴望連結的心。',
     date: '2024/11',
     cat: '舞蹈音樂',
@@ -914,7 +914,7 @@ export const events: EventArticle[] = [
   {
     slug: 'watercolor-landscape',
     title: '單身聯誼花絮：戶外寫生｜用水彩記錄相遇的風景',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    img: BASE + '2024/04/image-photo.webp',
     excerpt: '在最美的風景前揮灑色彩，記錄下相遇這一刻。',
     date: '2024/04',
     cat: '藝術創作',
@@ -930,7 +930,7 @@ export const events: EventArticle[] = [
   {
     slug: 'magic-workshop',
     title: '單身聯誼花絮：魔術教學｜讓心動從驚喜開始',
-    img: IMG + '2024/01/享樂21200x1200.png',
+    img: BASE + '2024/01/gamestart.png',
     excerpt: '學會一個魔術，就學會了製造心動的方法。',
     date: '2024/03',
     cat: '娛樂遊戲',

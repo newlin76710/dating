@@ -19,7 +19,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-gray-200 bg-white">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
-        <a href="/" className="relative block h-10 w-[150px] shrink-0 sm:h-[52px] sm:w-[180px]">
+        <a href="/" className="relative block h-[52px] w-[200px] shrink-0 sm:h-[70px] sm:w-[265px]">
           <img
             src="/images/logo.png"
             alt="戀愛小秘書娜米"

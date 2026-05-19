@@ -1,4 +1,5 @@
 import { SiteShell } from '@/components/site-shell';
+import { TestimonialCarousel } from '@/components/testimonial-carousel';
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
 const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
@@ -228,10 +229,23 @@ export default function HomePage() {
                       lineHeight: '35px',
                       color: '#000000',
                       margin: '12px 0 0 0',
-                      padding: '0 15% 2% 0',
+                      padding: '0 15% 0 0',
                     }}
                   >
-                    協助超過 4,000 位未婚男女配對成功！陪你找到真愛、實現幸福
+                    協助超過 4,000 位未婚男女配對成功！
+                  </p>
+                  <p
+                    style={{
+                      ...roboto,
+                      fontSize: 18,
+                      fontWeight: 400,
+                      lineHeight: '35px',
+                      color: '#000000',
+                      margin: 0,
+                      padding: '0 15% 0 0',
+                    }}
+                  >
+                    陪你找到真愛、實現幸福
                   </p>
                   <p
                     style={{
@@ -255,13 +269,13 @@ export default function HomePage() {
                       display: 'inline-block',
                       backgroundColor: '#2DC861',
                       color: '#FFFFFF',
-                      fontSize: 16,
+                      fontSize: 20,
                       fontWeight: 400,
                       textTransform: 'uppercase',
                       letterSpacing: '1.95px',
-                      lineHeight: '22px',
+                      lineHeight: '26px',
                       borderRadius: 12,
-                      padding: '16px 70px',
+                      padding: '18px 70px',
                       textDecoration: 'none',
                       marginTop: 16,
                     }}
@@ -428,50 +442,34 @@ export default function HomePage() {
               形象顧問提升你的吸引力
             </h2>
             <p style={{ ...roboto, fontSize: 18, fontWeight: 300, lineHeight: '25px', color: '#000000', textAlign: 'center', padding: '0 15% 3%', margin: 0 }}>
-              外在形象是吸引異性的第一步，讓我們的形象顧問團隊協助你全方位提升魅力！
+              戀愛小秘書團隊提供「約會魅力形象指導」及「形象改造計畫」。我們也提供形象風格穿搭、情感教育、投資理財等講座，讓你更能自我提升與學習！
             </p>
 
-            {/* 3-image triptych — images with hover overlay effect */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 0, width: '110.25%', marginLeft: '-5.125%' }}>
+            {/* 3-col article cards */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28, marginTop: 8 }}>
               {consultServices.map((s) => (
                 <a
                   key={s.title}
                   href={LINE_URL}
-                  style={{ position: 'relative', display: 'block', overflow: 'hidden', aspectRatio: '1', textDecoration: 'none' }}
-                  className="consult-card"
+                  style={{ textDecoration: 'none', color: 'inherit', display: 'block', borderRadius: 4, overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.12)', backgroundColor: '#fff' }}
                 >
-                  <img
-                    src={s.img}
-                    alt={s.title}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.8s' }}
-                  />
-                  {/* Overlay on hover */}
-                  <div
-                    className="consult-overlay"
-                    style={{
-                      position: 'absolute', inset: 0,
-                      display: 'flex', flexDirection: 'column',
-                      alignItems: 'center', justifyContent: 'center',
-                      padding: 20,
-                      backgroundColor: 'rgba(4, 144, 137, 0.85)',
-                      opacity: 0,
-                      transition: 'opacity 0.3s',
-                      textAlign: 'center',
-                    }}
-                  >
-                    <h3 style={{ ...playfair, fontSize: 20, fontWeight: 'bold', color: '#fff', margin: '0 0 12px' }}>{s.title}</h3>
-                    <p style={{ ...roboto, fontSize: 14, color: 'rgba(255,255,255,0.9)', lineHeight: '1.6', margin: 0 }}>{s.desc}</p>
+                  <div style={{ position: 'relative', paddingBottom: '65%', overflow: 'hidden' }}>
+                    <img
+                      src={s.img}
+                      alt={s.title}
+                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
+                    />
+                  </div>
+                  <div style={{ padding: '16px 20px 20px' }}>
+                    <h3 style={{ ...playfair, fontSize: 18, fontWeight: 700, color: '#1a1a1a', margin: '0 0 8px', lineHeight: '1.4' }}>{s.title}</h3>
+                    <p style={{ ...roboto, fontSize: 14, color: '#555', margin: 0, lineHeight: '1.6' }}>{s.desc}</p>
+                    <p style={{ ...roboto, fontSize: 13, fontWeight: 500, color: '#049089', margin: '10px 0 0', textAlign: 'right' }}>形象改造 »</p>
                   </div>
                 </a>
               ))}
             </div>
           </div>
         </section>
-
-        <style>{`
-          .consult-card:hover .consult-overlay { opacity: 1 !important; }
-          .consult-card:hover img { transform: scale(1.05); }
-        `}</style>
 
         {/* ── 戀愛數字密碼 ──────────────────────────────────────────────────── */}
         {/*
@@ -494,15 +492,18 @@ export default function HomePage() {
             gap: 0,
             alignItems: 'stretch',
             marginTop: 10,
+            maxWidth: 1440,
+            margin: '10px auto 0',
           }}>
             {/* Left col: worries */}
             <div style={{
-              flex: 1,
+              flex: '0 0 28%',
+              maxWidth: 400,
               background: 'linear-gradient(90deg, rgba(255,255,255,0) 100%, #FFFFFF 40%)',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              padding: '3% 5%',
+              padding: '3% 4% 3% 6%',
             }}>
               <div style={{ ...roboto, fontSize: 18, fontWeight: 400, lineHeight: '35px', color: '#000000' }}>
                 <p style={{ margin: '5px 5px 5px 5px' }}>・♡ 你正在為愛情煩惱嗎？ ♡・</p>
@@ -516,7 +517,7 @@ export default function HomePage() {
             </div>
 
             {/* Middle col: Nami photo */}
-            <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
+            <div style={{ flex: 1, overflow: 'hidden', position: 'relative', minWidth: 0 }}>
               <img
                 src={BASE + '2023/10/nami-consulting.jpg'}
                 alt="戀愛小秘書娜米諮詢"
@@ -526,12 +527,13 @@ export default function HomePage() {
 
             {/* Right col: helps */}
             <div style={{
-              flex: 1,
+              flex: '0 0 28%',
+              maxWidth: 400,
               background: 'linear-gradient(90deg, rgba(255,255,255,0) 100%, #FFFFFF 40%)',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              padding: '3% 5%',
+              padding: '3% 6% 3% 4%',
             }}>
               <div style={{ ...roboto, fontSize: 18, fontWeight: 400, lineHeight: '35px', color: '#000000' }}>
                 <p style={{ margin: '5px 5px 5px 5px' }}>・♡ 娜米老師幫你 ♡・</p>
@@ -626,13 +628,13 @@ export default function HomePage() {
               感謝媒體對戀愛小秘書及娜米的採訪報導
             </p>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: 32, marginTop: 40 }}>
+            <div style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', alignItems: 'center', gap: 20, marginTop: 40 }}>
               {mediaLogos.map((m) => (
-                <div key={m.name} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div key={m.name} style={{ flex: '1 1 0', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 50, maxWidth: 130 }}>
                   <img
                     src={m.img}
                     alt={m.name}
-                    style={{ maxHeight: 50, maxWidth: 120, objectFit: 'contain', filter: 'grayscale(30%)' }}
+                    style={{ width: '100%', maxHeight: 48, objectFit: 'contain', filter: 'grayscale(30%)' }}
                   />
                 </div>
               ))}
@@ -654,31 +656,9 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 32px', marginTop: '1%' }}>
+          <div style={{ maxWidth: 1200, margin: '2% auto 0', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 28px' }}>
             {endorserCols.map((col, ci) => (
-              <div key={ci} style={{ marginTop: ci > 0 ? '8%' : 0 }}>
-                {col.map((e, ei) => (
-                  <div
-                    key={e.name}
-                    style={{
-                      backgroundColor: '#D2E0DE',
-                      borderRadius: 10,
-                      padding: 25,
-                      marginBottom: ei < col.length - 1 ? 20 : 0,
-                    }}
-                  >
-                    <p style={{ fontSize: 15, fontWeight: 300, color: '#000000', margin: '0 0 12px', lineHeight: '1.6' }}>
-                      {e.quote}
-                    </p>
-                    <p style={{ fontSize: 15, fontWeight: 400, fontStyle: 'italic', color: '#049089', margin: 0 }}>
-                      {e.name}
-                    </p>
-                    <p style={{ fontSize: 15, fontWeight: 400, fontStyle: 'italic', color: '#049089', margin: 0 }}>
-                      {e.role}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <TestimonialCarousel key={ci} items={col} />
             ))}
           </div>
         </section>
@@ -698,9 +678,9 @@ export default function HomePage() {
             <div
               className="hidden md:block"
               style={{
-                width: '50%',
+                width: '35%',
                 flexShrink: 0,
-                minHeight: 500,
+                minHeight: 480,
                 backgroundImage: `url(${BASE}2023/03/cta_bottom.jpg)`,
                 backgroundPosition: 'top center',
                 backgroundRepeat: 'no-repeat',
@@ -711,16 +691,16 @@ export default function HomePage() {
             {/* Right: content */}
             <div className="cta-right" style={{
               flex: 1,
-              padding: '15% 30% 15% 20%',
+              padding: '12% 22% 12% 8%',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
             }}>
               <h3 style={{ ...poppins, fontSize: 22, fontWeight: 400, lineHeight: '26px', letterSpacing: '1.6px', color: '#049089', margin: 0, textAlign: 'start' }}>
-                追求脫單，先勇敢跨出你的第一步吧！
-              </h3>
-              <h2 style={{ ...poppins, fontSize: 55, fontWeight: 500, textTransform: 'uppercase', lineHeight: '1.1em', letterSpacing: '1.18px', color: '#090808', margin: '12px 0 0', padding: 0 }}>
                 別再為繼續單身找藉口！
+              </h3>
+              <h2 style={{ ...poppins, fontSize: 50, fontWeight: 500, lineHeight: '1.2em', letterSpacing: '1.18px', color: '#090808', margin: '12px 0 0', padding: 0 }}>
+                追求脫單，先勇敢跨出你的第一步吧！
               </h2>
               <p style={{ ...poppins, fontSize: 16, fontWeight: 300, lineHeight: '20px', letterSpacing: '1px', color: '#000000', margin: '12px 0 0', maxWidth: 310 }}>
                 建議以認識新朋友的心態，積極參與活動，才能真正為自己帶來戀愛的機會！

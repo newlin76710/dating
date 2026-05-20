@@ -326,7 +326,7 @@ export default function HomePage() {
           <div className="steps-row" style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', padding: '0 24px' }}>
 
             {/* Left: heading col */}
-            <div style={{ width: '25%', flexShrink: 0, paddingLeft: '10%' }}>
+            <div style={{ width: '25%', flexShrink: 0, paddingLeft: '0%' }}>
               <h2 style={{ ...playfair, fontSize: 40, fontWeight: 'normal', lineHeight: '58px', letterSpacing: '2.24px', color: '#000000', margin: 0 }}>
                 只要 3 步驟
               </h2>
@@ -479,7 +479,7 @@ export default function HomePage() {
           Right col: transparent gradient + text + #FF93A6 button
         */}
         <section style={{ marginTop: 30 }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '10px 0 0' }}>
+          <div style={{ maxWidth: 1000, margin: '0 auto', padding: '10px 0 0' }}>
             <h2 style={{ ...playfair, fontSize: 40, fontWeight: 400, lineHeight: '50px', letterSpacing: '2.24px', color: '#049089', textAlign: 'center', margin: '10px 0 0', padding: '10px 0' }}>
               戀愛數字密碼諮詢
             </h2>
@@ -492,18 +492,18 @@ export default function HomePage() {
             gap: 0,
             alignItems: 'stretch',
             marginTop: 10,
-            maxWidth: 1440,
+            maxWidth: 1220,
             margin: '10px auto 0',
           }}>
             {/* Left col: worries */}
             <div style={{
               flex: '0 0 28%',
-              maxWidth: 400,
+              maxWidth: 500,
               background: 'linear-gradient(90deg, rgba(255,255,255,0) 100%, #FFFFFF 40%)',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              padding: '3% 4% 3% 6%',
+
             }}>
               <div style={{ ...roboto, fontSize: 18, fontWeight: 400, lineHeight: '35px', color: '#000000' }}>
                 <p style={{ margin: '5px 5px 5px 5px' }}>・♡ 你正在為愛情煩惱嗎？ ♡・</p>
@@ -699,7 +699,7 @@ export default function HomePage() {
               <h3 style={{ ...poppins, fontSize: 22, fontWeight: 400, lineHeight: '26px', letterSpacing: '1.6px', color: '#049089', margin: 0, textAlign: 'start' }}>
                 別再為繼續單身找藉口！
               </h3>
-              <h2 style={{ ...poppins, fontSize: 50, fontWeight: 500, lineHeight: '1.2em', letterSpacing: '1.18px', color: '#090808', margin: '12px 0 0', padding: 0 }}>
+              <h2 style={{ ...poppins, fontSize: 44, fontWeight: 500, lineHeight: '1.2em', letterSpacing: '1.18px', color: '#090808', margin: '12px 0 0', padding: 0 }}>
                 追求脫單，先勇敢跨出你的第一步吧！
               </h2>
               <p style={{ ...poppins, fontSize: 16, fontWeight: 300, lineHeight: '20px', letterSpacing: '1px', color: '#000000', margin: '12px 0 0', maxWidth: 310 }}>

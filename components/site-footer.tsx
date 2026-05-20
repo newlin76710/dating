@@ -8,13 +8,6 @@ export function SiteFooter() {
         <div className="grid gap-10 lg:grid-cols-[1.6fr_0.8fr_0.6fr]">
           {/* Logo + description */}
           <div>
-            <a href="/" className="inline-block mb-4">
-              <img
-                src="/images/logo.png"
-                alt="戀愛小秘書娜米"
-                className="h-10 w-auto object-contain brightness-0 invert"
-              />
-            </a>
             <p className="mt-2 max-w-xs text-sm leading-7 text-white/70">
               單身聯誼活動、交友平台、相親認識異性、找對象的交友網站、婚友社、脫單
             </p>

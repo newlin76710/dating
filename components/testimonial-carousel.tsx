@@ -38,7 +38,7 @@ export function TestimonialCarousel({ items }: { items: Endorser[] }) {
         ›
       </button>
 
-      <p style={{ fontSize: 15, fontWeight: 300, color: '#000000', margin: '0 0 20px', lineHeight: '1.8', minHeight: 155 }}>
+      <p style={{ fontSize: 15, fontWeight: 300, color: '#000000', margin: '0 0 -25px', lineHeight: '1.8', minHeight: 155 }}>
         {item.quote}
       </p>
       <p style={{ fontSize: 15, fontWeight: 400, fontStyle: 'italic', color: '#049089', margin: 0 }}>

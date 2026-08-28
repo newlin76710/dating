@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SiteShell } from '@/components/site-shell';
+import { PodcastEpisodes, type PodcastEpisode } from '@/components/podcast-episodes';
 
 export const metadata: Metadata = {
   title: '戀愛會社',
@@ -19,14 +20,14 @@ const painPoints = [
   '發現自己總是遇見不對的人',
 ];
 
-const episodeCovers = [
-  BASE + '2024/04/ep4-cover.jpg',
-  BASE + '2024/04/ep14-cover.jpg',
-  BASE + '2024/04/ep8-cover.jpg',
-  BASE + '2024/04/ep18-cover.jpg',
-  BASE + '2024/04/ep10-cover.jpg',
-  BASE + '2024/04/ep17-cover.jpg',
-  BASE + '2024/04/ep15-cover.jpg',
+const episodeCovers: PodcastEpisode[] = [
+  { img: BASE + '2024/04/ep4-cover.jpg', youtubeId: 'Hgt2xCmHs-Y' },
+  { img: BASE + '2024/04/ep14-cover.jpg', youtubeId: 'xpiGap5iXYc' },
+  { img: BASE + '2024/04/ep8-cover.jpg', youtubeId: 'idknS7U_2Ms' },
+  { img: BASE + '2024/04/ep18-cover.jpg', youtubeId: 'mAz5yLuF0Q4' },
+  { img: BASE + '2024/04/ep10-cover.jpg', youtubeId: 'nfUpJhCfLns' },
+  { img: BASE + '2024/04/ep17-cover.jpg', youtubeId: 'JktJP9oDKFU' },
+  { img: BASE + '2024/04/ep15-cover.jpg', youtubeId: '6LYqUQ8YR7s' },
 ];
 
 const steps = [
@@ -131,6 +132,19 @@ export default function PodcastPage() {
   return (
     <SiteShell>
       <main>
+        {/* Top banner */}
+        <a
+          href="#form"
+          className="relative block w-full overflow-hidden"
+          style={{ height: 400, backgroundColor: '#833ca3' }}
+        >
+          <img
+            src={BASE + '2024/03/podcast-hero-banner.png'}
+            alt="戀愛會社節目"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </a>
+
         {/* Hero */}
         <section style={{ background: '#049089' }} className="py-16">
           <div className="max-w-[900px] mx-auto px-6 sm:px-8 lg:px-10 text-center">
@@ -207,18 +221,7 @@ export default function PodcastPage() {
         <section className="bg-gray-50 py-16">
           <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10">
             <h2 className="text-center text-2xl font-bold sm:text-3xl" style={{ color: '#049089' }}>戀愛會社節目</h2>
-            <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {episodeCovers.map((img, i) => (
-                <a key={i} href={LINE_URL} className="block overflow-hidden rounded-xl group">
-                  <img
-                    src={img}
-                    alt="戀愛會社節目"
-                    className="aspect-square w-full object-cover transition duration-300 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </a>
-              ))}
-            </div>
+            <PodcastEpisodes episodes={episodeCovers} />
           </div>
         </section>
 
@@ -266,7 +269,7 @@ export default function PodcastPage() {
         </section>
 
         {/* Consultation form */}
-        <section className="bg-white py-16">
+        <section id="form" className="bg-white py-16">
           <div className="max-w-[700px] mx-auto px-6 sm:px-8 lg:px-10">
             <h2 className="text-center text-2xl font-bold sm:text-3xl" style={{ color: '#049089' }}>我要參加戀愛會社節目</h2>
             <p className="mt-2 text-center text-sm font-semibold text-gray-500">戀愛數字密碼諮詢服務</p>

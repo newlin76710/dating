@@ -45,23 +45,32 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   );
 }
 
-const indoor  = articles.filter(a => ['室內活動', '娛樂遊戲', '藝術創作'].includes(a.cat)).slice(0, 6);
-const outdoor = articles.filter(a => a.cat === '戶外郊遊').slice(0, 3);
-const craft   = articles.filter(a => a.cat === '手作體驗').slice(0, 6);
+// Exact article selections matching ek21.com/dating/party structure
+const INDOOR_SLUGS  = ['mystery-adventure', 'alcohol-ink-art', 'flash-grid-party', 'photography-dating', 'coffee-workshop', 'fragrant-candle'];
+const OUTDOOR_SLUGS = ['stargazing-night', 'mountain-hiking', 'cycling-date'];
+const CRAFT_SLUGS   = ['nurse-dating-apple-tart', 'macaron-painting', 'pottery-workshop', 'floating-flower', 'flower-arrangement', 'ikebana-workshop'];
+const WSHOP_SLUGS   = ['tainan-culture-trip', 'matcha-ceremony', 'calligraphy-workshop'];
+const REP4_SLUGS    = ['tango-party', 'cocktail-party', 'game-start-party', 'nurse-dating-apple-tart'];
+
+const pick = (slugs: string[]) => slugs.map(s => articles.find(a => a.slug === s)!).filter(Boolean);
+
+const indoor  = pick(INDOOR_SLUGS);
+const outdoor = pick(OUTDOOR_SLUGS);
+const craft   = pick(CRAFT_SLUGS);
 const feat1   = articles.find(a => a.slug === 'cocktail-party')!;
 const feat2   = articles.find(a => a.slug === 'french-cooking')!;
 const feat3   = articles.find(a => a.slug === 'teppanyaki-dinner')!;
-const wshop   = articles.filter(a => a.cat === '文化體驗').slice(0, 3);
-const rep4    = articles.filter(a => ['舞蹈音樂', '美食廚藝'].includes(a.cat)).slice(0, 4);
-const repList = articles.filter(a => ['舞蹈音樂', '美食廚藝'].includes(a.cat)).slice(4);
+const wshop   = pick(WSHOP_SLUGS);
+const rep4    = pick(REP4_SLUGS);
+const repList = articles.filter(a => ['舞蹈音樂', '美食廚藝'].includes(a.cat));
 
 const VIDEO_THUMBS = [
-  { img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg', label: '單身聯誼活動介紹' },
-  { img: BASE + '2024/04/image-course-dalle.webp',        label: '微醺派對活動報導' },
-  { img: BASE + '2023/12/5428FC8C-F122-41da-9737-D5FA3F69EA5A.png', label: '娛樂遊戲聯誼花絮' },
-  { img: BASE + '2024/04/image-photo-dalle.webp',          label: '戶外郊遊聯誼介紹' },
-  { img: BASE + '2023/10/nami-consulting.jpg',             label: '娜米顧問諮詢服務' },
-  { img: BASE + '2023/08/escape-room.jpg',                 label: '密室逃脫聯誼花絮' },
+  { img: BASE + '2023/07/MTXX_MR20230715_180309740-300x200.jpg', label: '單身聯誼活動介紹' },
+  { img: BASE + '2024/03/wine2_副本-300x300.jpg',               label: '微醺派對活動報導' },
+  { img: BASE + '2024/07/桌遊-300x157.png',                     label: '娛樂遊戲聯誼花絮' },
+  { img: BASE + '2023/07/BHWQOX46V746ZQS-300x200.png',          label: '戶外郊遊聯誼介紹' },
+  { img: BASE + '2023/10/nami-consulting.jpg',                   label: '娜米顧問諮詢服務' },
+  { img: BASE + '2025/02/劇本殺-300x169.jpg',                   label: '推理冒險聯誼花絮' },
 ];
 
 export default function PartyPage() {
@@ -74,19 +83,19 @@ export default function PartyPage() {
           {([
             {
               href: '/party/tango-party',
-              img:  BASE + '2023/07/MTXX_MR20230715_180309740.jpg',
+              img:  BASE + '2023/07/MTXX_MR20230715_180309740-300x200.jpg',
               title: '【單身聯誼】一起搖擺吧',
               desc:  '探戈派對聯誼，浪漫共舞，在音樂節奏中找到心動的人！',
             },
             {
               href: '/party/mystery-adventure',
-              img:  BASE + '2023/08/escape-room.jpg',
+              img:  BASE + '2025/02/劇本殺-300x169.jpg',
               title: '【單身聯誼】Speed Dating',
               desc:  '一對一精緻速配，深度認識最合拍的靈魂伴侶！',
             },
             {
               href: '/party/cycling-date',
-              img:  BASE + '2024/04/image-photo-dalle.webp',
+              img:  BASE + '2023/07/BHWQOX46V746ZQS-300x200.png',
               title: '【單身聯誼】共享自然風光的輕鬆時光',
               desc:  '河岸單車並肩前行，感受最輕鬆浪漫的單身聯誼！',
             },

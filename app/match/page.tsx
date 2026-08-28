@@ -245,7 +245,7 @@ const features = [
 
 const successCases = [
   {
-    male: { name: '何先生', job: '科技業工程師', img: IMG + '2023/03/1678493288998-875x1024.jpg' },
+    male: { name: '何先生', job: '科技業工程師', img: BASE + '2023/02/male-portrait-glasses.jpg' },
     female: { name: '陳小姐', job: '護理師', img: IMG + '2023/09/188280_0.jpg' },
     days: 45,
     quote: '真的很感謝娜米，我原本不相信這種配對服務，但在第三次活動認識了她之後，才發現原來遇到對的人真的有一種說不出的自然。現在我們已經交往半年了，每天都很幸福。',

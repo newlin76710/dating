@@ -273,7 +273,7 @@ export default function PodcastPage() {
             <p className="mt-4 text-center text-sm leading-7 text-gray-600">
               歡迎分享任何關於戀愛的疑難雜症，無論是約會、搭訕、把妹、穿搭⋯⋯等問題，都可以匿名留言給我，記得附上你的生日密碼，我和電獺大叔會在節目中為各位解惑喔！
             </p>
-            <form className="mt-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <div className="mt-8 space-y-5">
               <div>
                 <label className="block text-sm font-semibold text-gray-700">怎麼稱呼您？（化名、綽號皆可）*</label>
                 <p className="mt-1 text-xs text-gray-400">留言將在節目中被公開討論，請盡量使用化名</p>
@@ -302,7 +302,7 @@ export default function PodcastPage() {
               >
                 已填寫完整，提交給戀愛會社
               </a>
-            </form>
+            </div>
           </div>
         </section>
 
@@ -315,7 +315,6 @@ export default function PodcastPage() {
                 src={BASE + '2023/03/500x500_5.jpg'}
                 alt="娜米老師"
                 className="mx-auto w-full max-w-[280px] rounded-2xl object-cover"
-                loading="lazy"
               />
               <div className="space-y-8">
                 <div>
@@ -374,7 +373,6 @@ export default function PodcastPage() {
                 src={BASE + '2023/03/500x500_2.jpg'}
                 alt="娜米老師 媒體與演講經歷"
                 className="w-full max-w-[200px] shrink-0 rounded-2xl object-cover"
-                loading="lazy"
               />
               <div>
                 <h2 className="text-lg font-bold" style={{ color: '#049089' }}>媒體採訪與演講經歷</h2>

@@ -18,7 +18,7 @@ export const events: EventArticle[] = [
   {
     slug: 'apple-tart-nurse',
     title: '單身聯誼花絮：手作玫瑰蘋果塔｜與護理師之約',
-    img: BASE + '2023/09/apple-tart-rose.jpg',
+    img: BASE + '2023/09/apple-tart-nurse.jpg',
     excerpt: '一起玩手作、揮灑甜蜜，一直都是我們男女學員的最愛。',
     date: '2023/09',
     cat: '手作體驗',
@@ -34,7 +34,7 @@ export const events: EventArticle[] = [
   {
     slug: 'cocktail-party',
     title: '單身聯誼花絮：愛情調酒派對-微醺午後時光',
-    img: BASE + '2024/02/wine1.png',
+    img: BASE + '2024/03/wine2.jpg',
     excerpt: '在酒香四溢的午後，娜米和戀愛小秘書為大家開拍了「愛情調酒派對」美妙場景。',
     date: '2024/03',
     cat: '微醺派對',
@@ -50,7 +50,7 @@ export const events: EventArticle[] = [
   {
     slug: 'game-start-party-highlight',
     title: '單身聯誼活動【Game START 派對花絮】電動激情降低社交尷尬感',
-    img: BASE + '2024/01/gamestart-party.jpg',
+    img: BASE + '2024/01/game-start-cover.png',
     excerpt: '在這個充滿歡笑聲和遊戲音效的夜晚，娜米與戀愛小秘書一起打破社交隔閡。',
     date: '2024/02',
     cat: '娛樂遊戲',
@@ -82,7 +82,7 @@ export const events: EventArticle[] = [
   {
     slug: 'succulent-planting',
     title: '單身聯誼推薦 : 多肉植物|愛在蔓延時',
-    img: BASE + '2019/10/succulent-planting.jpg',
+    img: BASE + '2019/10/succulent-planting.png',
     excerpt: '療癒性的植栽，另一半都不懂？想與曖昧的人培養感情？',
     date: '2019/10',
     cat: '手作體驗',
@@ -98,7 +98,7 @@ export const events: EventArticle[] = [
   {
     slug: 'k-song-party',
     title: '單身聯誼推薦 : Ｋ歌派對｜情聲綿綿',
-    img: BASE + '2023/03/k-song-party.png',
+    img: BASE + '2019/10/k-song-party.png',
     excerpt: '愛，讓我們用歌聲串起陌生的彼此！相遇和相愛只在一線之隔。',
     date: '2023/03',
     cat: '舞蹈音樂',
@@ -114,7 +114,7 @@ export const events: EventArticle[] = [
   {
     slug: 'salmon-cuisine-heart',
     title: '單身聯誼推薦 : 鮭魚料理｜吃心絕對',
-    img: BASE + '2019/10/salmon-dish.jpeg',
+    img: BASE + '2019/10/salmon-cuisine-heart.jpg',
     excerpt: '贏得對方的心之前，先了解她/他喜歡的口味是什麼～',
     date: '2019/10',
     cat: '美食廚藝',
@@ -162,7 +162,7 @@ export const events: EventArticle[] = [
   {
     slug: 'honey-toast-workshop',
     title: '單身聯誼推薦 : 蜜糖吐司手作趣',
-    img: BASE + '2023/07/honey-toast.jpg',
+    img: BASE + '2017/05/honey-toast.jpg',
     excerpt: '蜜糖吐司是女孩們最愛的下午茶甜點，大家一起手作的心情格外雀躍。',
     date: '2023/07',
     cat: '手作體驗',
@@ -258,7 +258,7 @@ export const events: EventArticle[] = [
   {
     slug: 'qixi-carnival',
     title: '未婚單身聯誼活動「七夕の園遊祭」圓滿句點，你錯過了什麼？',
-    img: BASE + '2023/08/qixi-carnival.jpg',
+    img: BASE + '2023/07/qixi-carnival.jpeg',
     excerpt: '盛夏的夜晚，娜米和戀愛小秘書們在內湖美堤碼頭，舉辦了一場別開生面的活動。',
     date: '2023/08',
     cat: '活動花絮',
@@ -290,7 +290,7 @@ export const events: EventArticle[] = [
   {
     slug: 'pool-party-water-battle',
     title: '單身聯誼推薦 : 水上騎馬打仗 清涼刺激的泳池Party',
-    img: BASE + '2014/12/pool-party-battle.jpg',
+    img: BASE + '2023/08/pool-party-battle.jpg',
     excerpt: '盛夏的酷熱讓人感到疲憊，最想做的就是跳入水中，把煩悶都拋諸腦後。',
     date: '2023/08',
     cat: '戶外郊遊',

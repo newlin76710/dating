@@ -16,7 +16,7 @@ const CAT_COLOR: Record<string, string> = {
   運動健身: '#2DC861',
 };
 
-const CATS = ['全部', '活動花絮', '手作體驗', '藝術創作', '娛樂遊戲', '舞蹈音樂', '微醺派對', '戶外郊遊', '美食廚藝', '文化體驗', '運動健身'];
+const CATS = ['全部', '活動花絮', '手作體驗', '娛樂遊戲', '舞蹈音樂', '微醺派對', '戶外郊遊', '美食廚藝'];
 
 export function EventsGrid({ events }: { events: EventArticle[] }) {
   const [active, setActive] = useState('全部');

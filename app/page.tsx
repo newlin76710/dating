@@ -128,28 +128,17 @@ export default function HomePage() {
 
         {/* ── Hero ────────────────────────────────────────────────────────── */}
         <section className="overflow-hidden bg-white" style={{ position: 'relative' }}>
-          {/* Photo: absolutely positioned, fills left ~40% so it bleeds into gradient zone */}
+          {/* Photo: fills left column exactly (33.333%), no bleed/gradient into the text column */}
           <div
             className="hidden md:block"
             style={{
               position: 'absolute',
               top: 0, left: 0, bottom: 0,
-              width: '40%',
+              width: '33.333%',
               backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
               backgroundPosition: 'top center',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
-            }}
-          />
-          {/* Gradient overlay: blends photo into white content area */}
-          <div
-            className="hidden md:block"
-            style={{
-              position: 'absolute',
-              top: 0, left: 0, bottom: 0,
-              width: '65%',
-              background: 'linear-gradient(to right, transparent 0%, transparent 28%, rgba(255,255,255,0.5) 40%, white 55%)',
-              pointerEvents: 'none',
             }}
           />
 
@@ -160,7 +149,7 @@ export default function HomePage() {
               width: '100%',
               height: 240,
               backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
-              backgroundPosition: 'top center',
+              backgroundPosition: 'top left',
               backgroundSize: 'cover',
             }}
           />
@@ -227,24 +216,13 @@ export default function HomePage() {
                       fontSize: 18,
                       fontWeight: 400,
                       lineHeight: '35px',
-                      color: '#000000',
+                      color: '#008080',
                       margin: '12px 0 0 0',
                       padding: '0 15% 0 0',
                     }}
                   >
                     協助超過 4,000 位未婚男女配對成功！
-                  </p>
-                  <p
-                    style={{
-                      ...roboto,
-                      fontSize: 18,
-                      fontWeight: 400,
-                      lineHeight: '35px',
-                      color: '#000000',
-                      margin: 0,
-                      padding: '0 15% 0 0',
-                    }}
-                  >
+                    <br />
                     陪你找到真愛、實現幸福
                   </p>
                   <p
@@ -269,13 +247,13 @@ export default function HomePage() {
                       display: 'inline-block',
                       backgroundColor: '#2DC861',
                       color: '#FFFFFF',
-                      fontSize: 20,
+                      fontSize: 16,
                       fontWeight: 400,
                       textTransform: 'uppercase',
                       letterSpacing: '1.95px',
-                      lineHeight: '26px',
+                      lineHeight: '22px',
                       borderRadius: 12,
-                      padding: '18px 70px',
+                      padding: '16px 70px',
                       textDecoration: 'none',
                       marginTop: 16,
                     }}

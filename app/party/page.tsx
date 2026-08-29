@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { SiteShell } from '@/components/site-shell';
 import { events, getEvent } from '@/lib/events';
+import { getArticle } from '@/lib/articles';
 
 export const metadata: Metadata = {
   title: '單身聯誼 — 戀愛小秘書推薦的聯誼活動 台北聯誼 高雄聯誼',
@@ -18,7 +19,10 @@ const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
  *  everything else (activity types we haven't built a dedicated page for) falls back
  *  to the /events listing, same as the real site's own long-tail activity pages would. */
 function eventHref(slug: string | null) {
-  return slug && getEvent(slug) ? `/events/${slug}` : '/events';
+  if (!slug) return '/events';
+  if (getArticle(slug)) return `/party/${slug}`;
+  if (getEvent(slug)) return `/events/${slug}`;
+  return '/events';
 }
 
 interface Card {
@@ -58,9 +62,9 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
 }
 
 const INDOOR: Card[] = [
-  { title: '推理冒險｜身臨其境的角色扮演遊戲', img: BASE + '2025/02/mystery-adventure.jpg', slug: null },
-  { title: '酒精墨水畫｜藝術過程浪漫的節奏', img: BASE + '2025/02/alcohol-ink-art.png', slug: null },
-  { title: '動感閃動格子｜未來科技派對遊戲', img: BASE + '2025/02/flash-grid-party.png', slug: null },
+  { title: '推理冒險｜身臨其境的角色扮演遊戲', img: BASE + '2025/02/mystery-adventure.jpg', slug: 'mystery-adventure' },
+  { title: '酒精墨水畫｜藝術過程浪漫的節奏', img: BASE + '2025/02/alcohol-ink-art.png', slug: 'alcohol-ink-art' },
+  { title: '動感閃動格子｜未來科技派對遊戲', img: BASE + '2025/02/flash-grid-party.png', slug: 'flash-grid-party' },
   { title: '攝影聯誼｜鏡頭下的愛情曝光', img: BASE + '2024/09/photography-dating.jpg', slug: null },
   { title: '浪漫咖啡香｜啡嚐不可', img: BASE + '2024/09/coffee-workshop.jpg', slug: null },
   { title: '夏日創意芬芳｜手作乾燥花香蠟燭', img: BASE + '2024/08/fragrant-candle.jpg', slug: null },
@@ -98,7 +102,7 @@ const ACTIVITY_LIST: Card[] = [
   { title: '愛情調酒派對-微醺午後時光', img: BASE + '2024/03/wine2.jpg', slug: 'cocktail-party' },
   { title: 'FUEGO巧克力傳情', img: BASE + '2023/07/chocolate-cake.jpg', slug: null },
   { title: '派對遊戲 桌遊 聯誼 愛的冒險邂逅', img: BASE + '2024/07/board-games.png', slug: 'perfect-match-boardgame' },
-  { title: '推理冒險｜身臨其境的角色扮演遊戲', img: BASE + '2025/02/mystery-adventure.jpg', slug: null },
+  { title: '推理冒險｜身臨其境的角色扮演遊戲', img: BASE + '2025/02/mystery-adventure.jpg', slug: 'mystery-adventure' },
   { title: '浪漫Swing Dance｜讓我們舞在一起', img: BASE + '2018/06/tango-argentina.jpg', slug: null },
 ];
 

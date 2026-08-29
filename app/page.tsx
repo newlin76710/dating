@@ -173,8 +173,6 @@ export default function HomePage() {
                 }}
               >
                 <div style={{ width: '100%' }}>
-                  {/* Teal spacer */}
-                  <div style={{ width: 128, height: 4, backgroundColor: '#07C3BA', marginBottom: 20 }} />
 
                   {/* Subtitle */}
                   <p

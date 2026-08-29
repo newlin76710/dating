@@ -43,31 +43,32 @@ export default async function ConsultArticlePage({
   return (
     <SiteShell>
       <main>
-        {/* ── Hero image ── */}
-        <div className="relative w-full overflow-hidden" style={{ maxHeight: 380 }}>
-          <img
-            src={article.img}
-            alt={article.title}
-            className="w-full object-cover"
-            style={{ maxHeight: 380, objectPosition: 'center 22%' }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{ background: 'linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.55) 100%)' }}
-          />
-          <div className="absolute bottom-0 left-0 right-0 px-6 pb-8 sm:px-10 lg:px-16">
-            <span
-              className="inline-block rounded-full px-4 py-1 text-xs font-semibold text-white mb-3"
-              style={{ backgroundColor: '#049089' }}
-            >
-              形象改造
-            </span>
-            <h1
-              className="text-white font-bold leading-tight"
-              style={{ fontSize: 'clamp(22px, 4vw, 38px)', textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}
-            >
-              {article.title}
-            </h1>
+        {/* ── Hero image: contained, centered, never cropped ── */}
+        <div className="mx-auto w-full max-w-[900px] px-6 pt-8 sm:px-8 lg:px-10">
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src={article.img}
+              alt={article.title}
+              className="block w-full h-auto"
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: 'linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.6) 100%)' }}
+            />
+            <div className="absolute bottom-0 left-0 right-0 px-6 pb-6 sm:px-8">
+              <span
+                className="inline-block rounded-full px-4 py-1 text-xs font-semibold text-white mb-3"
+                style={{ backgroundColor: '#049089' }}
+              >
+                形象改造
+              </span>
+              <h1
+                className="text-white font-bold leading-tight"
+                style={{ fontSize: 'clamp(20px, 3.5vw, 34px)', textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}
+              >
+                {article.title}
+              </h1>
+            </div>
           </div>
         </div>
 

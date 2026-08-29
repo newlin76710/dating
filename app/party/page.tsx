@@ -66,15 +66,15 @@ const INDOOR: Card[] = [
   { title: '推理冒險｜身臨其境的角色扮演遊戲', img: BASE + '2025/02/mystery-adventure.jpg', slug: 'mystery-adventure' },
   { title: '酒精墨水畫｜藝術過程浪漫的節奏', img: BASE + '2025/02/alcohol-ink-art.png', slug: 'alcohol-ink-art' },
   { title: '動感閃動格子｜未來科技派對遊戲', img: BASE + '2025/02/flash-grid-party.png', slug: 'flash-grid-party' },
-  { title: '攝影聯誼｜鏡頭下的愛情曝光', img: BASE + '2024/09/photography-dating.jpg', slug: null },
-  { title: '浪漫咖啡香｜啡嚐不可', img: BASE + '2024/09/coffee-workshop.jpg', slug: null },
-  { title: '夏日創意芬芳｜手作乾燥花香蠟燭', img: BASE + '2024/08/fragrant-candle.jpg', slug: null },
+  { title: '攝影聯誼｜鏡頭下的愛情曝光', img: BASE + '2024/09/photography-dating.jpg', slug: 'photography-dating' },
+  { title: '浪漫咖啡香｜啡嚐不可', img: BASE + '2024/09/coffee-workshop.jpg', slug: 'coffee-workshop' },
+  { title: '夏日創意芬芳｜手作乾燥花香蠟燭', img: BASE + '2024/08/fragrant-candle.jpg', slug: 'fragrant-candle' },
 ];
 
 const OUTDOOR: Card[] = [
-  { title: '愜意情調｜滿天星花賞夜趣', img: BASE + '2023/08/stargazing-night.png', slug: null },
-  { title: '轉動幸福｜鶯歌窯城手拉胚', img: BASE + '2023/07/pottery-workshop.webp', slug: null },
-  { title: '夕陽情懷｜淡水河畔騎車趣', img: BASE + '2023/07/cycling-date.jpg', slug: null },
+  { title: '愜意情調｜滿天星花賞夜趣', img: BASE + '2023/08/stargazing-night.png', slug: 'stargazing-night' },
+  { title: '轉動幸福｜鶯歌窯城手拉胚', img: BASE + '2023/07/pottery-workshop.webp', slug: 'pottery-workshop' },
+  { title: '夕陽情懷｜淡水河畔騎車趣', img: BASE + '2023/07/cycling-date.jpg', slug: 'cycling-date' },
 ];
 
 const KAOHSIUNG: Card[] = [
@@ -93,18 +93,18 @@ const REGIONAL: Card[] = [
 ];
 
 const ACTIVITY_LIST: Card[] = [
-  { title: '夏日創意芬芳｜手作乾燥花香蠟燭', img: BASE + '2024/08/fragrant-candle.jpg', slug: null },
+  { title: '夏日創意芬芳｜手作乾燥花香蠟燭', img: BASE + '2024/08/fragrant-candle.jpg', slug: 'fragrant-candle' },
   { title: '一對一精緻客製化專屬約會', img: BASE + '2023/07/custom-1on1-date.jpg', slug: null },
   { title: 'Game START 派對｜電玩對對碰', img: BASE + '2023/12/game-start-2.png', slug: 'game-start-party-highlight' },
-  { title: '彩繪馬卡龍｜玩美巴黎風', img: BASE + '2023/11/macaron-painting.jpg', slug: null },
+  { title: '彩繪馬卡龍｜玩美巴黎風', img: BASE + '2023/11/macaron-painting.jpg', slug: 'macaron-painting' },
   { title: '排約或約會，高手會怎麼做？', img: BASE + '2023/07/dating-lecture.jpg', slug: null },
   { title: '浪漫探戈派對｜阿根廷之夜', img: BASE + '2018/06/tango-argentina.jpg', slug: 'tango-party' },
   { title: '手作玫瑰蘋果塔｜與護理師之約', img: BASE + '2023/09/apple-tart-nurse.jpg', slug: 'apple-tart-nurse' },
   { title: '愛情調酒派對-微醺午後時光', img: BASE + '2024/03/wine2.jpg', slug: 'cocktail-party' },
-  { title: 'FUEGO巧克力傳情', img: BASE + '2023/07/chocolate-cake.jpg', slug: null },
+  { title: 'FUEGO巧克力傳情', img: BASE + '2023/07/chocolate-cake.jpg', slug: 'chocolate-cake-baking' },
   { title: '派對遊戲 桌遊 聯誼 愛的冒險邂逅', img: BASE + '2024/07/board-games.png', slug: 'perfect-match-boardgame' },
   { title: '推理冒險｜身臨其境的角色扮演遊戲', img: BASE + '2025/02/mystery-adventure.jpg', slug: 'mystery-adventure' },
-  { title: '浪漫Swing Dance｜讓我們舞在一起', img: BASE + '2018/06/tango-argentina.jpg', slug: null },
+  { title: '浪漫Swing Dance｜讓我們舞在一起', img: BASE + '2018/06/tango-argentina.jpg', slug: 'swing-dance' },
 ];
 
 const WORKSHOPS: Card[] = [

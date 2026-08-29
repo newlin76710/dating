@@ -1,5 +1,6 @@
 import { SiteShell } from '@/components/site-shell';
 import { TestimonialCarousel } from '@/components/testimonial-carousel';
+import { consultArticles } from '@/lib/consulting';
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
 const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
@@ -46,23 +47,12 @@ const steps = [
 ];
 
 
-const consultServices = [
-  {
-    title: '1對1 形象風格打造',
-    desc: '想談一場戀愛，第一印象是首要重要的！正視外表的重要性，我們提供1V1客製化的風格打造，讓你在約會前有一個優質完美的形象！',
-    img: BASE + '2024/04/S__18202927_0.jpg',
-  },
-  {
-    title: '社群形象照服務',
-    desc: '一組好的交友軟體形象照，讓你的配對率立馬提升99.9%，同時擺脫照片總使被滑掉的窘境，快速遇到對的她！',
-    img: BASE + '2024/04/image-photo-dalle.webp',
-  },
-  {
-    title: '內在涵養提升課程',
-    desc: '內在修養、氣質談吐、經濟能力等條件，也是吸引異性的重要元素。我們提供各類進修的課程，例如：品酒、咖啡、髮型等課程，讓你提升自我更能散發魅力！',
-    img: BASE + '2024/04/image-course-dalle.webp',
-  },
-];
+const consultServices = consultArticles.map((a) => ({
+  slug: a.slug,
+  title: a.title,
+  desc: a.excerpt,
+  img: a.img,
+}));
 
 const consultTestimonials = [
   {
@@ -164,6 +154,16 @@ export default function HomePage() {
               alignItems: 'stretch',
             }}
           >
+            {/* Decorative accent blocks (teal + gold), matching the reference's design */}
+            <div
+              className="hidden md:block"
+              style={{ position: 'absolute', top: 0, left: '33.333%', width: 128, height: 94, backgroundColor: '#07C3BA' }}
+            />
+            <div
+              className="hidden md:block"
+              style={{ position: 'absolute', top: 0, left: '85.08%', width: '15%', height: '100%', backgroundColor: '#EFB92A' }}
+            />
+
             <div className="hidden md:block" style={{ width: '33.333%', flexShrink: 0, minHeight: 500 }} />
             <div style={{ flex: 1 }}>
               <div
@@ -428,7 +428,7 @@ export default function HomePage() {
               {consultServices.map((s) => (
                 <a
                   key={s.title}
-                  href={LINE_URL}
+                  href={`/consulting/${s.slug}`}
                   style={{ textDecoration: 'none', color: 'inherit', display: 'block', borderRadius: 4, overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.12)', backgroundColor: '#fff' }}
                 >
                   <div style={{ position: 'relative', paddingBottom: '65%', overflow: 'hidden' }}>

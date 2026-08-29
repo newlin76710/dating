@@ -3,6 +3,7 @@ import { SiteShell } from '@/components/site-shell';
 import { events, getEvent } from '@/lib/events';
 import { getArticle } from '@/lib/articles';
 import { HeroSlides } from '@/components/hero-slides';
+import { VideoCarousel } from '@/components/video-carousel';
 
 export const metadata: Metadata = {
   title: '單身聯誼 — 戀愛小秘書推薦的聯誼活動 台北聯誼 高雄聯誼',
@@ -83,18 +84,18 @@ const KAOHSIUNG: Card[] = [
   { title: '愛意盎然｜多肉植物DIY', img: BASE + '2023/07/succulent-diy-khh.png', slug: 'succulent-planting' },
   { title: 'K歌派對-歌聲傳情', img: BASE + '2024/07/karaoke-khh.png', slug: 'k-song-party' },
   { title: '水上騎馬打仗 清涼刺激的泳池Party', img: BASE + '2023/08/pool-party-battle.jpg', slug: 'pool-party-water-battle' },
-  { title: '一對一精緻客製化專屬約會', img: BASE + '2023/07/custom-1on1-date.jpg', slug: null },
+  { title: '一對一精緻客製化專屬約會', img: BASE + '2023/07/custom-1on1-date.jpg', slug: 'custom-1on1-date' },
 ];
 
 const REGIONAL: Card[] = [
   { title: '新竹聯誼活動｜萬聖節變裝派對', img: BASE + '2023/10/hsinchu-halloween.jpg', slug: 'hsinchu-halloween' },
-  { title: '台南聯誼｜密室逃脫聯誼', img: BASE + '2023/09/tainan-escape-room.jpg', slug: 'escape-room-brain-challenge' },
+  { title: '台南聯誼｜密室逃脫聯誼', img: BASE + '2023/08/escape-room-challenge.jpg', slug: 'escape-room-brain-challenge' },
   { title: '台中聯誼活動｜平價優質的台中未婚聯誼', img: BASE + '2023/09/taichung-party.png', slug: null },
 ];
 
 const ACTIVITY_LIST: Card[] = [
   { title: '夏日創意芬芳｜手作乾燥花香蠟燭', img: BASE + '2024/08/fragrant-candle.jpg', slug: 'fragrant-candle' },
-  { title: '一對一精緻客製化專屬約會', img: BASE + '2023/07/custom-1on1-date.jpg', slug: null },
+  { title: '一對一精緻客製化專屬約會', img: BASE + '2023/07/custom-1on1-date.jpg', slug: 'custom-1on1-date' },
   { title: 'Game START 派對｜電玩對對碰', img: BASE + '2023/12/game-start-2.png', slug: 'game-start-party-highlight' },
   { title: '彩繪馬卡龍｜玩美巴黎風', img: BASE + '2023/11/macaron-painting.jpg', slug: 'macaron-painting' },
   { title: '排約或約會，高手會怎麼做？', img: BASE + '2023/07/dating-lecture.jpg', slug: null },
@@ -133,12 +134,12 @@ const REPORT_LIST: { title: string; slug: string | null }[] = [
   { title: '美味料理｜幸福好味道', slug: 'salmon-happy-flavor' },
 ];
 
-const VIDEO_THUMBS = [
-  { img: BASE + '2023/07/MTXX_MR20230715_180309740.jpg', label: '單身聯誼活動介紹' },
-  { img: BASE + '2024/03/wine2.jpg', label: '微醺派對活動報導' },
-  { img: BASE + '2024/07/board-games.png', label: '娛樂遊戲聯誼花絮' },
-  { img: BASE + '2023/07/cycling-date.jpg', label: '戶外郊遊聯誼介紹' },
-  { img: BASE + '2023/10/nami-consulting.jpg', label: '娜米顧問諮詢服務' },
+const VIDEO_SLIDES = [
+  { img: BASE + '2023/03/01.jpeg', youtubeId: 'ZMhXI9SFmK0' },
+  { img: BASE + '2023/03/02.jpeg', youtubeId: '_Pnx7ugkRNY' },
+  { img: BASE + '2023/03/03.jpeg', youtubeId: 'KpfWwRtExxU' },
+  { img: BASE + '2023/03/04.jpeg', youtubeId: 'zA4Dq-0WTns' },
+  { img: BASE + '2023/03/06.jpeg', youtubeId: 'GMen8wIEA3Q' },
 ];
 
 export default function PartyPage() {
@@ -334,110 +335,93 @@ export default function PartyPage() {
           <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
             <div className="mb-8 text-center">
               <h2 className="text-xl font-bold text-gray-800">娜米 X 單身聯誼活動介紹</h2>
+              <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-gray-500">
+                娜米透過影片跟大家介紹我們的交友服務是怎麼進行，單身聯誼有哪些注意事項，及交友小技巧！
+              </p>
             </div>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
-              {VIDEO_THUMBS.map((v, i) => (
-                <a
-                  key={i}
-                  href={LINE_URL}
-                  className="relative block overflow-hidden rounded-sm aspect-video bg-gray-200 group"
-                >
-                  <img
-                    src={v.img}
-                    alt={v.label}
-                    className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/25 group-hover:bg-black/40 transition">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-red-600/90">
-                      <svg viewBox="0 0 24 24" fill="white" width="18" height="18" aria-hidden="true">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 px-2 py-1">
-                    <p className="truncate text-xs text-white">{v.label}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
+            <VideoCarousel slides={VIDEO_SLIDES} />
           </div>
         </section>
 
         {/* ── 12. TRUST & CREDENTIALS ── */}
-        <section className="bg-white py-12">
+        <section className="bg-white pt-12">
           <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-              <div>
-                <p className="text-sm font-semibold" style={{ color: '#049089' }}>值得信任，讓你放心</p>
-                <h2 className="mt-2 text-xl font-bold text-gray-800 sm:text-2xl">
-                  戀愛小秘書的專業團隊<br />嚴選單身聯誼活動
-                </h2>
-                <ul className="mt-5 space-y-3 text-sm leading-6 text-gray-600">
-                  {[
-                    '累積超過 10 萬名會員，持續成長中',
-                    '所有會員皆經過實名認證，安全可靠',
-                    '大數據智能配對系統，精準找到你的另一半',
-                    '一對一專業諮詢，量身打造最適合的配對方案',
-                    '豐富媒合經驗，成功案例不斷',
-                    '多元活動主題，每月持續更新',
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-0.5 shrink-0 text-base" style={{ color: '#049089' }}>✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={LINE_URL}
-                  className="mt-6 inline-block rounded-full px-7 py-3 text-sm font-semibold text-white transition hover:opacity-90"
-                  style={{ background: '#2DC861' }}
-                >
-                  加LINE免費諮詢
-                </a>
-              </div>
-              <div>
-                <img
-                  src={BASE + '2023/10/nami-consulting.jpg'}
-                  alt="戀愛小秘書娜米"
-                  className="w-full rounded-lg object-cover"
-                  loading="lazy"
-                />
+            <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
+              <h2 className="text-2xl font-bold leading-snug sm:text-3xl" style={{ color: '#7fbcc4' }}>
+                戀愛小秘書的專業團隊<br />嚴選單身聯誼活動<br />值得信任，讓你放心
+              </h2>
+              <p className="text-sm leading-7" style={{ color: '#049089' }}>
+                Hi！我是戀愛小秘書，娜米，我知道找對象從來就不是一件簡單的事，我們的專業團隊會透過
+                <strong>一對一的諮詢診斷</strong>，為你<strong>量身訂制</strong>一套戀愛攻略，並以朋友的角度提供約會建議，協助你發展
+                <strong>長期且穩定的伴侶關係</strong>。
+              </p>
+            </div>
+          </div>
+
+          <div className="relative mx-auto mt-10 max-w-[1200px] px-4 sm:px-6 lg:px-8">
+            <img
+              src={BASE + '2023/03/500x500_2.jpg'}
+              alt="戀愛小秘書娜米"
+              className="absolute -left-2 bottom-0 hidden h-40 w-40 rounded-full border-4 border-white object-cover shadow-lg sm:block lg:h-48 lg:w-48"
+              loading="lazy"
+            />
+            <img
+              src={BASE + '2023/03/500x500_1.jpg'}
+              alt="戀愛小秘書娜米"
+              className="absolute -right-2 bottom-0 hidden h-40 w-40 rounded-full border-4 border-white object-cover shadow-lg sm:block lg:h-48 lg:w-48"
+              loading="lazy"
+            />
+            <div
+              className="rounded-2xl px-6 py-10 sm:px-28 lg:px-44"
+              style={{ backgroundColor: '#D2E0DE' }}
+            >
+              <div className="grid grid-cols-1 gap-x-10 gap-y-3 text-sm leading-6 text-gray-700 sm:grid-cols-2">
+                {[
+                  '戀愛小秘書的專業團隊擁有超過30年的業界經驗',
+                  '所有會員都經過嚴格審查、實名認證、精心篩選',
+                  '已認證的會員資料庫超過10萬筆，數據量充足',
+                  '運用大數據人格分析系統，做最精準的媒合配對',
+                  '安排一對一約會，舉辦豐富多元的主題聯誼活動',
+                  '高度客製化約會安排，從「契合度」提高速配率',
+                  '傳授與異性聊天的技巧，讓你在聯誼活動中累積自信',
+                  '針對每位會員給予個人形象改造建議，輕鬆吸引異性目光',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-base" style={{ color: '#049089' }}>✓</span>
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
         {/* ── 13. CTA BANNER ── */}
-        <section style={{ background: '#049089' }} className="py-14">
-          <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-sm font-semibold tracking-widest" style={{ color: '#D2E0DE' }}>
-              別再為繼續單身找藉口！
-            </p>
-            <h2 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
-              戀愛小秘書推薦的 🌹【單身聯誼】🌹<br />讓你佛系交友也脫單
+        <section className="flex flex-col items-stretch overflow-hidden sm:flex-row" style={{ backgroundColor: '#D2E0DE' }}>
+          <div
+            className="hidden sm:block sm:w-1/3"
+            style={{
+              backgroundImage: `url(${BASE}2023/07/LINE_ALBUM_230320_81.jpg)`,
+              backgroundPosition: 'top center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+            }}
+          />
+          <div className="w-full px-6 py-14 sm:w-2/3 sm:px-12 lg:px-16">
+            <p className="text-sm font-semibold" style={{ color: '#049089' }}>戀愛的事更要讓專業的來！</p>
+            <h2 className="mt-3 text-2xl font-bold leading-snug text-gray-900 sm:text-3xl">
+              戀愛小秘書推薦的<br />🌹【單身聯誼】🌹<br />讓你佛系交友也脫單
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-white/80">
-              加入官方LINE，了解最新活動資訊，戀愛小秘書為你安排最適合的聯誼活動！
+            <p className="mt-4 max-w-md text-sm leading-7 text-gray-700">
+              積極參加活動，輕鬆突破單身圈！小秘書幫您策劃活動，人來就好免煩惱～讓您專注在深度交流，獲得高品質互動經驗。馬上聯絡戀愛小秘書娜米，今年穩交不是夢！
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href={LINE_URL}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-10 py-4 text-sm font-semibold transition hover:opacity-90"
-                style={{ color: '#049089' }}
-              >
-                <svg viewBox="0 0 24 24" fill="#2DC861" width="16" height="16" aria-hidden="true">
-                  <path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
-                </svg>
-                加LINE洽詢單身聯誼活動
-              </a>
-              <a
-                href="/match"
-                className="inline-flex rounded-full border border-white/30 px-10 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                了解找對象服務
-              </a>
-            </div>
+            <a
+              href={LINE_URL}
+              className="mt-6 inline-block text-sm font-semibold uppercase tracking-widest text-white transition hover:opacity-90"
+              style={{ backgroundColor: '#1A1A1A', padding: '16px 70px' }}
+            >
+              加LINE洽詢單身聯誼活動
+            </a>
           </div>
         </section>
       </main>

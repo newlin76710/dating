@@ -292,7 +292,7 @@ export const articles: Article[] = [
   {
     slug: 'mountain-hiking',
     title: '單身聯誼活動：戶外登山健行｜山間的初次相遇',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2023/07/guide-taoyuan.jpg',
     excerpt: '在山林中找尋真愛，共同征服山頭，並肩作戰的默契就是最好的愛情開始。',
     date: '2024/04/13',
     cat: '戶外郊遊',
@@ -428,7 +428,7 @@ export const articles: Article[] = [
   {
     slug: 'river-tracing',
     title: '單身聯誼活動：溯溪冒險｜清涼夏日的驚喜相遇',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2023/09/tainan-escape-room.jpg',
     excerpt: '在清澈的溪水中並肩冒險，互相扶持的那一刻，也許就是愛情開始的地方。',
     date: '2024/08/17',
     cat: '戶外郊遊',
@@ -598,7 +598,7 @@ export const articles: Article[] = [
   {
     slug: 'surfing-first-time',
     title: '單身聯誼活動：衝浪初體驗｜海浪中的勇氣與笑聲',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2023/09/tainan-escape-room.jpg',
     excerpt: '第一次站上衝浪板的瞬間，是勇氣、是笑聲，也是和陌生人最快速拉近距離的時刻。',
     date: '2025/03/15',
     cat: '戶外郊遊',
@@ -632,7 +632,7 @@ export const articles: Article[] = [
   {
     slug: 'tainan-culture-trip',
     title: '單身聯誼活動：台南文化小旅行｜在古城發現真愛',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2023/09/guide-taichung.jpg',
     excerpt: '在四百年古城的巷弄間漫步，讓台南的人情味牽引你找到心靈相通的另一半。',
     date: '2024/03/30',
     cat: '文化體驗',
@@ -734,7 +734,7 @@ export const articles: Article[] = [
   {
     slug: 'kayaking-adventure',
     title: '單身聯誼活動：划獨木舟｜水上運動中的相遇',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2023/09/tainan-escape-room.jpg',
     excerpt: '在藍天碧水之間划槳前行，背後有你，前面是希望——這就是愛情最美的樣子。',
     date: '2024/09/14',
     cat: '戶外郊遊',
@@ -819,7 +819,7 @@ export const articles: Article[] = [
   {
     slug: 'sup-surfing',
     title: '單身聯誼活動：立槳衝浪體驗｜平衡中找到你的另一半',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2023/09/tainan-escape-room.jpg',
     excerpt: '站在衝浪板上保持平衡，就像在感情中保持自我——穩定的你，才能遇見對的人。',
     date: '2025/04/05',
     cat: '戶外郊遊',
@@ -900,6 +900,23 @@ export const articles: Article[] = [
     highlights: ['自由變裝主題派對', 'DJ現場音樂狂歡', '搗蛋互動遊戲', '新竹在地舉辦', '解放日常放鬆交流'],
     audience: '男生25-40歲、女生20-35歲單身未婚',
     related: ['game-start-party', 'board-games', 'jazz-night', 'movie-appreciation', 'cocktail-party', 'street-dance'],
+  },
+  {
+    slug: 'custom-1on1-date',
+    title: '單身聯誼活動：一對一精緻客製化專屬約會',
+    img: BASE + '2023/07/custom-1on1-date.jpg',
+    excerpt: '戀愛小秘書將根據您的喜好和篩選條件，精心安排一對一約會對象，找到心靈契合的另一半。',
+    date: '2023/07/15',
+    cat: '文化體驗',
+    hook: '踏出尋愛的第一步，立即報名娜米和戀愛小秘書精心策劃的一對一精緻專屬約會！',
+    intro: '讓我們陪伴您找到適合的TA，展開愛情的奇妙冒險，共創幸福未來！戀愛小秘書將會根據您的喜好和篩選條件，幫您精心安排一對一約會對象，透過近距離互動，一邊享用下午茶，一邊輕鬆聊天，找到心靈契合的另一半。',
+    body: [
+      '愛情就在眼前，讓我們為您打開尋愛的大門！透過我們精心安排的一對一約會，您將有機會深入了解對方，建立深刻的感情連結。我們將根據您的喜好和興趣，巧妙地進行配對，確保每場約會都是您專屬的美好時光。',
+      '我們的團隊擁有豐富的專業經驗，將以敏銳的洞察力為您找到最適合的對象，讓您無需再煩惱尋找，專心享受約會的美好。所有約會場所都是精心挑選的，讓您可以在輕鬆自在的氛圍中展開真摯交流，共同開啟一段美妙的愛情旅程。',
+    ],
+    highlights: ['一對一客製化配對', '專業顧問全程安排', '場地精心挑選', '下午茶輕鬆聊天', '深入了解彼此步調'],
+    audience: '男生25-45歲、女生22-40歲優質單身',
+    related: ['cocktail-party', 'coffee-workshop', 'french-cooking', 'tainan-culture-trip', 'wine-tasting', 'jazz-night'],
   },
 ];
 

@@ -173,38 +173,36 @@ export default function PodcastPage() {
 
         {/* 戀愛數字密碼怎麼幫助你？ */}
         <section className="bg-white py-16">
-          <div className="max-w-[900px] mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10">
             <h2 className="text-center text-2xl font-bold sm:text-3xl" style={{ color: '#049089' }}>
               戀愛數字密碼怎麼幫助你？
             </h2>
+            <p className="mt-3 text-center text-base font-semibold text-gray-700">從生日就能分析戀愛訊息</p>
 
-            <div className="mt-12">
-              <h3 className="text-lg font-bold text-gray-800">從生日就能分析戀愛訊息</h3>
-              <img src={BASE + '2023/07/numerology-06.png'} alt="從生日就能分析戀愛訊息" className="mt-4 w-full rounded-xl" loading="lazy" />
-            </div>
-
-            <div className="mt-12">
-              <h3 className="text-lg font-bold text-gray-800">拿到你的生日後，娜米發現⋯⋯</h3>
-              <p className="mt-2 text-gray-600">相信你一定會想知道⋯⋯</p>
-              <img src={BASE + '2023/07/numerology-07.png'} alt="我到底什麼時候才能脫單" className="mt-4 w-full rounded-xl" loading="lazy" />
-            </div>
-
-            <div className="mt-12">
-              <h3 className="text-lg font-bold text-gray-800">「那我正在什麼年？」</h3>
-              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
-                <img src={BASE + '2023/07/numerology-08.png'} alt="走在身心靈的心三年" className="w-full rounded-xl" loading="lazy" />
-                <img src={BASE + '2023/07/numerology-09.png'} alt="他可以能轉角就遇到愛了" className="w-full rounded-xl" loading="lazy" />
-                <img src={BASE + '2023/07/numerology-10.png'} alt="就是很多很多的機會會來" className="w-full rounded-xl" loading="lazy" />
+            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
+              <div>
+                <h3 className="text-lg font-bold text-gray-800">拿到你的生日後，娜米發現⋯⋯</h3>
+                <img src={BASE + '2023/07/numerology-06.png'} alt="你今年會遇到什麼樣的對象啊" className="mt-4 w-full rounded-xl" loading="lazy" />
+                <p className="mt-4 text-gray-600">相信你一定會想知道⋯⋯</p>
+                <img src={BASE + '2023/07/numerology-07.png'} alt="我到底什麼時候才能脫單" className="mt-4 w-full rounded-xl" loading="lazy" />
               </div>
-            </div>
 
-            <p className="mt-8 text-center text-lg font-semibold" style={{ color: '#FF93A6' }}>太羨慕了吧！</p>
+              <div>
+                <h3 className="text-lg font-bold text-gray-800">「那我正在什麼年？」</h3>
+                <div className="mt-4 space-y-4">
+                  <img src={BASE + '2023/07/numerology-08.png'} alt="走在身心靈的心三年" className="w-full rounded-xl" loading="lazy" />
+                  <img src={BASE + '2023/07/numerology-09.png'} alt="他可能轉角就遇到愛了" className="w-full rounded-xl" loading="lazy" />
+                  <img src={BASE + '2023/07/numerology-10.png'} alt="就是很多很多的機會會來" className="w-full rounded-xl" loading="lazy" />
+                </div>
+                <p className="mt-4 text-center text-lg font-semibold" style={{ color: '#FF93A6' }}>太羨慕了吧！</p>
+              </div>
 
-            <div className="mt-12">
-              <h3 className="text-center text-xl font-bold text-gray-800">娜米最擔心的是⋯⋯</h3>
-              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <img src={BASE + '2023/07/numerology-12.png'} alt="你本來不知道就錯過了" className="w-full rounded-xl" loading="lazy" />
-                <img src={BASE + '2023/07/numerology-11.png'} alt="結果你錯過就真的錯過" className="w-full rounded-xl" loading="lazy" />
+              <div>
+                <h3 className="text-lg font-bold text-gray-800">娜米最擔心的是⋯⋯</h3>
+                <div className="mt-4 space-y-4">
+                  <img src={BASE + '2023/07/numerology-12.png'} alt="你本來不知道就錯過了" className="w-full rounded-xl" loading="lazy" />
+                  <img src={BASE + '2023/07/numerology-11.png'} alt="結果你錯過就真的錯過" className="w-full rounded-xl" loading="lazy" />
+                </div>
               </div>
             </div>
 

@@ -86,16 +86,29 @@ export function PodcastEpisodes({ episodes }: { episodes: PodcastEpisode[] }) {
         </button>
       </div>
 
-      <div className="mt-4 flex justify-center gap-2">
-        {episodes.map((_, i) => (
+      <div className="mt-4 flex gap-2 overflow-x-auto sm:gap-3" style={{ scrollSnapType: 'x mandatory' }}>
+        {episodes.map((ep, i) => (
           <button
-            key={i}
+            key={ep.youtubeId}
             type="button"
             onClick={() => setIdx(i)}
             aria-label={`前往第 ${i + 1} 集`}
-            className="h-2 w-2 rounded-full p-0"
-            style={{ backgroundColor: i === idx ? '#049089' : 'rgba(4,144,137,0.3)' }}
-          />
+            className="relative block aspect-video shrink-0 overflow-hidden rounded-md"
+            style={{
+              width: 'calc((100% - 4 * 0.75rem) / 5)',
+              scrollSnapAlign: 'start',
+              outline: i === idx ? '3px solid #049089' : 'none',
+              outlineOffset: 2,
+              opacity: i === idx ? 1 : 0.6,
+            }}
+          >
+            <img
+              src={ep.img}
+              alt="戀愛會社節目"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          </button>
         ))}
       </div>
 

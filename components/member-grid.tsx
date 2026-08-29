@@ -1,16 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import type { Member } from '@/lib/match-members';
 
-const LINE_URL = 'https://lin.ee/iweaTucb';
-
-export interface Member {
-  name: string;
-  gender: 'F' | 'M';
-  img: string;
-  meta: string;
-  desc: string;
-}
+export type { Member };
 
 export function MemberGrid({ members }: { members: Member[] }) {
   const [tab, setTab] = useState<'all' | 'F' | 'M'>('all');
@@ -43,9 +36,9 @@ export function MemberGrid({ members }: { members: Member[] }) {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {filtered.map((member, i) => (
+        {filtered.map((member) => (
           <div
-            key={i}
+            key={member.slug}
             className="group overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition hover:shadow-lg"
           >
             <div className="relative aspect-[3/4] overflow-hidden">
@@ -60,9 +53,7 @@ export function MemberGrid({ members }: { members: Member[] }) {
               <p className="mt-1 text-xs text-gray-500">{member.meta}</p>
               <p className="mt-2 text-xs text-gray-600 leading-5 line-clamp-3">{member.desc}</p>
               <a
-                href={LINE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`/match/${member.slug}`}
                 className="mt-4 inline-block rounded-full px-5 py-1.5 text-xs font-semibold text-white transition hover:opacity-90"
                 style={{ background: '#049089' }}
               >

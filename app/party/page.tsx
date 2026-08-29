@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { SiteShell } from '@/components/site-shell';
 import { events, getEvent } from '@/lib/events';
 import { getArticle } from '@/lib/articles';
+import { HeroSlides } from '@/components/hero-slides';
 
 export const metadata: Metadata = {
   title: '單身聯誼 — 戀愛小秘書推薦的聯誼活動 台北聯誼 高雄聯誼',
@@ -144,44 +145,34 @@ export default function PartyPage() {
   return (
     <SiteShell>
       <main>
-        {/* ── 1. TOP 3 FEATURED BANNER CARDS ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          {([
+        {/* ── 1. TOP HERO SLIDER ── */}
+        <HeroSlides
+          slides={[
             {
-              img: BASE + '2018/06/tango-argentina.jpg',
+              img: BASE + '2023/07/ev_f567e1223d_1521796535.jpg',
               title: '【單身聯誼】一起搖擺吧',
               desc: '微醺的氛圍下，自在與異性互動。不會跳也沒關係，表現真誠的你看起來更有吸引力。不須跳舞基礎、不須帶舞伴，不用怕沒人理。',
+              href: LINE_URL,
             },
             {
-              img: BASE + '2025/02/mystery-adventure.jpg',
+              img: BASE + '2023/07/ev_e9c0cf47c6_1501489826.jpg',
               title: '【單身聯誼】Speed Dating',
               desc: '根據您的喜好和篩選條件，幫您精心安排一對一約會對象。透過近距離互動，一邊享用下午茶，一邊輕鬆聊天，找到心靈契合的另一半。',
+              href: LINE_URL,
             },
             {
-              img: BASE + '2023/07/cycling-date.jpg',
+              img: BASE + '2023/07/ev_ecbfd5e3b9_1546591688.jpg',
               title: '【單身聯誼】共享自然風光的輕鬆時光',
               desc: '騎著自行車，感受輕鬆自在的時刻。享受自然的氛圍，放鬆心情，遠離日常的壓力，尋找內心的寧靜。',
+              href: LINE_URL,
             },
-          ] as const).map((item) => (
-            <a key={item.title} href={LINE_URL} className="relative block overflow-hidden group" style={{ aspectRatio: '4/3' }}>
-              <img
-                src={item.img}
-                alt={item.title}
-                className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-4 text-center" style={{ background: 'rgba(0,0,0,0.42)' }}>
-                <h2 className="text-sm font-bold text-white drop-shadow sm:text-base">{item.title}</h2>
-                <p className="text-xs text-white/80 leading-5">{item.desc}</p>
-                <span
-                  className="mt-1 rounded px-4 py-1.5 text-xs font-semibold text-white"
-                  style={{ background: '#2DC861' }}
-                >
-                  加LINE參加活動
-                </span>
-              </div>
-            </a>
-          ))}
-        </div>
+            {
+              img: BASE + '2023/09/主題式聯誼直式.jpg',
+              title: '多元有趣的單身聯誼活動',
+              href: LINE_URL,
+            },
+          ]}
+        />
 
         {/* ── 2. HERO HEADING ── */}
         <div className="bg-white py-10 text-center">

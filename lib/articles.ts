@@ -1,4 +1,5 @@
 const IMG = 'https://ek21.com/dating/wp-content/uploads/';
+const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
 
 export interface Article {
   slug: string;
@@ -512,7 +513,7 @@ export const articles: Article[] = [
   {
     slug: 'leather-craft',
     title: '單身聯誼活動：皮革手工藝｜親手打造的愛情記念',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2023/07/195087_副本.jpg',
     excerpt: '用雙手塑造一件皮革小物，也用同樣的用心，塑造一段值得珍惜的緣分。',
     date: '2024/11/23',
     cat: '手作體驗',

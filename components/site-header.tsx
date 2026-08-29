@@ -19,7 +19,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-gray-200 bg-white">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
-        <a href="/" className="relative block h-[52px] w-[200px] shrink-0 sm:h-[70px] sm:w-[265px]">
+        <a href="/" className="relative block h-[86px] w-36 shrink-0 md:h-[113px] md:w-[190px] lg:h-[140px] lg:w-[236px]">
           <img
             src="/images/logo.png"
             alt="戀愛小秘書娜米"
@@ -33,7 +33,7 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-gray-800 transition hover:text-[#07C3BA]"
+              className="text-sm font-semibold text-gray-800 transition hover:text-[#049089]"
             >
               {item.label}
             </a>
@@ -75,7 +75,7 @@ export function SiteHeader() {
               <a
                 key={item.href}
                 href={item.href}
-                className="block py-3 text-sm font-medium text-gray-800 transition hover:text-[#07C3BA]"
+                className="block py-3 text-sm font-semibold text-gray-800 transition hover:text-[#049089]"
                 onClick={() => setOpen(false)}
               >
                 {item.label}

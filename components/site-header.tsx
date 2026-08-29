@@ -17,9 +17,9 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-30 bg-[#f0f0f5]">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
-        <a href="/" className="relative block h-[86px] w-36 shrink-0 md:h-[113px] md:w-[190px] lg:h-[140px] lg:w-[236px]">
+        <a href="/" className="relative block h-[49px] w-[82px] shrink-0 md:h-[89px] md:w-[150px] lg:h-[98px] lg:w-[165px]">
           <img
             src="/images/logo.png"
             alt="戀愛小秘書娜米"
@@ -33,7 +33,7 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-semibold text-gray-800 transition hover:text-[#049089]"
+              className="text-sm font-semibold text-[#7a7a7a] transition hover:text-[#049089]"
             >
               {item.label}
             </a>
@@ -69,13 +69,13 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div id="mobile-menu" className="border-t border-gray-200 bg-white lg:hidden" role="navigation" aria-label="手機版導航">
+        <div id="mobile-menu" className="border-t border-gray-200 bg-[#f0f0f5] lg:hidden" role="navigation" aria-label="手機版導航">
           <nav className="mx-auto max-w-[1200px] px-6 py-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="block py-3 text-sm font-semibold text-gray-800 transition hover:text-[#049089]"
+                className="block py-3 text-sm font-semibold text-[#7a7a7a] transition hover:text-[#049089]"
                 onClick={() => setOpen(false)}
               >
                 {item.label}

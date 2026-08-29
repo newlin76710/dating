@@ -397,31 +397,33 @@ export default function PartyPage() {
         </section>
 
         {/* ── 13. CTA BANNER ── */}
-        <section className="flex flex-col items-stretch overflow-hidden sm:flex-row" style={{ backgroundColor: '#D2E0DE' }}>
-          <div
-            className="hidden sm:block sm:w-1/3"
-            style={{
-              backgroundImage: `url(${BASE}2023/07/LINE_ALBUM_230320_81.jpg)`,
-              backgroundPosition: 'top center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          />
-          <div className="w-full px-6 py-14 sm:w-2/3 sm:px-12 lg:px-16">
-            <p className="text-sm font-semibold" style={{ color: '#049089' }}>戀愛的事更要讓專業的來！</p>
-            <h2 className="mt-3 text-2xl font-bold leading-snug text-gray-900 sm:text-3xl">
-              戀愛小秘書推薦的<br />🌹【單身聯誼】🌹<br />讓你佛系交友也脫單
-            </h2>
-            <p className="mt-4 max-w-md text-sm leading-7 text-gray-700">
-              積極參加活動，輕鬆突破單身圈！小秘書幫您策劃活動，人來就好免煩惱～讓您專注在深度交流，獲得高品質互動經驗。馬上聯絡戀愛小秘書娜米，今年穩交不是夢！
-            </p>
-            <a
-              href={LINE_URL}
-              className="mt-6 inline-block text-sm font-semibold uppercase tracking-widest text-white transition hover:opacity-90"
-              style={{ backgroundColor: '#1A1A1A', padding: '16px 70px' }}
-            >
-              加LINE洽詢單身聯誼活動
-            </a>
+        <section className="mt-[72px] overflow-hidden" style={{ backgroundColor: '#D2E0DE' }}>
+          <div className="mx-auto flex max-w-[1200px] flex-col items-stretch sm:flex-row" style={{ minHeight: 620 }}>
+            <div
+              className="hidden sm:block sm:w-1/3"
+              style={{
+                backgroundImage: `url(${BASE}2023/07/LINE_ALBUM_230320_81.jpg)`,
+                backgroundPosition: 'top center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+              }}
+            />
+            <div className="flex w-full flex-col justify-center px-6 py-16 sm:w-2/3 sm:px-16 lg:px-24">
+              <p className="text-sm font-semibold" style={{ color: '#049089' }}>戀愛的事更要讓專業的來！</p>
+              <h2 className="mt-4 text-3xl font-bold leading-snug text-gray-900 sm:text-4xl">
+                戀愛小秘書推薦的<br />🌹【單身聯誼】🌹<br />讓你佛系交友也脫單
+              </h2>
+              <p className="mt-5 max-w-md text-sm leading-7 text-gray-700">
+                積極參加活動，輕鬆突破單身圈！小秘書幫您策劃活動，人來就好免煩惱～讓您專注在深度交流，獲得高品質互動經驗。馬上聯絡戀愛小秘書娜米，今年穩交不是夢！
+              </p>
+              <a
+                href={LINE_URL}
+                className="mt-8 inline-block w-fit text-sm font-semibold uppercase tracking-widest text-white transition hover:opacity-90"
+                style={{ backgroundColor: '#1A1A1A', padding: '18px 70px' }}
+              >
+                加LINE洽詢單身聯誼活動
+              </a>
+            </div>
           </div>
         </section>
       </main>

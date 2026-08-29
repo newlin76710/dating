@@ -286,6 +286,28 @@ export default function HomePage() {
             .cta-right {
               padding: 10% 8% !important;
             }
+            .home-grid-3 {
+              grid-template-columns: 1fr !important;
+            }
+            .numerology-3col > div {
+              width: 100% !important;
+              max-width: 420px;
+            }
+            .testimonial-row {
+              flex-direction: column !important;
+            }
+            .testimonial-row > div {
+              margin: 0 0 16px 0 !important;
+            }
+            .media-logos-row {
+              flex-wrap: wrap !important;
+              row-gap: 20px !important;
+            }
+            .media-logo-item {
+              flex: 0 0 28% !important;
+              max-width: 28% !important;
+              min-width: 0 !important;
+            }
           }
         `}</style>
 
@@ -378,7 +400,7 @@ export default function HomePage() {
             </p>
 
             {/* 3-col grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 35 }}>
+            <div className="home-grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 35 }}>
               {homeEvents.map((ev) => (
                 <a
                   key={ev.title}
@@ -419,7 +441,7 @@ export default function HomePage() {
             </p>
 
             {/* 3-col article cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28, marginTop: 8 }}>
+            <div className="home-grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28, marginTop: 8 }}>
               {consultServices.map((s) => (
                 <a
                   key={s.title}
@@ -530,7 +552,7 @@ export default function HomePage() {
               戀愛密碼諮詢見證
             </h2>
 
-            <div style={{ display: 'flex', gap: 0, marginTop: 35 }}>
+            <div className="testimonial-row" style={{ display: 'flex', gap: 0, marginTop: 35 }}>
               {consultTestimonials.map((t, i) => (
                 <div
                   key={t.name}
@@ -578,9 +600,9 @@ export default function HomePage() {
               感謝媒體對戀愛小秘書及娜米的採訪報導
             </p>
 
-            <div style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', alignItems: 'center', gap: 20, marginTop: 40 }}>
+            <div className="media-logos-row" style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', alignItems: 'center', gap: 20, marginTop: 40 }}>
               {mediaLogos.map((m) => (
-                <div key={m.name} style={{ flex: '1 1 0', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 50, maxWidth: 130 }}>
+                <div key={m.name} className="media-logo-item" style={{ flex: '1 1 0', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 50, maxWidth: 130 }}>
                   <img
                     src={m.img}
                     alt={m.name}
@@ -606,7 +628,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div style={{ maxWidth: 1200, margin: '2% auto 0', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 28px' }}>
+          <div className="home-grid-3" style={{ maxWidth: 1200, margin: '2% auto 0', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 28px' }}>
             {endorserCols.map((col, ci) => (
               <TestimonialCarousel key={ci} items={col} />
             ))}

@@ -44,12 +44,12 @@ export default async function ConsultArticlePage({
     <SiteShell>
       <main>
         {/* ── Hero image ── */}
-        <div className="relative w-full overflow-hidden" style={{ maxHeight: 480 }}>
+        <div className="relative w-full overflow-hidden" style={{ maxHeight: 380 }}>
           <img
             src={article.img}
             alt={article.title}
             className="w-full object-cover"
-            style={{ maxHeight: 480 }}
+            style={{ maxHeight: 380, objectPosition: 'center 22%' }}
           />
           <div
             className="absolute inset-0"

@@ -118,20 +118,6 @@ export default function HomePage() {
 
         {/* ── Hero ────────────────────────────────────────────────────────── */}
         <section className="overflow-hidden bg-white" style={{ position: 'relative' }}>
-          {/* Photo: fills left column exactly (33.333%), no bleed/gradient into the text column */}
-          <div
-            className="hidden md:block"
-            style={{
-              position: 'absolute',
-              top: 0, left: 0, bottom: 0,
-              width: '33.333%',
-              backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
-              backgroundPosition: 'top center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          />
-
           {/* Mobile: stacked image */}
           <div
             className="block md:hidden"
@@ -164,7 +150,18 @@ export default function HomePage() {
               style={{ position: 'absolute', top: 0, left: '85.08%', width: '15%', height: '100%', backgroundColor: '#EFB92A' }}
             />
 
-            <div className="hidden md:block" style={{ width: '33.333%', flexShrink: 0, minHeight: 500 }} />
+            <div
+              className="hidden md:block"
+              style={{
+                width: '33.333%',
+                flexShrink: 0,
+                minHeight: 500,
+                backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
+                backgroundPosition: 'top center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+              }}
+            />
             <div style={{ flex: 1 }}>
               <div
                 className="hero-content-col"

@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 export interface HeroSlide {
   img: string;
-  title: string;
+  title?: string;
   desc?: string;
   href: string;
   buttonLabel?: string;
@@ -34,29 +34,33 @@ export function HeroSlides({ slides }: { slides: HeroSlide[] }) {
     >
       {slides.map((s, i) => (
         <a
-          key={s.title}
+          key={s.title ?? s.img}
           href={s.href}
           className="absolute inset-0 block transition-opacity duration-500"
           style={{ opacity: i === idx ? 1 : 0, pointerEvents: i === idx ? 'auto' : 'none' }}
         >
           <img
             src={s.img}
-            alt={s.title}
+            alt={s.title ?? ''}
             className="absolute inset-0 h-full w-full object-cover"
           />
+          {(s.title || s.buttonLabel) && (
           <div
             className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-4 text-center"
-            style={{ background: 'rgba(0,0,0,0.42)' }}
+            style={{ background: s.title ? 'rgba(0,0,0,0.42)' : 'transparent' }}
           >
-            <h2 className="text-lg font-bold text-white drop-shadow sm:text-2xl">{s.title}</h2>
+            {s.title && <h2 className="text-lg font-bold text-white drop-shadow sm:text-2xl">{s.title}</h2>}
             {s.desc && <p className="max-w-xl text-xs text-white/80 leading-5 sm:text-sm">{s.desc}</p>}
-            <span
-              className="mt-1 rounded px-5 py-2 text-xs font-semibold text-white sm:text-sm"
-              style={{ background: '#2DC861' }}
-            >
-              {s.buttonLabel ?? '加LINE參加活動'}
-            </span>
+            {(s.buttonLabel || s.title) && (
+              <span
+                className="mt-1 rounded px-5 py-2 text-xs font-semibold text-white sm:text-sm"
+                style={{ background: '#2DC861' }}
+              >
+                {s.buttonLabel ?? '加LINE參加活動'}
+              </span>
+            )}
           </div>
+          )}
         </a>
       ))}
 

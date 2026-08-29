@@ -105,7 +105,7 @@ export const articles: Article[] = [
   {
     slug: 'fragrant-candle',
     title: '單身聯誼活動：夏日創意芬芳｜手作乾燥花香氛蠟燭',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/08/fragrant-candle.jpg',
     excerpt: '愛上手作的美好，一起來參加「手作乾燥花香氛蠟燭」聯誼活動，在香氛中創造浪漫。',
     date: '2024/08/10',
     cat: '手作體驗',
@@ -258,7 +258,7 @@ export const articles: Article[] = [
   {
     slug: 'pottery-workshop',
     title: '單身聯誼活動：日式陶藝體驗｜手捏愛的形狀',
-    img: IMG + '2023/09/20231014手作蘋果塔.jpg',
+    img: BASE + '2023/07/pottery-workshop.webp',
     excerpt: '用雙手捏出愛的形狀，在陶土的溫度中感受兩顆心靠近的感動。',
     date: '2024/03/09',
     cat: '手作體驗',
@@ -496,7 +496,7 @@ export const articles: Article[] = [
   {
     slug: 'stargazing-night',
     title: '單身聯誼活動：夜間天文觀星｜星空下的浪漫告白',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2023/08/stargazing-night.png',
     excerpt: '在億萬顆星星的見證下，與你並肩仰望浩瀚宇宙，是這輩子最浪漫的事。',
     date: '2024/11/09',
     cat: '戶外郊遊',
@@ -666,7 +666,7 @@ export const articles: Article[] = [
   {
     slug: 'cycling-date',
     title: '單身聯誼活動：騎自行車郊遊｜兩人同行的浪漫',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2023/07/cycling-date.jpg',
     excerpt: '沿著河岸並肩騎行，微風吹拂的每一秒，都是和對的人在一起最美的畫面。',
     date: '2024/05/11',
     cat: '戶外郊遊',
@@ -866,6 +866,40 @@ export const articles: Article[] = [
     highlights: ['米其林推薦鐵板燒餐廳', '精緻主廚晚宴套餐', 'L型座位自然互動', '座位輪換多元交流', '高規格品味相遇場合'],
     audience: '男生28-50歲、女生25-45歲優質單身',
     related: ['wine-tasting', 'jazz-night', 'french-cooking', 'cocktail-party', 'pasta-making', 'matcha-ceremony'],
+  },
+  {
+    slug: 'yacht-party',
+    title: '單身聯誼活動：遊艇派對｜海上的浪漫',
+    img: BASE + '2019/04/yacht-party.jpg',
+    excerpt: '醉人的夕陽海景，像偶像劇般的浪漫氣氛，讓我們手持香檳，暢遊藍色公路，在夕陽的祝福下相遇。',
+    date: '2019/04/20',
+    cat: '戶外郊遊',
+    hook: '醉人的夕陽海景，像偶像劇般的浪漫氣氛，讓我們手持香檳，暢遊藍色公路。',
+    intro: '與身旁的你一起唱歌、享受美食，在夕陽的祝福下，願與你伴在身旁。遊艇派對讓單身男女在海風與樂聲中，自然而然地打開話匣子。',
+    body: [
+      '讓海風輕輕吹拂過你的頭髮，在享受風景的同時，也可以與身旁的朋友聊聊天，透過簡單的問候，打開彼此的話匣子。遊艇內附設KTV，大家都可以自由地拿起麥克風與大家一同歡唱，歡唱中還意外聽到不少深藏不露的好聲音。',
+      '害羞不敢拿起麥克風也沒關係，現場準備了派對小遊戲，透過遊戲的樂趣讓氣氛更加熱絡。精心準備的自助小點心與飲品，在主持人專業的帶領下，讓派對氣氛越來越歡樂，太平洋上滿是我們的笑聲。',
+    ],
+    highlights: ['夕陽海景包船出遊', '船上KTV自由歡唱', '主持人帶領互動遊戲', '自助輕食飲品無負擔', '結束前互留聯絡方式'],
+    audience: '男生25-40歲、女生20-35歲優質單身',
+    related: ['cycling-date', 'stargazing-night', 'cocktail-party', 'tainan-culture-trip', 'mountain-hiking', 'river-tracing'],
+  },
+  {
+    slug: 'hsinchu-halloween',
+    title: '單身聯誼活動：萬聖節變裝派對｜不給愛就搗蛋',
+    img: BASE + '2023/10/hsinchu-halloween.jpg',
+    excerpt: '在即將到來的萬聖節，我們不給愛就搗蛋！準備好與我們一同度過一個瘋狂、無拘束、有趣好玩的尋愛之夜。',
+    date: '2023/10/29',
+    cat: '娛樂遊戲',
+    hook: '不給愛就搗蛋！用笑聲編織一個瘋狂又甜美的尋愛之夜。',
+    intro: '放開你的瘋狂，拋開白天的工作與煩悶，換上另一個自己！無論是華麗變裝、幽默搞怪，或是獨特奇幻，每一個你都是這場派對的主角。',
+    body: [
+      '搗蛋遊戲大集合：搞怪的遊戲等你來挑戰，嚴肅的時刻是不容忽視的搗蛋時刻！拋開一切，讓快樂的氛圍滿溢整個夜晚，在遊戲互動中自然拉近彼此的距離。',
+      'DJ現場點燃音樂之魂，現場熱情四溢，隨著音樂的節拍翩翩起舞，享受音樂狂歡的感覺。追愛的第一步就是放開心態去玩High，第二步就是記得加LINE，其他的隨興發揮即可！',
+    ],
+    highlights: ['自由變裝主題派對', 'DJ現場音樂狂歡', '搗蛋互動遊戲', '新竹在地舉辦', '解放日常放鬆交流'],
+    audience: '男生25-40歲、女生20-35歲單身未婚',
+    related: ['game-start-party', 'board-games', 'jazz-night', 'movie-appreciation', 'cocktail-party', 'street-dance'],
   },
 ];
 

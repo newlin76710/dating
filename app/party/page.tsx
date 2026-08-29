@@ -79,7 +79,7 @@ const OUTDOOR: Card[] = [
 
 const KAOHSIUNG: Card[] = [
   { title: '濃情蜜意巧克力蛋糕', img: BASE + '2023/07/chocolate-cake.jpg', slug: 'chocolate-cake-baking' },
-  { title: '遊艇派對｜海上的浪漫', img: BASE + '2019/04/yacht-party.jpg', slug: null },
+  { title: '遊艇派對｜海上的浪漫', img: BASE + '2019/04/yacht-party.jpg', slug: 'yacht-party' },
   { title: '愛意盎然｜多肉植物DIY', img: BASE + '2023/07/succulent-diy-khh.png', slug: 'succulent-planting' },
   { title: 'K歌派對-歌聲傳情', img: BASE + '2024/07/karaoke-khh.png', slug: 'k-song-party' },
   { title: '水上騎馬打仗 清涼刺激的泳池Party', img: BASE + '2023/08/pool-party-battle.jpg', slug: 'pool-party-water-battle' },
@@ -87,7 +87,7 @@ const KAOHSIUNG: Card[] = [
 ];
 
 const REGIONAL: Card[] = [
-  { title: '新竹聯誼活動｜萬聖節變裝派對', img: BASE + '2023/10/hsinchu-halloween.jpg', slug: null },
+  { title: '新竹聯誼活動｜萬聖節變裝派對', img: BASE + '2023/10/hsinchu-halloween.jpg', slug: 'hsinchu-halloween' },
   { title: '台南聯誼｜密室逃脫聯誼', img: BASE + '2023/09/tainan-escape-room.jpg', slug: 'escape-room-brain-challenge' },
   { title: '台中聯誼活動｜平價優質的台中未婚聯誼', img: BASE + '2023/09/taichung-party.png', slug: null },
 ];

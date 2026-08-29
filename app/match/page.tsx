@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { SiteShell } from '@/components/site-shell';
 import { MemberGrid } from '@/components/member-grid';
 import type { Member } from '@/components/member-grid';
+import { HeroSlides } from '@/components/hero-slides';
 
 export const metadata: Metadata = {
   title: '找對象',
@@ -300,32 +301,14 @@ export default function MatchPage() {
     <SiteShell>
       <main>
         {/* Hero Banner */}
-        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/5', minHeight: '200px' }}>
-          <img
-            src="/images/banners/banner-03.jpg"
-            alt="找對象配對服務"
-            className="absolute inset-0 h-full w-full object-cover"
-            loading="eager"
-          />
-          <div
-            className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
-            style={{ background: 'rgba(4,144,137,0.58)' }}
-          >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-md">
-              找對象
-            </h1>
-            <p className="mt-3 text-base sm:text-lg text-white/90">
-              真實會員 × 數據配對 × 專業陪伴
-            </p>
-            <a
-              href={LINE_URL}
-              className="mt-6 inline-block rounded-full px-8 py-3 text-sm font-bold text-white shadow-md hover:opacity-90 transition"
-              style={{ background: '#FF93A6' }}
-            >
-              立刻免費諮詢
-            </a>
-          </div>
-        </div>
+        <HeroSlides
+          slides={[
+            { img: BASE + '2023/12/找對象－女生會員徵婚02.png', href: LINE_URL },
+            { img: BASE + '2023/08/0809a.jpg', href: LINE_URL, buttonLabel: '給他一個交友機會' },
+            { img: BASE + '2023/08/0809c.jpg', href: LINE_URL, buttonLabel: '交友成功' },
+            { img: BASE + '2023/12/輪播封面版二01.png', href: LINE_URL },
+          ]}
+        />
 
         {/* Breadcrumb */}
         <div style={{ background: '#f9fafb', borderBottom: '1px solid #e5e7eb' }}>

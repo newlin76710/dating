@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SiteShell } from '@/components/site-shell';
+import { VideoCarousel } from '@/components/video-carousel';
 
 export const metadata: Metadata = {
   title: '關於娜米｜戀愛小秘書娜米｜用數據幫你找對象',
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
 };
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
-const BASE = 'https://ek21.com/dating/wp-content/uploads/';
+const PARTNER_LINE_URL = 'https://line.me/R/ti/p/@121teviv';
+const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
 
 const brands = [
   {
@@ -38,7 +40,7 @@ const brands = [
 
 const socials = [
   {
-    logo: BASE + '2023/09/20230714_娜米logo（無背景）.jpg',
+    logo: BASE + '2023/09/20230714_娜米logo（無背景）.png',
     name: '官方網站',
     items: ['脫單秘笈', '戀愛數字', '男女會員'],
     url: 'https://ek21.com/dating/',
@@ -103,6 +105,22 @@ const products = [
   { img: BASE + '2023/04/LINE_ALBUM_230320_67.jpg', name: '女性服飾' },
   { img: BASE + '2023/04/nnnn.jpg', name: '運動內衣' },
   { img: BASE + '2023/04/1.jpeg', name: '聊天機器人' },
+];
+
+const recommendations = [
+  { quote: '作為一個網路創業家，我對娜米的經營的用心和細心深表敬意。娜米不斷努力鑽研和優化自己的服務', name: '謝綸', title: '電獺執行長' },
+  { quote: '娜米提供了許多有價值的服務，從活動媒合到專業教練顧問諮詢，過程感受到她的在乎與耐心，提供客戶在幸福路上全方位的指引。', name: 'Kevin Lin', title: 'Fandora 行銷總監' },
+  { quote: '娜米的網站不僅提供了許多優質的服務，而且也非常專業和用心。她不斷投入時間和精力來改進自己的技術和服務，以確保每一位用戶都能夠得到最好的體驗。', name: '曾少甫', title: '台灣好新聞 創始人' },
+  { quote: '娜米是一個非常貼心的人，她親近人、不做作，她用專業的態度和專注的精神，為每一個人提供最好的服務。', name: '麗子老師', title: '彩虹數字學會 理事長' },
+  { quote: '她不斷投入時間和精力來提高自己的服務水平，從行銷到技術，她都非常用心地進行優化和提升。', name: 'Dix Chen', title: 'UIUXCafe 執行長' },
+  { quote: '娜米是一個非常有才華和用心的人，她不僅是一個平台，更是一個溫暖和有愛的家。', name: '林正立', title: '采童莊執行長' },
+  { quote: '我真的被她的服務感動了。她非常用心地為每一個人提供最好的服務，細心地聆聽每個人的需求和願望。', name: '林昱廷', title: 'Mandarin Go 執行長' },
+];
+
+const playbookVideos = [
+  { img: BASE + '2023/03/15-2.jpg', youtubeId: 'ARfYxw-dKdU' },
+  { img: BASE + '2022/10/15-768x432.jpg', youtubeId: '_Pnx7ugkRNY' },
+  { img: BASE + '2023/03/15-1-768x432.jpg', youtubeId: 'KpfWwRtExxU' },
 ];
 
 export default function AboutPage() {
@@ -307,30 +325,65 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Contact CTA ── */}
-        <section style={{ background: '#049089' }} className="py-14">
-          <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10 text-center">
-            <h2 className="text-2xl font-bold text-white sm:text-3xl">與娜米合作</h2>
-            <p className="mx-auto mt-4 max-w-xl text-base text-white/80">
-              商業合作請寄信至 mkt@ek21.com，或直接加官方 LINE 諮詢。
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
-                href={LINE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-white px-8 py-3 text-sm font-semibold transition hover:opacity-90"
-                style={{ color: '#049089' }}
-              >
-                加 LINE 免費諮詢
-              </a>
-              <a
-                href="mailto:mkt@ek21.com"
-                className="rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                寄信聯絡
-              </a>
+        {/* ── 感謝各界人士推薦 ── */}
+        <section className="py-14 bg-gray-50">
+          <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
+            <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>
+              感謝各界人士推薦
+            </h2>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {recommendations.map((r) => (
+                <div key={r.name} className="rounded-2xl p-6" style={{ backgroundColor: '#D2E0DE' }}>
+                  <p className="text-sm leading-7 text-gray-700">「{r.quote}」</p>
+                  <p className="mt-4 text-sm font-bold text-gray-800">{r.name}</p>
+                  <p className="text-xs text-gray-500">{r.title}</p>
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── 娜米 X 戀愛教戰守則 ── */}
+        <section className="py-14 bg-white">
+          <div className="mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10">
+            <h2 className="mb-4 text-center text-2xl font-bold" style={{ color: '#049089' }}>
+              娜米 X 戀愛教戰守則
+            </h2>
+            <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-7 text-gray-500">
+              娜米深刻了解單身朋友的情感困境，並親自錄製了許多線上教學影片，教大家應對各種愛情疑難雜症，如善待自己、建立良好的關係、維持長久的戀愛、解決感情危機等等。這些課程影片將幫助你找到愛情的關鍵，讓你在感情生活中更加自信，達到幸福美滿的人生。
+            </p>
+            <VideoCarousel slides={playbookVideos} />
+          </div>
+        </section>
+
+        {/* ── Final CTA (品牌異業合作) ── */}
+        <section className="flex flex-col items-stretch overflow-hidden sm:flex-row" style={{ backgroundColor: '#D2E0DE' }}>
+          <div
+            className="hidden sm:block sm:w-1/3"
+            style={{
+              backgroundImage: `url(${BASE}2023/03/QQ20230325-121403@2x.png)`,
+              backgroundPosition: 'top center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+            }}
+          />
+          <div className="flex w-full flex-col justify-center px-6 py-16 sm:w-2/3 sm:px-16 lg:px-24">
+            <p className="text-sm font-semibold" style={{ color: '#049089' }}>現在就私訊娜米！</p>
+            <h2 className="mt-3 text-3xl font-bold leading-snug text-gray-900 sm:text-4xl">
+              讓脫單男女<br />看見好物
+            </h2>
+            <a
+              href={PARTNER_LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white transition hover:opacity-90"
+              style={{ backgroundColor: '#1A1A1A', padding: '18px 70px' }}
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                <path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+              </svg>
+              加速曝光
+            </a>
           </div>
         </section>
 

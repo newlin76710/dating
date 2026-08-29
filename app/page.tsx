@@ -414,7 +414,7 @@ export default function HomePage() {
 
         {/* ── 形象顧問 ─────────────────────────────────────────────────────── */}
         {/* bg white, padding 0% 5% 0%, min-height 410px, heading Playfair 45px #049089 */}
-        <section style={{ backgroundColor: '#FFFFFF', padding: '50px 0 0' }}>
+        <section style={{ backgroundColor: '#FFFFFF', padding: '44px 0 144px' }}>
           <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 5%' }}>
             <h2 style={{ ...playfair, fontSize: 45, fontWeight: 400, lineHeight: '50px', letterSpacing: '2.24px', color: '#049089', textAlign: 'center', padding: '0 0 2%', margin: 0 }}>
               形象顧問提升你的吸引力
@@ -441,7 +441,7 @@ export default function HomePage() {
                   <div style={{ padding: '16px 20px 20px' }}>
                     <h3 style={{ ...playfair, fontSize: 18, fontWeight: 700, color: '#1a1a1a', margin: '0 0 8px', lineHeight: '1.4' }}>{s.title}</h3>
                     <p style={{ ...roboto, fontSize: 14, color: '#555', margin: 0, lineHeight: '1.6' }}>{s.desc}</p>
-                    <p style={{ ...roboto, fontSize: 13, fontWeight: 500, color: '#049089', margin: '10px 0 0', textAlign: 'right' }}>形象改造 »</p>
+                    <p style={{ ...roboto, fontSize: 13, fontWeight: 500, color: '#049089', margin: '10px 0 0' }}>形象改造 »</p>
                   </div>
                 </a>
               ))}
@@ -450,14 +450,9 @@ export default function HomePage() {
         </section>
 
         {/* ── 戀愛數字密碼 ──────────────────────────────────────────────────── */}
-        {/*
-          3-column flex, min-height 80vh, gap 0, overflow hidden
-          Left col: transparent gradient + text (Roboto 18px)
-          Middle col: Nami WechatIMG photo
-          Right col: transparent gradient + text + #FF93A6 button
-        */}
+        {/* 3 equal 400px columns, content-height (no forced min-height), gap 0 */}
         <section style={{ marginTop: 30 }}>
-          <div style={{ maxWidth: 1000, margin: '0 auto', padding: '10px 0 0' }}>
+          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '10px 0 0' }}>
             <h2 style={{ ...playfair, fontSize: 40, fontWeight: 400, lineHeight: '50px', letterSpacing: '2.24px', color: '#049089', textAlign: 'center', margin: '10px 0 0', padding: '10px 0' }}>
               戀愛數字密碼諮詢
             </h2>
@@ -465,24 +460,13 @@ export default function HomePage() {
 
           <div className="numerology-3col" style={{
             display: 'flex',
-            minHeight: '80vh',
-            overflow: 'hidden',
-            gap: 0,
-            alignItems: 'stretch',
+            justifyContent: 'center',
             marginTop: 10,
-            maxWidth: 1220,
+            maxWidth: 1200,
             margin: '10px auto 0',
           }}>
             {/* Left col: worries */}
-            <div style={{
-              flex: '0 0 28%',
-              maxWidth: 500,
-              background: 'linear-gradient(90deg, rgba(255,255,255,0) 100%, #FFFFFF 40%)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-
-            }}>
+            <div style={{ width: 400, padding: 10, boxSizing: 'border-box' }}>
               <div style={{ ...roboto, fontSize: 18, fontWeight: 400, lineHeight: '35px', color: '#000000' }}>
                 <p style={{ margin: '5px 5px 5px 5px' }}>・♡ 你正在為愛情煩惱嗎？ ♡・</p>
                 <p style={{ margin: '5px 5px 5px 5px' }}>・缺乏感情經驗</p>
@@ -495,24 +479,16 @@ export default function HomePage() {
             </div>
 
             {/* Middle col: Nami photo */}
-            <div style={{ flex: 1, overflow: 'hidden', position: 'relative', minWidth: 0 }}>
+            <div style={{ width: 400, padding: 10, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img
                 src={BASE + '2023/10/nami-consulting.jpg'}
                 alt="戀愛小秘書娜米諮詢"
-                style={{ width: '106%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
+                style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </div>
 
             {/* Right col: helps */}
-            <div style={{
-              flex: '0 0 28%',
-              maxWidth: 400,
-              background: 'linear-gradient(90deg, rgba(255,255,255,0) 100%, #FFFFFF 40%)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              padding: '3% 6% 3% 4%',
-            }}>
+            <div style={{ width: 400, padding: 10, boxSizing: 'border-box' }}>
               <div style={{ ...roboto, fontSize: 18, fontWeight: 400, lineHeight: '35px', color: '#000000' }}>
                 <p style={{ margin: '5px 5px 5px 5px' }}>・♡ 娜米老師幫你 ♡・</p>
                 <p style={{ margin: '5px 5px 5px 5px' }}>・展開戀愛藍圖</p>
@@ -538,9 +514,10 @@ export default function HomePage() {
                     padding: '20px 66px',
                     textDecoration: 'none',
                     marginTop: 10,
+                    whiteSpace: 'nowrap',
                   }}
                 >
-                  立刻諮詢
+                  » 立刻諮詢
                 </a>
               </div>
             </div>
@@ -688,7 +665,9 @@ export default function HomePage() {
                   href={LINE_URL}
                   style={{
                     ...roboto,
-                    display: 'inline-block',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 10,
                     backgroundColor: '#2DC861',
                     color: '#FFFFFF',
                     fontSize: 30,
@@ -702,6 +681,7 @@ export default function HomePage() {
                     marginTop: 10,
                   }}
                 >
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
                   立刻諮詢
                 </a>
               </div>

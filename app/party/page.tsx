@@ -4,6 +4,7 @@ import { events, getEvent } from '@/lib/events';
 import { getArticle } from '@/lib/articles';
 import { HeroSlides } from '@/components/hero-slides';
 import { VideoCarousel } from '@/components/video-carousel';
+import { LineButton } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: '單身聯誼 — 戀愛小秘書推薦的聯誼活動 台北聯誼 高雄聯誼',
@@ -398,7 +399,7 @@ export default function PartyPage() {
 
         {/* ── 13. CTA BANNER ── */}
         <section className="mt-[72px] overflow-hidden" style={{ backgroundColor: '#D2E0DE' }}>
-          <div className="mx-auto flex max-w-[1200px] flex-col items-stretch sm:flex-row" style={{ minHeight: 620 }}>
+          <div className="mx-auto flex max-w-[1200px] flex-col items-stretch sm:flex-row">
             <div
               className="hidden sm:block sm:w-1/3"
               style={{
@@ -416,13 +417,9 @@ export default function PartyPage() {
               <p className="mt-5 max-w-md text-sm leading-7 text-gray-700">
                 積極參加活動，輕鬆突破單身圈！小秘書幫您策劃活動，人來就好免煩惱～讓您專注在深度交流，獲得高品質互動經驗。馬上聯絡戀愛小秘書娜米，今年穩交不是夢！
               </p>
-              <a
-                href={LINE_URL}
-                className="mt-8 inline-block w-fit text-sm font-semibold uppercase tracking-widest text-white transition hover:opacity-90"
-                style={{ backgroundColor: '#1A1A1A', padding: '18px 70px' }}
-              >
+              <LineButton href={LINE_URL} variant="dark" size="lg" className="mt-8 w-fit uppercase tracking-widest">
                 加LINE洽詢單身聯誼活動
-              </a>
+              </LineButton>
             </div>
           </div>
         </section>

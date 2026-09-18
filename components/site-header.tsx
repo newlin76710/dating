@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { LineButton } from './ui/button';
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
 
@@ -15,9 +17,12 @@ const navItems = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === href || pathname?.startsWith(`${href}/`);
 
   return (
-    <header className="sticky top-0 z-30 bg-[#f0f0f5]">
+    <header className="sticky top-0 z-30 bg-[#f0f0f5]/95 backdrop-blur-sm shadow-sm">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
         <a href="/" className="relative block h-[49px] w-[82px] shrink-0 md:h-[89px] md:w-[150px] lg:h-[98px] lg:w-[165px]">
           <img
@@ -33,7 +38,12 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-semibold text-[#7a7a7a] transition hover:text-[#049089]"
+              aria-current={isActive(item.href) ? 'page' : undefined}
+              className={`relative py-1 text-sm font-semibold transition after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:rounded-full after:bg-[#049089] after:transition-all ${
+                isActive(item.href)
+                  ? 'text-[#049089] after:w-full'
+                  : 'text-[#7a7a7a] hover:text-[#049089] after:w-0 hover:after:w-full'
+              }`}
             >
               {item.label}
             </a>
@@ -41,18 +51,14 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href={LINE_URL}
-            className="hidden items-center gap-2 rounded-md bg-line-green px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90 sm:inline-flex"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          <LineButton href={LINE_URL} icon size="md" className="hidden sm:inline-flex">
             加 line 免費諮詢
-          </a>
+          </LineButton>
 
           <button
             type="button"
             onClick={() => setOpen(!open)}
-            className="relative flex h-10 w-10 items-center justify-center rounded-lg text-gray-700 transition hover:bg-gray-100 lg:hidden"
+            className="relative flex h-11 w-11 items-center justify-center rounded-lg text-gray-700 transition hover:bg-gray-100 lg:hidden"
             aria-label={open ? '關閉選單' : '開啟選單'}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -68,30 +74,33 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {open && (
-        <div id="mobile-menu" className="border-t border-gray-200 bg-[#f0f0f5] lg:hidden" role="navigation" aria-label="手機版導航">
-          <nav className="mx-auto max-w-[1200px] px-6 py-4">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="block py-3 text-sm font-semibold text-[#7a7a7a] transition hover:text-[#049089]"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+      <div
+        id="mobile-menu"
+        className={`overflow-hidden border-t border-gray-200 bg-[#f0f0f5] transition-[max-height,opacity] duration-300 ease-in-out lg:hidden ${
+          open ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+        role="navigation"
+        aria-label="手機版導航"
+      >
+        <nav className="mx-auto max-w-[1200px] px-6 py-4">
+          {navItems.map((item) => (
             <a
-              href={LINE_URL}
-              className="mt-3 flex items-center justify-center gap-2 rounded-md bg-line-green px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+              key={item.href}
+              href={item.href}
+              aria-current={isActive(item.href) ? 'page' : undefined}
+              className={`block py-3 text-sm font-semibold transition ${
+                isActive(item.href) ? 'text-[#049089]' : 'text-[#7a7a7a] hover:text-[#049089]'
+              }`}
               onClick={() => setOpen(false)}
             >
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-              加 line 免費諮詢
+              {item.label}
             </a>
-          </nav>
-        </div>
-      )}
+          ))}
+          <LineButton href={LINE_URL} icon size="md" className="mt-3 flex w-full" onClick={() => setOpen(false)}>
+            加 line 免費諮詢
+          </LineButton>
+        </nav>
+      </div>
     </header>
   );
 }

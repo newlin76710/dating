@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { SiteShell } from '@/components/site-shell';
 import { VideoCarousel } from '@/components/video-carousel';
+import { LineButton } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: '關於娜米｜戀愛小秘書娜米｜用數據幫你找對象',
@@ -392,7 +393,7 @@ export default function AboutPage() {
             <h2 className="mb-10 text-center text-2xl font-bold" style={{ color: '#049089' }}>
               娜米的經歷
             </h2>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {experienceImgs.map((src, i) => (
                 <div key={i} className="overflow-hidden rounded-lg aspect-[4/3]">
                   <img src={src} alt="" className="h-full w-full object-cover" />
@@ -513,18 +514,17 @@ export default function AboutPage() {
             <h2 className="mt-3 text-3xl font-bold leading-snug text-gray-900 sm:text-4xl">
               讓脫單男女<br />看見好物
             </h2>
-            <a
+            <LineButton
               href={PARTNER_LINE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white transition hover:opacity-90"
-              style={{ backgroundColor: '#1A1A1A', padding: '18px 70px' }}
+              variant="dark"
+              size="lg"
+              icon
+              className="mt-8 w-fit"
             >
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-                <path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
-              </svg>
               加速曝光
-            </a>
+            </LineButton>
           </div>
         </section>
 

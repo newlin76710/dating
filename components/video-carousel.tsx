@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export interface VideoSlide {
   img: string;
@@ -11,6 +11,17 @@ export function VideoCarousel({ slides }: { slides: VideoSlide[] }) {
   const [start, setStart] = useState(0);
   const [active, setActive] = useState<string | null>(null);
   const visible = 3;
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!active) return;
+    closeBtnRef.current?.focus();
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActive(null);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [active]);
 
   const next = () => setStart((s) => (s + 1) % slides.length);
   const prev = () => setStart((s) => (s - 1 + slides.length) % slides.length);
@@ -74,6 +85,9 @@ export function VideoCarousel({ slides }: { slides: VideoSlide[] }) {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
           onClick={() => setActive(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="活動介紹影片"
         >
           <div className="relative w-full max-w-3xl" style={{ aspectRatio: '16/9' }} onClick={(e) => e.stopPropagation()}>
             <iframe
@@ -84,6 +98,7 @@ export function VideoCarousel({ slides }: { slides: VideoSlide[] }) {
               className="absolute inset-0 h-full w-full rounded"
             />
             <button
+              ref={closeBtnRef}
               onClick={() => setActive(null)}
               aria-label="關閉影片"
               className="absolute -top-10 right-0 flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-xl text-white hover:bg-white/30"

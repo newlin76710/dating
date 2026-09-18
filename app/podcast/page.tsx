@@ -74,8 +74,8 @@ export default function PodcastPage() {
         {/* Top banner */}
         <a
           href="#form"
-          className="relative block w-full overflow-hidden"
-          style={{ height: 400, backgroundColor: '#833ca3' }}
+          className="relative block aspect-[21/9] w-full overflow-hidden"
+          style={{ backgroundColor: '#833ca3' }}
         >
           <img
             src={BASE + '2024/03/podcast-hero-banner.png'}
@@ -215,25 +215,25 @@ export default function PodcastPage() {
             </p>
             <div className="mt-8 space-y-5">
               <div>
-                <label className="block text-sm font-semibold text-gray-700">怎麼稱呼您？（化名、綽號皆可）*</label>
+                <label htmlFor="nickname" className="block text-sm font-semibold text-gray-700">怎麼稱呼您？（化名、綽號皆可）*</label>
                 <p className="mt-1 text-xs text-gray-400">留言將在節目中被公開討論，請盡量使用化名</p>
-                <input type="text" className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
+                <input id="nickname" type="text" className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700">您的性別？</label>
-                <input type="text" className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
+                <label htmlFor="gender" className="block text-sm font-semibold text-gray-700">您的性別？</label>
+                <input id="gender" type="text" className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700">出生 年、月、日、時、分（時、分若無可只填生日）*</label>
-                <input type="text" className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
+                <label htmlFor="birthdate" className="block text-sm font-semibold text-gray-700">出生 年、月、日、時、分（時、分若無可只填生日）*</label>
+                <input id="birthdate" type="text" className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700">我想問娜米的問題 *</label>
-                <textarea rows={4} className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
+                <label htmlFor="question" className="block text-sm font-semibold text-gray-700">我想問娜米的問題 *</label>
+                <textarea id="question" rows={4} className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700">方便的話請留下您的 Email，讓戀愛會社能聯繫您</label>
-                <input type="email" className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-700">方便的話請留下您的 Email，讓戀愛會社能聯繫您</label>
+                <input id="email" type="email" className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm" />
               </div>
               <a
                 href={LINE_URL}

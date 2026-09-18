@@ -12,6 +12,17 @@ export function PodcastEpisodes({ episodes }: { episodes: PodcastEpisode[] }) {
   const [active, setActive] = useState<PodcastEpisode | null>(null);
   const [paused, setPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!active) return;
+    closeBtnRef.current?.focus();
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActive(null);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [active]);
 
   const next = useCallback(() => setIdx((i) => (i + 1) % episodes.length), [episodes.length]);
   const prev = useCallback(() => setIdx((i) => (i - 1 + episodes.length) % episodes.length), [episodes.length]);
@@ -86,17 +97,15 @@ export function PodcastEpisodes({ episodes }: { episodes: PodcastEpisode[] }) {
         </button>
       </div>
 
-      <div className="mt-4 flex gap-2 overflow-x-auto sm:gap-3" style={{ scrollSnapType: 'x mandatory' }}>
+      <div className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-5 sm:gap-3">
         {episodes.map((ep, i) => (
           <button
             key={ep.youtubeId}
             type="button"
             onClick={() => setIdx(i)}
             aria-label={`前往第 ${i + 1} 集`}
-            className="relative block aspect-video shrink-0 overflow-hidden rounded-md"
+            className="relative block aspect-video overflow-hidden rounded-md"
             style={{
-              width: 'calc((100% - 4 * 0.75rem) / 5)',
-              scrollSnapAlign: 'start',
               outline: i === idx ? '3px solid #049089' : 'none',
               outlineOffset: 2,
               opacity: i === idx ? 1 : 0.6,
@@ -116,9 +125,13 @@ export function PodcastEpisodes({ episodes }: { episodes: PodcastEpisode[] }) {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
           onClick={() => setActive(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="戀愛會社節目影片"
         >
           <div className="relative w-full max-w-3xl" onClick={(e) => e.stopPropagation()}>
             <button
+              ref={closeBtnRef}
               type="button"
               onClick={() => setActive(null)}
               className="absolute -top-10 right-0 text-2xl font-bold text-white"

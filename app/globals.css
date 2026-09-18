@@ -16,6 +16,12 @@ body {
   color: #1a1a1a;
 }
 
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 56px;
+  }
+}
+
 ::selection {
   background: rgba(7, 195, 186, 0.2);
 }

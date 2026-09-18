@@ -1,5 +1,9 @@
 import { SiteShell } from '@/components/site-shell';
 import { TestimonialCarousel } from '@/components/testimonial-carousel';
+import { Section } from '@/components/ui/section';
+import { SectionHeading } from '@/components/ui/section-heading';
+import { LineButton } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { consultArticles } from '@/lib/consulting';
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
@@ -45,7 +49,6 @@ const steps = [
     desc: '資料驗證完成，開始安排約會，參加各種有趣的單身聯誼活動，開始在真實生活中認識異性吧！',
   },
 ];
-
 
 const consultServices = consultArticles.map((a) => ({
   slug: a.slug,
@@ -107,601 +110,241 @@ const endorserCols = [
   ],
 ];
 
-const playfair: React.CSSProperties = { fontFamily: 'var(--font-playfair), "Playfair Display", serif' };
-const roboto: React.CSSProperties = { fontFamily: 'var(--font-roboto), "Roboto", sans-serif' };
-const poppins: React.CSSProperties = { fontFamily: 'var(--font-poppins), "Poppins", sans-serif' };
-
 export default function HomePage() {
   return (
     <SiteShell>
       <main>
 
         {/* ── Hero ────────────────────────────────────────────────────────── */}
-        <section className="overflow-hidden bg-white" style={{ position: 'relative' }}>
-          {/* Mobile: stacked image */}
-          <div
-            className="block md:hidden"
-            style={{
-              width: '100%',
-              height: 240,
-              backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
-              backgroundPosition: 'top left',
-              backgroundSize: 'cover',
-            }}
-          />
-
-          {/* Content: max-width 1200px, with spacer matching left 33% */}
-          <div
-            style={{
-              position: 'relative',
-              maxWidth: 1200,
-              margin: '0 auto',
-              display: 'flex',
-              alignItems: 'stretch',
-            }}
-          >
-            {/* Decorative accent blocks (teal + gold), matching the reference's design */}
-            <div
-              className="hidden md:block"
-              style={{ position: 'absolute', top: 0, left: '33.333%', width: 128, height: 94, backgroundColor: '#07C3BA' }}
-            />
-            <div
-              className="hidden md:block"
-              style={{ position: 'absolute', top: 0, left: '85.08%', width: '15%', height: '100%', backgroundColor: '#EFB92A' }}
-            />
+        <section className="overflow-hidden bg-white">
+          <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 md:grid-cols-[1fr_1.4fr]">
+            {/* Decorative accent blocks (desktop only) */}
+            <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[15%] bg-[#EFB92A] md:block" />
+            <div className="pointer-events-none absolute left-[calc(33.333%-1px)] top-0 hidden h-24 w-32 bg-[#07C3BA] md:block" />
 
             <div
-              className="hidden md:block"
-              style={{
-                width: '33.333%',
-                flexShrink: 0,
-                minHeight: 500,
-                backgroundImage: `url(${BASE}2023/03/0330home.jpg)`,
-                backgroundPosition: 'top center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-              }}
+              className="aspect-[4/3] bg-cover bg-top md:aspect-auto md:min-h-[500px]"
+              style={{ backgroundImage: `url(${BASE}2023/03/0330home.jpg)` }}
             />
-            <div style={{ flex: 1 }}>
-              <div
-                className="hero-content-col"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  minHeight: 500,
-                  padding: '0 22% 0 15%',
-                }}
-              >
-                <div style={{ width: '100%' }}>
 
-                  {/* Subtitle */}
-                  <p
-                    style={{
-                      ...roboto,
-                      fontSize: 30,
-                      fontWeight: 400,
-                      lineHeight: '34px',
-                      color: '#000000',
-                      margin: '0 0 12px 0',
-                      padding: '2% 0',
-                    }}
-                  >
-                    台灣最專業的紅娘
-                  </p>
+            <div className="relative flex items-center px-6 py-10 sm:px-10 md:px-14 md:py-16 lg:pr-24">
+              <div>
+                <p className="font-roboto text-lg text-gray-700 sm:text-xl md:text-2xl">
+                  台灣最專業的紅娘
+                </p>
+                <h1 className="font-playfair mt-2 font-bold tracking-wide text-gray-900 text-hero">
+                  戀愛小秘書娜米
+                </h1>
+                <p className="font-roboto mt-4 text-base leading-8 sm:text-lg" style={{ color: '#008080' }}>
+                  協助超過 4,000 位未婚男女配對成功！
+                  <br />
+                  陪你找到真愛、實現幸福
+                </p>
+                <p className="font-roboto mt-2 text-sm leading-7 text-gray-800 sm:text-base">
+                  免費配對諮詢／聯誼活動推薦／戀愛密碼解析
+                </p>
 
-                  {/* H1 */}
-                  <h1
-                    style={{
-                      ...playfair,
-                      fontSize: 55,
-                      fontWeight: 700,
-                      lineHeight: '60px',
-                      letterSpacing: '3.53px',
-                      color: '#000000',
-                      margin: 0,
-                    }}
-                  >
-                    戀愛小秘書娜米
-                  </h1>
-
-                  {/* Description */}
-                  <p
-                    style={{
-                      ...roboto,
-                      fontSize: 18,
-                      fontWeight: 400,
-                      lineHeight: '35px',
-                      color: '#008080',
-                      margin: '12px 0 0 0',
-                      padding: '0 15% 0 0',
-                    }}
-                  >
-                    協助超過 4,000 位未婚男女配對成功！
-                    <br />
-                    陪你找到真愛、實現幸福
-                  </p>
-                  <p
-                    style={{
-                      ...roboto,
-                      fontSize: 18,
-                      fontWeight: 400,
-                      lineHeight: '35px',
-                      color: '#000000',
-                      margin: 0,
-                      padding: '0 0 2% 0',
-                    }}
-                  >
-                    免費配對諮詢／聯誼活動推薦／戀愛密碼解析
-                  </p>
-
-                  {/* LINE button */}
-                  <a
-                    href={LINE_URL}
-                    style={{
-                      ...roboto,
-                      display: 'inline-block',
-                      backgroundColor: '#2DC861',
-                      color: '#FFFFFF',
-                      fontSize: 16,
-                      fontWeight: 400,
-                      textTransform: 'uppercase',
-                      letterSpacing: '1.95px',
-                      lineHeight: '22px',
-                      borderRadius: 12,
-                      padding: '16px 70px',
-                      textDecoration: 'none',
-                      marginTop: 16,
-                    }}
-                  >
-                    加 line 免費諮詢
-                  </a>
-                </div>
+                <LineButton href={LINE_URL} icon size="lg" className="mt-8">
+                  加 line 免費諮詢
+                </LineButton>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Mobile padding style */}
-        <style>{`
-          @media (max-width: 767px) {
-            .hero-content-col {
-              min-height: auto !important;
-              padding: 5% 8% 8% 8% !important;
-            }
-            .steps-row {
-              flex-wrap: wrap !important;
-            }
-            .steps-row > div {
-              width: 100% !important;
-              padding-left: 24px !important;
-              padding-right: 24px !important;
-              margin-bottom: 32px;
-            }
-            .numerology-3col {
-              flex-direction: column !important;
-            }
-            .cta-split {
-              flex-direction: column !important;
-            }
-            .cta-right {
-              padding: 10% 8% !important;
-            }
-            .home-grid-3 {
-              grid-template-columns: 1fr !important;
-            }
-            .numerology-3col > div {
-              width: 100% !important;
-              max-width: 420px;
-            }
-            .testimonial-row {
-              flex-direction: column !important;
-            }
-            .testimonial-row > div {
-              margin: 0 0 16px 0 !important;
-            }
-            .media-logos-row {
-              flex-wrap: wrap !important;
-              row-gap: 20px !important;
-            }
-            .media-logo-item {
-              flex: 0 0 28% !important;
-              max-width: 28% !important;
-              min-width: 0 !important;
-            }
-          }
-        `}</style>
-
         {/* ── 3 Steps ─────────────────────────────────────────────────────── */}
-        {/*
-          4 equal columns (25% each), section bg white, padding 100px 0
-          Left col: heading 只要3步驟 / 輕鬆認識異性 (Playfair 40px)
-          Steps: number Playfair 45px #07C3BA, title Playfair 22px bold, desc Roboto 18px w300
-        */}
-        <section style={{ backgroundColor: '#FFFFFF', padding: '100px 0' }}>
-          <div className="steps-row" style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', padding: '0 24px' }}>
-
-            {/* Left: heading col */}
-            <div style={{ width: '25%', flexShrink: 0, paddingLeft: '0%' }}>
-              <h2 style={{ ...playfair, fontSize: 40, fontWeight: 'normal', lineHeight: '58px', letterSpacing: '2.24px', color: '#000000', margin: 0 }}>
+        <Section>
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <h2 className="font-playfair text-display font-normal text-gray-900">
                 只要 3 步驟
-              </h2>
-              <h2 style={{ ...playfair, fontSize: 40, fontWeight: 'normal', lineHeight: '58px', letterSpacing: '2.24px', color: '#000000', margin: 0 }}>
+                <br />
                 輕鬆認識異性
               </h2>
             </div>
 
-            {/* Step 1 */}
-            <div style={{ width: '25%', flexShrink: 0, paddingLeft: 49, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-              <div>
-                <p style={{ ...playfair, fontSize: 45, fontWeight: 'bold', lineHeight: '35px', letterSpacing: '1.87px', color: '#07C3BA', margin: '0 0 12px 0' }}>
-                  01
+            {steps.map((s) => (
+              <div key={s.num}>
+                <p className="font-playfair text-4xl font-bold" style={{ color: '#07C3BA' }}>
+                  {s.num}
                 </p>
-                <div style={{ marginTop: 12 }}>
-                  <p style={{ ...playfair, fontSize: 22, fontWeight: 'bold', lineHeight: '32px', letterSpacing: '1.45px', color: '#1A1A1A', margin: 0 }}>
-                    {steps[0].title}
-                  </p>
-                  <p style={{ ...roboto, fontSize: 18, fontWeight: 300, lineHeight: '25px', color: '#1A1A1A', margin: '8px 0 0 0' }}>
-                    {steps[0].desc}
-                  </p>
-                </div>
+                <h3 className="font-playfair mt-3 text-xl font-bold text-gray-900">{s.title}</h3>
+                <p className="font-roboto mt-2 text-base leading-7 text-gray-700">{s.desc}</p>
               </div>
-            </div>
-
-            {/* Step 2 */}
-            <div style={{ width: '25%', flexShrink: 0, paddingLeft: 35, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-              <div>
-                <p style={{ ...playfair, fontSize: 45, fontWeight: 'bold', lineHeight: '35px', letterSpacing: '1.87px', color: '#07C3BA', margin: '0 0 12px 0' }}>
-                  02
-                </p>
-                <div style={{ marginTop: 12 }}>
-                  <p style={{ ...playfair, fontSize: 22, fontWeight: 'bold', lineHeight: '32px', letterSpacing: '1.45px', color: '#1A1A1A', margin: 0 }}>
-                    {steps[1].title}
-                  </p>
-                  <p style={{ ...roboto, fontSize: 18, fontWeight: 300, lineHeight: '25px', color: '#1A1A1A', margin: '8px 0 0 0' }}>
-                    {steps[1].desc}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div style={{ width: '25%', flexShrink: 0, paddingLeft: 35, paddingRight: 60, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-              <div>
-                <p style={{ ...playfair, fontSize: 45, fontWeight: 'bold', lineHeight: '35px', letterSpacing: '1.87px', color: '#07C3BA', margin: '0 0 12px 0' }}>
-                  03
-                </p>
-                <div style={{ marginTop: 12 }}>
-                  <p style={{ ...playfair, fontSize: 22, fontWeight: 'bold', lineHeight: '32px', letterSpacing: '1.45px', color: '#1A1A1A', margin: 0 }}>
-                    {steps[2].title}
-                  </p>
-                  <p style={{ ...roboto, fontSize: 18, fontWeight: 300, lineHeight: '25px', color: '#1A1A1A', margin: '8px 0 0 0' }}>
-                    {steps[2].desc}
-                  </p>
-                </div>
-              </div>
-            </div>
-
+            ))}
           </div>
-        </section>
+        </Section>
 
         {/* ── Events ──────────────────────────────────────────────────────── */}
-        {/* bg white + 0.5 overlay, padding 3% 10% 10% 10%, heading Playfair 40px #049089 */}
-        <section style={{ backgroundColor: '#FFFFFF', padding: '3% 10% 10%', position: 'relative' }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundColor: '#FFFFFF', opacity: 0.5 }} />
-          <div style={{ position: 'relative', maxWidth: 1200, margin: '0 auto' }}>
-            <h2 style={{ ...playfair, fontSize: 40, fontWeight: 400, lineHeight: '50px', letterSpacing: '2.24px', color: '#049089', textAlign: 'center', margin: '10px 0 0', padding: '10px 0 0' }}>
-              多元有趣的單身聯誼活動
-            </h2>
-            <h2 style={{ ...playfair, fontSize: 40, fontWeight: 400, lineHeight: '50px', letterSpacing: '2.24px', color: '#049089', textAlign: 'center', margin: 0, padding: '10px 0' }}>
-              豐富你的社交生活
-            </h2>
-            <p style={{ ...roboto, fontSize: 18, fontWeight: 300, lineHeight: '25px', color: '#000000', textAlign: 'center', padding: '0 15% 3%', margin: 0 }}>
-              透過各種主題的實體活動，不僅能親眼真實見到異性，也能在活動進行中讓大家很輕鬆自然的認識彼此、聊天互動，能更快速的找到適合的對象。
-            </p>
+        <Section bg="#FFFFFF">
+          <SectionHeading subtitle="透過各種主題的實體活動，不僅能親眼真實見到異性，也能在活動進行中讓大家很輕鬆自然的認識彼此、聊天互動，能更快速的找到適合的對象。">
+            多元有趣的單身聯誼活動
+            <br />
+            豐富你的社交生活
+          </SectionHeading>
 
-            {/* 3-col grid */}
-            <div className="home-grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 35 }}>
-              {homeEvents.map((ev) => (
-                <a
-                  key={ev.title}
-                  href={ev.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: 'none', color: 'inherit', display: 'block', borderRadius: 4, overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.12)', backgroundColor: '#fff' }}
-                >
-                  <div style={{ position: 'relative', paddingBottom: '50%', overflow: 'hidden' }}>
-                    <img
-                      src={ev.img}
-                      alt={ev.title}
-                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
-                    />
-                  </div>
-                  <div style={{ padding: '16px 20px 20px' }}>
-                    <h3 style={{ ...roboto, fontSize: 15, fontWeight: 500, color: '#1a1a1a', margin: '0 0 8px', lineHeight: '1.4' }}>{ev.title}</h3>
-                    <p style={{ ...roboto, fontSize: 14, color: '#666', margin: 0, lineHeight: '1.6' }}>{ev.desc}</p>
-                    <p style={{ ...roboto, fontSize: 13, fontWeight: 500, color: '#049089', margin: '8px 0 0', textAlign: 'right' }}>
-                      參加單身聯誼 »
-                    </p>
-                  </div>
-                </a>
-              ))}
-            </div>
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {homeEvents.map((ev) => (
+              <Card
+                key={ev.title}
+                href={ev.url}
+                img={ev.img}
+                imgAlt={ev.title}
+                aspect="aspect-[2/1]"
+                title={ev.title}
+                desc={ev.desc}
+                cta="參加單身聯誼 »"
+              />
+            ))}
           </div>
-        </section>
+        </Section>
 
         {/* ── 形象顧問 ─────────────────────────────────────────────────────── */}
-        {/* bg white, padding 0% 5% 0%, min-height 410px, heading Playfair 45px #049089 */}
-        <section style={{ backgroundColor: '#FFFFFF', padding: '44px 0 144px' }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 5%' }}>
-            <h2 style={{ ...playfair, fontSize: 45, fontWeight: 400, lineHeight: '50px', letterSpacing: '2.24px', color: '#049089', textAlign: 'center', padding: '0 0 2%', margin: 0 }}>
-              形象顧問提升你的吸引力
-            </h2>
-            <p style={{ ...roboto, fontSize: 18, fontWeight: 300, lineHeight: '25px', color: '#000000', textAlign: 'center', padding: '0 15% 3%', margin: 0 }}>
-              戀愛小秘書團隊提供「約會魅力形象指導」及「形象改造計畫」。我們也提供形象風格穿搭、情感教育、投資理財等講座，讓你更能自我提升與學習！
-            </p>
+        <Section bg="#FFFFFF">
+          <SectionHeading subtitle="戀愛小秘書團隊提供「約會魅力形象指導」及「形象改造計畫」。我們也提供形象風格穿搭、情感教育、投資理財等講座，讓你更能自我提升與學習！">
+            形象顧問提升你的吸引力
+          </SectionHeading>
 
-            {/* 3-col article cards */}
-            <div className="home-grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28, marginTop: 8 }}>
-              {consultServices.map((s) => (
-                <a
-                  key={s.title}
-                  href={`/consulting/${s.slug}`}
-                  style={{ textDecoration: 'none', color: 'inherit', display: 'block', borderRadius: 4, overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.12)', backgroundColor: '#fff' }}
-                >
-                  <div style={{ position: 'relative', paddingBottom: '65%', overflow: 'hidden' }}>
-                    <img
-                      src={s.img}
-                      alt={s.title}
-                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
-                    />
-                  </div>
-                  <div style={{ padding: '16px 20px 20px' }}>
-                    <h3 style={{ ...playfair, fontSize: 18, fontWeight: 700, color: '#1a1a1a', margin: '0 0 8px', lineHeight: '1.4' }}>{s.title}</h3>
-                    <p style={{ ...roboto, fontSize: 14, color: '#555', margin: 0, lineHeight: '1.6' }}>{s.desc}</p>
-                    <p style={{ ...roboto, fontSize: 13, fontWeight: 500, color: '#049089', margin: '10px 0 0' }}>形象改造 »</p>
-                  </div>
-                </a>
-              ))}
-            </div>
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {consultServices.map((s) => (
+              <Card
+                key={s.title}
+                href={`/consulting/${s.slug}`}
+                img={s.img}
+                imgAlt={s.title}
+                aspect="aspect-[3/2]"
+                title={s.title}
+                desc={s.desc}
+                cta="形象改造 »"
+                titleFont="serif"
+              />
+            ))}
           </div>
-        </section>
+        </Section>
 
         {/* ── 戀愛數字密碼 ──────────────────────────────────────────────────── */}
-        {/* 3 equal 400px columns, content-height (no forced min-height), gap 0 */}
-        <section style={{ marginTop: 30 }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '10px 0 0' }}>
-            <h2 style={{ ...playfair, fontSize: 40, fontWeight: 400, lineHeight: '50px', letterSpacing: '2.24px', color: '#049089', textAlign: 'center', margin: '10px 0 0', padding: '10px 0' }}>
-              戀愛數字密碼諮詢
-            </h2>
-          </div>
+        <Section>
+          <SectionHeading>戀愛數字密碼諮詢</SectionHeading>
 
-          <div className="numerology-3col" style={{
-            display: 'flex',
-            justifyContent: 'center',
-            marginTop: 10,
-            maxWidth: 1200,
-            margin: '10px auto 0',
-          }}>
-            {/* Left col: worries */}
-            <div style={{ width: 400, padding: 10, boxSizing: 'border-box' }}>
-              <div style={{ ...roboto, fontSize: 18, fontWeight: 400, lineHeight: '35px', color: '#000000' }}>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・♡ 你正在為愛情煩惱嗎？ ♡・</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・缺乏感情經驗</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・與異性相處，時常受挫</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・不知道自己的優勢在哪裡</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・不知道如何吸引異性</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・無法在感情上做出好的抉擇</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・總是遇見不對的人</p>
-              </div>
+          <div className="mt-10 grid grid-cols-1 items-center gap-10 md:grid-cols-3">
+            <div className="font-roboto space-y-2 text-base leading-9 text-gray-900">
+              <p>・♡ 你正在為愛情煩惱嗎？ ♡・</p>
+              <p>・缺乏感情經驗</p>
+              <p>・與異性相處，時常受挫</p>
+              <p>・不知道自己的優勢在哪裡</p>
+              <p>・不知道如何吸引異性</p>
+              <p>・無法在感情上做出好的抉擇</p>
+              <p>・總是遇見不對的人</p>
             </div>
 
-            {/* Middle col: Nami photo */}
-            <div style={{ width: 400, padding: 10, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img
-                src={BASE + '2023/10/nami-consulting.jpg'}
-                alt="戀愛小秘書娜米諮詢"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
+            <img
+              src={BASE + '2023/10/nami-consulting.jpg'}
+              alt="戀愛小秘書娜米諮詢"
+              className="mx-auto w-full max-w-xs rounded-2xl shadow-card"
+              loading="lazy"
+            />
 
-            {/* Right col: helps */}
-            <div style={{ width: 400, padding: 10, boxSizing: 'border-box' }}>
-              <div style={{ ...roboto, fontSize: 18, fontWeight: 400, lineHeight: '35px', color: '#000000' }}>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・♡ 娜米老師幫你 ♡・</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・展開戀愛藍圖</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・吸引戀愛秘訣</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・經營幸福方法</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・找到速配對象</p>
-                <p style={{ margin: '5px 5px 5px 5px' }}>・創造幸福人生</p>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: 10 }}>
-                <a
-                  href="/podcast"
-                  style={{
-                    ...roboto,
-                    display: 'inline-block',
-                    backgroundColor: '#FF93A6',
-                    color: '#FFFFFF',
-                    fontSize: 30,
-                    fontWeight: 'normal',
-                    textTransform: 'uppercase',
-                    letterSpacing: '1.95px',
-                    lineHeight: '30px',
-                    borderRadius: 4,
-                    padding: '20px 66px',
-                    textDecoration: 'none',
-                    marginTop: 10,
-                    whiteSpace: 'nowrap',
-                  }}
-                >
+            <div className="font-roboto space-y-2 text-base leading-9 text-gray-900">
+              <p>・♡ 娜米老師幫你 ♡・</p>
+              <p>・展開戀愛藍圖</p>
+              <p>・吸引戀愛秘訣</p>
+              <p>・經營幸福方法</p>
+              <p>・找到速配對象</p>
+              <p>・創造幸福人生</p>
+              <div className="mt-6 flex justify-center md:justify-start">
+                <LineButton href="/podcast" variant="rose" size="lg">
                   » 立刻諮詢
-                </a>
+                </LineButton>
               </div>
             </div>
           </div>
-        </section>
+        </Section>
 
         {/* ── 戀愛密碼諮詢見證 ──────────────────────────────────────────────── */}
-        {/*
-          White cards, box-shadow 0 0 25px rgba(0,0,0,0.15), border-radius 5px, padding 35px
-          Quote: 16px w300, Photo: 55px circle, Name: 20px, Meta: #bfbfbf 15px w300
-        */}
-        <section style={{ padding: '35px 0 0' }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
-            <h2 style={{ ...playfair, fontSize: 40, fontWeight: 400, lineHeight: '50px', letterSpacing: '2.24px', color: '#049089', textAlign: 'center', margin: '10px 0 0', padding: '10px 0 0' }}>
-              戀愛密碼諮詢見證
-            </h2>
+        <Section>
+          <SectionHeading>戀愛密碼諮詢見證</SectionHeading>
 
-            <div className="testimonial-row" style={{ display: 'flex', gap: 0, marginTop: 35 }}>
-              {consultTestimonials.map((t, i) => (
-                <div
-                  key={t.name}
-                  style={{
-                    flex: 1,
-                    background: 'linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)',
-                    borderRadius: 5,
-                    boxShadow: '0px 0px 25px 0px rgba(0,0,0,0.15)',
-                    padding: 35,
-                    margin: i === 0 ? '0 16px 0 0' : i === 1 ? '0 8px 0 8px' : '0 0 0 16px',
-                  }}
-                >
-                  <p style={{ ...roboto, fontSize: 16, fontWeight: 300, lineHeight: '1.8em', color: '#000000', margin: '0 0 16px' }}>
-                    {t.quote}
-                  </p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 'auto' }}>
-                    <img
-                      src={t.photo}
-                      alt={t.name}
-                      style={{ width: 55, height: 55, borderRadius: '50%', objectFit: 'cover', objectPosition: 'top', flexShrink: 0 }}
-                    />
-                    <div>
-                      <p style={{ fontSize: 20, color: '#000000', margin: 0 }}>{t.name}</p>
-                      <p style={{ fontSize: 15, fontWeight: 300, color: '#bfbfbf', margin: 0 }}>{t.meta}</p>
-                    </div>
-                  </div>
-                  {/* Numerology graphic */}
-                  <div style={{ marginTop: 16 }}>
-                    <img src={t.graphic} alt={`${t.name} 戀愛數字`} style={{ width: '100%', objectFit: 'contain', maxHeight: 80 }} />
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {consultTestimonials.map((t) => (
+              <div key={t.name} className="rounded-2xl bg-white p-8 shadow-card">
+                <p className="font-roboto text-sm leading-7 text-gray-800">{t.quote}</p>
+                <div className="mt-5 flex items-center gap-3">
+                  <img
+                    src={t.photo}
+                    alt={t.name}
+                    className="h-14 w-14 shrink-0 rounded-full object-cover object-top"
+                    loading="lazy"
+                  />
+                  <div>
+                    <p className="text-base text-gray-900">{t.name}</p>
+                    <p className="text-sm font-light text-gray-400">{t.meta}</p>
                   </div>
                 </div>
-              ))}
-            </div>
+                <img
+                  src={t.graphic}
+                  alt={`${t.name} 戀愛數字`}
+                  className="mt-4 max-h-20 w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
-        </section>
+        </Section>
 
         {/* ── 媒體採訪報導 ──────────────────────────────────────────────────── */}
-        {/* Poppins 45px uppercase #049089, bg white, padding 50px 10% 8% */}
-        <section style={{ backgroundColor: '#FFFFFF', padding: '50px 0 0' }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 10% 8%' }}>
-            <h2 style={{ ...poppins, fontSize: 45, fontWeight: 400, textTransform: 'uppercase', lineHeight: '50px', letterSpacing: '1.18px', color: '#049089', textAlign: 'center', margin: 0, padding: 0 }}>
-              媒體採訪報導
-            </h2>
-            <p style={{ ...roboto, fontSize: 16, fontWeight: 300, color: '#666666', textAlign: 'center', margin: '12px 0 0' }}>
-              感謝媒體對戀愛小秘書及娜米的採訪報導
-            </p>
+        <Section bg="#FFFFFF">
+          <h2 className="font-poppins text-center text-2xl font-normal uppercase tracking-wide" style={{ color: '#049089' }}>
+            媒體採訪報導
+          </h2>
+          <p className="font-roboto mt-3 text-center text-base font-light text-gray-500">
+            感謝媒體對戀愛小秘書及娜米的採訪報導
+          </p>
 
-            <div className="media-logos-row" style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', alignItems: 'center', gap: 20, marginTop: 40 }}>
-              {mediaLogos.map((m) => (
-                <div key={m.name} className="media-logo-item" style={{ flex: '1 1 0', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 50, maxWidth: 130 }}>
-                  <img
-                    src={m.img}
-                    alt={m.name}
-                    style={{ width: '100%', maxHeight: 48, objectFit: 'contain', filter: 'grayscale(30%)' }}
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+            {mediaLogos.map((m) => (
+              <img
+                key={m.name}
+                src={m.img}
+                alt={m.name}
+                className="h-12 w-auto max-w-[130px] object-contain grayscale-[30%]"
+                loading="lazy"
+              />
+            ))}
           </div>
-        </section>
+        </Section>
 
         {/* ── 感謝各界人士推薦 ──────────────────────────────────────────────── */}
-        {/*
-          bg #D2E0DE, Playfair 40px #049089
-          3 columns of endorsers (simulating Swiper carousels)
-          Each slide: bg #D2E0DE, border-radius 10px, padding 25px
-          Text: 15px w300 | Name: #049089 15px italic
-        */}
-        <section style={{ backgroundColor: '#D2E0DE', padding: '0 0 50px' }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 10% 0 0' }}>
-            <h2 style={{ ...playfair, fontSize: 40, fontWeight: 400, lineHeight: '50px', letterSpacing: '2.24px', color: '#049089', textAlign: 'center', margin: 0, padding: '10px 0 0 10%' }}>
-              感謝各界人士推薦
-            </h2>
-          </div>
+        <Section bg="#D2E0DE">
+          <SectionHeading>感謝各界人士推薦</SectionHeading>
 
-          <div className="home-grid-3" style={{ maxWidth: 1200, margin: '2% auto 0', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 28px' }}>
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {endorserCols.map((col, ci) => (
               <TestimonialCarousel key={ci} items={col} />
             ))}
           </div>
-        </section>
+        </Section>
 
         {/* ── CTA ─────────────────────────────────────────────────────────── */}
-        {/*
-          bg #D2E0DE, split: left col = cta_bottom.jpg, right col = text
-          Right col padding: 15% 30% 15% 20%
-          Sub-heading: Poppins 22px #049089
-          Main heading: Poppins 55px uppercase #090808
-          Text: Poppins 16px w300
-          Button: #2DC861, border-radius 12px, padding 20px 66px
-        */}
-        <section className="cta-split" style={{ backgroundColor: '#D2E0DE', display: 'flex', alignItems: 'stretch', overflow: 'hidden' }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', width: '100%' }}>
-            {/* Left: image */}
+        <section style={{ backgroundColor: '#D2E0DE' }}>
+          <div className="mx-auto flex max-w-[1200px] flex-col md:flex-row">
             <div
-              className="hidden md:block"
-              style={{
-                width: '35%',
-                flexShrink: 0,
-                minHeight: 480,
-                backgroundImage: `url(${BASE}2023/03/cta_bottom.jpg)`,
-                backgroundPosition: 'top center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-              }}
+              className="hidden bg-cover bg-top md:block md:w-[35%]"
+              style={{ backgroundImage: `url(${BASE}2023/03/cta_bottom.jpg)` }}
             />
 
-            {/* Right: content */}
-            <div className="cta-right" style={{
-              flex: 1,
-              padding: '12% 22% 12% 8%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-            }}>
-              <h3 style={{ ...poppins, fontSize: 22, fontWeight: 400, lineHeight: '26px', letterSpacing: '1.6px', color: '#049089', margin: 0, textAlign: 'start' }}>
+            <div className="flex flex-1 flex-col justify-center px-6 py-14 sm:px-10 md:px-16">
+              <h3 className="font-poppins text-lg tracking-wide" style={{ color: '#049089' }}>
                 別再為繼續單身找藉口！
               </h3>
-              <h2 style={{ ...poppins, fontSize: 44, fontWeight: 500, lineHeight: '1.2em', letterSpacing: '1.18px', color: '#090808', margin: '12px 0 0', padding: 0 }}>
+              <h2 className="font-poppins mt-3 font-medium leading-tight text-gray-900 text-display">
                 追求脫單，先勇敢跨出你的第一步吧！
               </h2>
-              <p style={{ ...poppins, fontSize: 16, fontWeight: 300, lineHeight: '20px', letterSpacing: '1px', color: '#000000', margin: '12px 0 0', maxWidth: 310 }}>
+              <p className="font-poppins mt-4 max-w-md text-base leading-7 text-gray-800">
                 建議以認識新朋友的心態，積極參與活動，才能真正為自己帶來戀愛的機會！
               </p>
-              <div style={{ marginTop: 10 }}>
-                <a
-                  href={LINE_URL}
-                  style={{
-                    ...roboto,
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 10,
-                    backgroundColor: '#2DC861',
-                    color: '#FFFFFF',
-                    fontSize: 30,
-                    fontWeight: 'normal',
-                    textTransform: 'uppercase',
-                    letterSpacing: '1.95px',
-                    lineHeight: '30px',
-                    borderRadius: 12,
-                    padding: '20px 66px',
-                    textDecoration: 'none',
-                    marginTop: 10,
-                  }}
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-                  立刻諮詢
-                </a>
-              </div>
+              <LineButton href={LINE_URL} icon size="lg" className="mt-8 w-fit">
+                立刻諮詢
+              </LineButton>
             </div>
           </div>
         </section>

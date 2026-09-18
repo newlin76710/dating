@@ -1,10 +1,12 @@
+import { LineButton } from './ui/button';
+
 const LINE_URL = 'https://lin.ee/iweaTucb';
 const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
 
 export function SiteFooter() {
   return (
     <footer className="text-white" style={{ background: '#049089' }}>
-      <div className="mx-auto max-w-[1200px] px-6 py-7 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-[1200px] px-6 py-12 sm:px-8 sm:py-16 lg:px-10">
         <div className="grid gap-10 lg:grid-cols-[1.6fr_0.8fr_0.6fr]">
           {/* Logo + description */}
           <div>
@@ -28,14 +30,9 @@ export function SiteFooter() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
               </a>
             </div>
-            <a
-              href={LINE_URL}
-              className="mt-5 inline-flex items-center gap-2 rounded-md px-6 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
-              style={{ background: '#2DC861' }}
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            <LineButton href={LINE_URL} icon className="mt-5">
               加 line 免費諮詢
-            </a>
+            </LineButton>
           </div>
 
           {/* Nav links */}

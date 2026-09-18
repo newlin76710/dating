@@ -33,12 +33,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ek21.com/dating'),
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: '48x48' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/dating/favicon.ico', sizes: '48x48' },
+      { url: '/dating/icon.svg', type: 'image/svg+xml' },
     ],
-    apple: '/apple-touch-icon.png',
+    apple: '/dating/apple-touch-icon.png',
   },
-  manifest: '/manifest.json',
+  manifest: '/dating/manifest.json',
   openGraph: {
     type: 'website',
     locale: 'zh_TW',

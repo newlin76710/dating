@@ -1,5 +1,5 @@
 const IMG = 'https://ek21.com/dating/wp-content/uploads/';
-const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
+const BASE = '/dating/images/original/ek21.com/dating/wp-content/uploads/';
 
 export interface Article {
   slug: string;

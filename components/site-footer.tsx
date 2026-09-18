@@ -1,7 +1,7 @@
 import { LineButton } from './ui/button';
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
-const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
+const BASE = '/dating/images/original/ek21.com/dating/wp-content/uploads/';
 
 export function SiteFooter() {
   return (
@@ -39,12 +39,12 @@ export function SiteFooter() {
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-white/80">服務項目</h3>
             <div className="grid grid-cols-2 gap-x-5 gap-y-2 text-sm text-white/70">
-              <a href="/party" className="transition hover:text-white">單身聯誼</a>
-              <a href="/events" className="transition hover:text-white">聯誼花絮</a>
-              <a href="/match" className="transition hover:text-white">找對象</a>
-              <a href="/love" className="transition hover:text-white">脫單指南</a>
-              <a href="/podcast" className="transition hover:text-white">戀愛會社</a>
-              <a href="/about" className="transition hover:text-white">與娜米合作</a>
+              <a href="/dating/party" className="transition hover:text-white">單身聯誼</a>
+              <a href="/dating/events" className="transition hover:text-white">聯誼花絮</a>
+              <a href="/dating/match" className="transition hover:text-white">找對象</a>
+              <a href="/dating/love" className="transition hover:text-white">脫單指南</a>
+              <a href="/dating/podcast" className="transition hover:text-white">戀愛會社</a>
+              <a href="/dating/about" className="transition hover:text-white">與娜米合作</a>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ export function SiteFooter() {
 
         <p className="mt-6 border-t border-white/10 pt-4 text-xs text-white/40">
           © 昱科網路股份有限公司 2023. All rights reserved. ／ 統編：70525697 ／{' '}
-          <a href="/policy" className="hover:text-white/70">隱私權條款</a>
+          <a href="/dating/policy" className="hover:text-white/70">隱私權條款</a>
         </p>
       </div>
     </footer>

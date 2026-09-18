@@ -53,7 +53,7 @@ export function MemberGrid({ members }: { members: Member[] }) {
               <p className="mt-1 text-xs text-gray-500">{member.meta}</p>
               <p className="mt-2 text-xs text-gray-600 leading-5 line-clamp-3">{member.desc}</p>
               <a
-                href={`/match/${member.slug}`}
+                href={`/dating/match/${member.slug}`}
                 className="mt-4 inline-block rounded-full px-5 py-1.5 text-xs font-semibold text-white transition hover:opacity-90"
                 style={{ background: '#049089' }}
               >

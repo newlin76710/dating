@@ -24,7 +24,7 @@ export async function generateMetadata({
     openGraph: {
       title: story.title + ' — 戀愛小秘書娜米',
       description: story.excerpt,
-      images: [{ url: story.img, alt: story.title }],
+      images: [{ url: story.img.replace(/^\/dating/, ''), alt: story.title }],
     },
   };
 }
@@ -146,7 +146,7 @@ export default async function SuccessStoryPage({
               {others.map((s) => (
                 <a
                   key={s.slug}
-                  href={`/match/success/${s.slug}`}
+                  href={`/dating/match/success/${s.slug}`}
                   className="group overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.1)] transition hover:shadow-lg"
                 >
                   <div className="relative aspect-[16/9] overflow-hidden">

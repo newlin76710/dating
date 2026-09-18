@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
-const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
+const BASE = '/dating/images/original/ek21.com/dating/wp-content/uploads/';
 
 const features = [
   { icon: '🔒', title: '實名認證保護', desc: '所有會員均通過身份驗證，確保配對品質與安全性。' },
@@ -47,7 +47,7 @@ export default function MatchPage() {
         {/* Breadcrumb */}
         <div style={{ background: '#f9fafb', borderBottom: '1px solid #e5e7eb' }}>
           <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10 py-3 text-xs text-gray-500 flex items-center gap-1.5">
-            <a href="/" className="hover:underline" style={{ color: '#049089' }}>首頁</a>
+            <a href="/dating" className="hover:underline" style={{ color: '#049089' }}>首頁</a>
             <span>›</span>
             <span className="text-gray-700 font-medium">找對象</span>
           </div>
@@ -118,7 +118,7 @@ export default function MatchPage() {
               {successStories.map((s) => (
                 <a
                   key={s.slug}
-                  href={s.externalHref ?? `/match/success/${s.slug}`}
+                  href={s.externalHref ? `/dating${s.externalHref}` : `/dating/match/success/${s.slug}`}
                   className="group overflow-hidden rounded-2xl bg-white shadow-[0_4px_24px_rgba(0,0,0,0.10)] transition hover:shadow-lg"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
@@ -173,7 +173,7 @@ export default function MatchPage() {
                 加LINE開始配對
               </a>
               <a
-                href="/party"
+                href="/dating/party"
                 className="inline-flex rounded-full border border-white/30 px-10 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 參加單身聯誼活動

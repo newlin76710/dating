@@ -21,7 +21,7 @@ export default function EventsPage() {
         {/* Hero Banner */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/5', minHeight: '200px' }}>
           <img
-            src="/images/banners/banner-02.jpg"
+            src="/dating/images/banners/banner-02.jpg"
             alt="聯誼花絮"
             className="absolute inset-0 h-full w-full object-cover"
             loading="eager"
@@ -49,7 +49,7 @@ export default function EventsPage() {
         {/* Breadcrumb */}
         <div style={{ background: '#f9fafb', borderBottom: '1px solid #e5e7eb' }}>
           <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10 py-3 text-xs text-gray-500 flex items-center gap-1.5">
-            <a href="/" className="hover:underline" style={{ color: '#049089' }}>首頁</a>
+            <a href="/dating" className="hover:underline" style={{ color: '#049089' }}>首頁</a>
             <span>›</span>
             <span className="text-gray-700 font-medium">聯誼花絮</span>
           </div>
@@ -79,7 +79,7 @@ export default function EventsPage() {
                 加LINE了解活動
               </a>
               <a
-                href="/party"
+                href="/dating/party"
                 className="inline-flex rounded-full border border-white/30 px-10 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 查看所有聯誼活動

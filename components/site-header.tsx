@@ -24,9 +24,9 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 bg-[#f0f0f5]/95 backdrop-blur-sm shadow-sm">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
-        <a href="/" className="relative block h-[49px] w-[82px] shrink-0 md:h-[89px] md:w-[150px] lg:h-[98px] lg:w-[165px]">
+        <a href="/dating" className="relative block h-[49px] w-[82px] shrink-0 md:h-[89px] md:w-[150px] lg:h-[98px] lg:w-[165px]">
           <img
-            src="/images/logo.png"
+            src="/dating/images/logo.png"
             alt="戀愛小秘書娜米"
             className="absolute inset-0 h-full w-full object-contain object-left"
             loading="eager"
@@ -37,7 +37,7 @@ export function SiteHeader() {
           {navItems.map((item) => (
             <a
               key={item.href}
-              href={item.href}
+              href={`/dating${item.href}`}
               aria-current={isActive(item.href) ? 'page' : undefined}
               className={`relative py-1 text-sm font-semibold transition after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:rounded-full after:bg-[#049089] after:transition-all ${
                 isActive(item.href)
@@ -86,7 +86,7 @@ export function SiteHeader() {
           {navItems.map((item) => (
             <a
               key={item.href}
-              href={item.href}
+              href={`/dating${item.href}`}
               aria-current={isActive(item.href) ? 'page' : undefined}
               className={`block py-3 text-sm font-semibold transition ${
                 isActive(item.href) ? 'text-[#049089]' : 'text-[#7a7a7a] hover:text-[#049089]'

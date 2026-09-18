@@ -24,7 +24,7 @@ export function FloatingSidebar() {
           <span className="text-sm font-bold tracking-[0.15em] text-white">加LINE諮詢</span>
         </a>
         <a
-          href="/podcast"
+          href="/dating/podcast"
           onClick={handleClick}
           className="flex items-center justify-center rounded-l-lg px-2 py-4 shadow-lg transition hover:opacity-90 hover:px-3"
           style={{ writingMode: 'vertical-rl', backgroundColor: '#FF93A6' }}
@@ -49,7 +49,7 @@ export function FloatingSidebar() {
           加LINE諮詢
         </a>
         <a
-          href="/podcast"
+          href="/dating/podcast"
           onClick={handleClick}
           className="flex flex-1 items-center justify-center gap-2 py-3.5 text-sm font-bold text-white shadow-[0_-4px_16px_rgba(0,0,0,0.12)]"
           style={{ backgroundColor: '#FF93A6' }}

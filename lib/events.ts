@@ -1,4 +1,4 @@
-const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
+const BASE = '/dating/images/original/ek21.com/dating/wp-content/uploads/';
 
 export interface EventArticle {
   slug: string;

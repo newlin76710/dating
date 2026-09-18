@@ -52,7 +52,7 @@ export function EventsGrid({ events }: { events: EventArticle[] }) {
           {filtered.map((event) => (
             <a
               key={event.slug}
-              href={`/events/${event.slug}`}
+              href={`/dating/events/${event.slug}`}
               className="group overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.10)] transition hover:shadow-xl hover:-translate-y-0.5"
             >
               <div className="relative aspect-[4/3] overflow-hidden">

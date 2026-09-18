@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const LINE_URL = 'https://line.me/R/ti/p/@121teviv';
-const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
+const BASE = '/dating/images/original/ek21.com/dating/wp-content/uploads/';
 
 const painPoints = [
   '缺乏感情經驗',

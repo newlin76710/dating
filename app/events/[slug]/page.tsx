@@ -21,7 +21,7 @@ export async function generateMetadata({
     openGraph: {
       title: event.title + ' — 戀愛小秘書娜米',
       description: event.excerpt,
-      images: [{ url: event.img, alt: event.title }],
+      images: [{ url: event.img.replace(/^\/dating/, ''), alt: event.title }],
     },
   };
 }
@@ -96,9 +96,9 @@ export default async function EventPage({
         {/* Breadcrumb */}
         <div style={{ background: '#f9fafb', borderBottom: '1px solid #e5e7eb' }}>
           <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-10 py-3 text-xs text-gray-500 flex items-center gap-1.5">
-            <a href="/" className="hover:underline" style={{ color: '#049089' }}>首頁</a>
+            <a href="/dating" className="hover:underline" style={{ color: '#049089' }}>首頁</a>
             <span>›</span>
-            <a href="/events" className="hover:underline" style={{ color: '#049089' }}>聯誼花絮</a>
+            <a href="/dating/events" className="hover:underline" style={{ color: '#049089' }}>聯誼花絮</a>
             <span>›</span>
             <span className="text-gray-700 font-medium line-clamp-1">{event.title}</span>
           </div>
@@ -218,7 +218,7 @@ export default async function EventPage({
                 {relatedItems.map((rel) => (
                   <a
                     key={rel.slug}
-                    href={`/events/${rel.slug}`}
+                    href={`/dating/events/${rel.slug}`}
                     className="group overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.1)] transition hover:shadow-lg hover:-translate-y-0.5"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">

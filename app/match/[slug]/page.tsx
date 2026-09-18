@@ -24,7 +24,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${member.name} — 戀愛小秘書娜米`,
       description: member.desc,
-      images: [{ url: member.img, alt: member.name }],
+      images: [{ url: member.img.replace(/^\/dating/, ''), alt: member.name }],
     },
   };
 }
@@ -163,7 +163,7 @@ export default async function MemberPage({
               {others.map((m) => (
                 <a
                   key={m.slug}
-                  href={`/match/${m.slug}`}
+                  href={`/dating/match/${m.slug}`}
                   className="group overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.1)] transition hover:shadow-lg"
                 >
                   <div className="relative aspect-[3/4] overflow-hidden">

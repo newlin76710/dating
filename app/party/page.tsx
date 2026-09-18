@@ -16,16 +16,16 @@ export const metadata: Metadata = {
 };
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
-const BASE = '/images/original/ek21.com/dating/wp-content/uploads/';
+const BASE = '/dating/images/original/ek21.com/dating/wp-content/uploads/';
 
 /** Cards whose theme matches one of our 20 real 聯誼花絮 posts link straight into it;
  *  everything else (activity types we haven't built a dedicated page for) falls back
  *  to the /events listing, same as the real site's own long-tail activity pages would. */
 function eventHref(slug: string | null) {
-  if (!slug) return '/events';
-  if (getArticle(slug)) return `/party/${slug}`;
-  if (getEvent(slug)) return `/events/${slug}`;
-  return '/events';
+  if (!slug) return '/dating/events';
+  if (getArticle(slug)) return `/dating/party/${slug}`;
+  if (getEvent(slug)) return `/dating/events/${slug}`;
+  return '/dating/events';
 }
 
 interface Card {

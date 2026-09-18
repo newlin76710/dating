@@ -5,7 +5,7 @@
   "start_url": "/dating",
   "display": "standalone",
   "background_color": "#fff7fb",
-  "theme_color": "#ff5c8a",
+  "theme_color": "#049089",
   "icons": [
     {
       "src": "/dating/icon-192.png",

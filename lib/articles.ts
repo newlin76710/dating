@@ -1,4 +1,3 @@
-const IMG = 'https://ek21.com/dating/wp-content/uploads/';
 const BASE = '/dating/images/original/ek21.com/dating/wp-content/uploads/';
 
 export interface Article {
@@ -20,7 +19,7 @@ export const articles: Article[] = [
   {
     slug: 'mystery-adventure',
     title: '單身聯誼活動：推理冒險｜身臨其境的角色扮演遊戲',
-    img: IMG + '2025/02/劇本殺-scaled.jpg',
+    img: BASE + '2025/02/mystery-adventure.jpg',
     excerpt: '「解謎 × 戀愛」沉浸式角色扮演遊戲，在謎題中認識彼此，建立獨特的感情連結！',
     date: '2025/02/15',
     cat: '室內活動',
@@ -37,7 +36,7 @@ export const articles: Article[] = [
   {
     slug: 'alcohol-ink-art',
     title: '單身聯誼活動：酒精墨水畫｜藝術過程浪漫的節奏',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    img: BASE + '2025/02/alcohol-ink-art.png',
     excerpt: '藝術與愛情的邂逅：用酒精墨水畫創作屬於你們的獨特作品，在藝術中找到共鳴。',
     date: '2025/02/08',
     cat: '藝術創作',
@@ -54,7 +53,7 @@ export const articles: Article[] = [
   {
     slug: 'flash-grid-party',
     title: '單身聯誼活動：動感閃動格子｜未來科技派對遊戲',
-    img: IMG + '2025/02/閃動格娜米_男.png',
+    img: BASE + '2025/02/flash-grid-party.png',
     excerpt: '速度 × 戀愛 × 科技！動感科技派對，在互動遊戲中展現你的魅力，快速認識異性。',
     date: '2025/02/01',
     cat: '娛樂遊戲',
@@ -71,7 +70,7 @@ export const articles: Article[] = [
   {
     slug: 'photography-dating',
     title: '單身聯誼活動：攝影聯誼｜鏡頭下的愛情曝光',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2024/09/photography-dating.jpg',
     excerpt: '首創攝影聯誼，拒當攝影白癡，快來參加我們的攝影聯誼活動，用鏡頭記錄愛情。',
     date: '2024/09/20',
     cat: '藝術創作',
@@ -88,7 +87,7 @@ export const articles: Article[] = [
   {
     slug: 'coffee-workshop',
     title: '單身聯誼活動：浪漫咖啡香｜咖啡不可',
-    img: IMG + '2024/09/咖啡聯誼.jpg',
+    img: BASE + '2024/09/coffee-workshop.jpg',
     excerpt: '你所不知的咖啡秘密，手沖咖啡體驗，靜謐午後的愉悅時光，在咖啡香中相遇。',
     date: '2024/09/06',
     cat: '微醺派對',
@@ -122,7 +121,7 @@ export const articles: Article[] = [
   {
     slug: 'tango-party',
     title: '單身聯誼活動：浪漫探戈派對｜阿根廷之夜',
-    img: IMG + '2023/07/MTXX_MR20230715_180309740-scaled.jpg',
+    img: BASE + '2018/06/tango-argentina.jpg',
     excerpt: '女孩們穿上美麗洋裝，男生們西裝筆挺，在這歡樂的氛圍中共舞探戈，感受浪漫！',
     date: '2024/05/18',
     cat: '舞蹈音樂',
@@ -139,7 +138,7 @@ export const articles: Article[] = [
   {
     slug: 'nurse-dating-apple-tart',
     title: '單身聯誼活動【與護理師聯誼】｜手作玫瑰蘋果塔',
-    img: IMG + '2023/09/20231014手作蘋果塔.jpg',
+    img: BASE + '2023/09/apple-tart-nurse.jpg',
     excerpt: '一起玩手作、揮灑甜蜜，與護理師們共度美好時光，在甜蜜中認識另一半。',
     date: '2024/05/04',
     cat: '手作體驗',
@@ -156,7 +155,7 @@ export const articles: Article[] = [
   {
     slug: 'macaron-painting',
     title: '單身聯誼活動：彩繪馬卡龍｜玩美巴黎風',
-    img: IMG + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg',
+    img: BASE + '2023/11/macaron-painting.jpg',
     excerpt: '微風輕輕拂過，在這浪漫的馬卡龍彩繪時光中，共度甜蜜的巴黎風情。',
     date: '2024/01/20',
     cat: '手作體驗',
@@ -173,7 +172,7 @@ export const articles: Article[] = [
   {
     slug: 'swing-dance',
     title: '單身聯誼活動：浪漫Swing Dance｜讓我們舞在一起',
-    img: IMG + '2023/07/ev_f567e1223d_1521796535.jpg',
+    img: BASE + '2023/07/ev_f567e1223d_1521796535.jpg',
     excerpt: '想要尋找浪漫與愛情的邂逅？加入我們的Swing Dance，讓我們在舞池中共舞！',
     date: '2024/01/13',
     cat: '舞蹈音樂',
@@ -190,7 +189,7 @@ export const articles: Article[] = [
   {
     slug: 'game-start-party',
     title: '單身聯誼活動：Game START 派對｜電玩對對碰',
-    img: IMG + '2023/12/5428FC8C-F122-41da-9737-D5FA3F69EA5A.png',
+    img: BASE + '2024/01/game-start-cover.png',
     excerpt: '挑戰感十足的電玩積分賽狂歡派對！在電玩中找到心動對象，輕鬆脫單！',
     date: '2024/01/06',
     cat: '娛樂遊戲',
@@ -207,7 +206,7 @@ export const articles: Article[] = [
   {
     slug: 'floating-flower',
     title: '單身聯誼活動：療癒的浪漫小物｜浮遊花手作趣',
-    img: IMG + '2023/07/195087_副本.jpg',
+    img: BASE + '2023/07/195087_副本.jpg',
     excerpt: '療癒的浪漫小物，永恆不朽的小花永遠為你盛開，手作DIY樂趣無窮。',
     date: '2024/01/27',
     cat: '手作體驗',
@@ -224,7 +223,7 @@ export const articles: Article[] = [
   {
     slug: 'cocktail-party',
     title: '單身聯誼活動：愛情調酒派對｜微醺午後時光',
-    img: IMG + '2023/07/1.webp',
+    img: BASE + '2023/07/ev_e9c0cf47c6_1501489826.jpg',
     excerpt: 'Cocktail Time！品酒交友，在微醺的午後時光中輕鬆相識，找到心中那個他。',
     date: '2024/01/21',
     cat: '微醺派對',
@@ -241,7 +240,7 @@ export const articles: Article[] = [
   {
     slug: 'ktv-karaoke',
     title: '單身聯誼活動：KTV 情歌對唱｜Let\'s Sing 愛情點唱機',
-    img: IMG + '2023/07/222225-scaled.jpg',
+    img: BASE + '2024/07/karaoke-khh.png',
     excerpt: '你愛唱歌，她愛聽，想要找個和你一樣愛唱歌的另一半？來KTV情歌對唱！',
     date: '2024/01/14',
     cat: '舞蹈音樂',
@@ -275,7 +274,7 @@ export const articles: Article[] = [
   {
     slug: 'wine-tasting',
     title: '單身聯誼活動：品酒之夜｜法式紅酒品鑑',
-    img: IMG + '2023/07/1.webp',
+    img: BASE + '2024/03/wine2.jpg',
     excerpt: '一杯好酒配上好的相遇，在紅酒的香氣中發現彼此的品味與格調。',
     date: '2024/03/16',
     cat: '微醺派對',
@@ -309,7 +308,7 @@ export const articles: Article[] = [
   {
     slug: 'french-cooking',
     title: '單身聯誼活動：法式料理烹飪課｜美食中的浪漫邂逅',
-    img: IMG + '2023/09/20231014手作蘋果塔.jpg',
+    img: BASE + '2018/10/salmon-flavor.jpg',
     excerpt: '和對的人一起做一頓美食，是最甜蜜的浪漫——讓廚房成為你們愛情故事的起點。',
     date: '2024/04/20',
     cat: '美食廚藝',
@@ -326,7 +325,7 @@ export const articles: Article[] = [
   {
     slug: 'pour-over-coffee',
     title: '單身聯誼活動：手沖咖啡工作坊｜在香氣中認識你',
-    img: IMG + '2024/09/咖啡聯誼.jpg',
+    img: BASE + '2024/09/coffee-workshop.jpg',
     excerpt: '從選豆到沖泡，每一杯咖啡都是一段故事——你願意和我分享你的那一杯嗎？',
     date: '2024/05/25',
     cat: '手作體驗',
@@ -343,7 +342,7 @@ export const articles: Article[] = [
   {
     slug: 'night-market-food',
     title: '單身聯誼活動：夜市美食探索｜台灣味道的遇見',
-    img: IMG + '2024/09/咖啡聯誼.jpg',
+    img: BASE + '2023/08/0809c.jpg',
     excerpt: '走進最接地氣的台灣夜市，用美食打開話匣子，用笑聲拉近彼此的心。',
     date: '2024/06/08',
     cat: '美食廚藝',
@@ -360,7 +359,7 @@ export const articles: Article[] = [
   {
     slug: 'street-dance',
     title: '單身聯誼活動：街舞入門課｜舞蹈節奏中的相遇',
-    img: IMG + '2023/07/ev_f567e1223d_1521796535.jpg',
+    img: BASE + '2023/07/ev_f567e1223d_1521796535.jpg',
     excerpt: '用身體說話，在街舞的節奏中釋放自我，找到和你一樣熱愛律動的靈魂。',
     date: '2024/06/22',
     cat: '舞蹈音樂',
@@ -377,7 +376,7 @@ export const articles: Article[] = [
   {
     slug: 'watercolor-painting',
     title: '單身聯誼活動：水彩寫生｜在風景中發現彼此',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    img: BASE + '2025/02/alcohol-ink-art.png',
     excerpt: '拿起畫筆，在水彩的暈染中描繪眼前的風景，也描繪與你並肩的那個人。',
     date: '2024/07/06',
     cat: '藝術創作',
@@ -394,7 +393,7 @@ export const articles: Article[] = [
   {
     slug: 'escape-room',
     title: '單身聯誼活動：密室逃脫｜解謎遊戲中的默契',
-    img: IMG + '2025/02/劇本殺-scaled.jpg',
+    img: BASE + '2023/08/escape-room-challenge.jpg',
     excerpt: '在密室中與陌生人並肩作戰，解謎的默契就是感情的最好試金石。',
     date: '2024/07/20',
     cat: '娛樂遊戲',
@@ -411,7 +410,7 @@ export const articles: Article[] = [
   {
     slug: 'yoga-class',
     title: '單身聯誼活動：瑜珈靜心課｜在呼吸中感受緣分',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2024/05/workshop-fitness.jpg',
     excerpt: '一呼一吸之間，讓身體和心靈都放鬆下來，在靜謐中感受那份特別的緣分。',
     date: '2024/08/03',
     cat: '運動健身',
@@ -445,7 +444,7 @@ export const articles: Article[] = [
   {
     slug: 'board-games',
     title: '單身聯誼活動：桌遊派對｜智慧與笑聲的邂逅',
-    img: IMG + '2023/12/5428FC8C-F122-41da-9737-D5FA3F69EA5A.png',
+    img: BASE + '2024/07/board-games.png',
     excerpt: '一局桌遊，看透一個人；一場歡笑，拉近兩顆心——桌遊是最好的交友利器！',
     date: '2024/09/28',
     cat: '娛樂遊戲',
@@ -462,7 +461,7 @@ export const articles: Article[] = [
   {
     slug: 'flower-arrangement',
     title: '單身聯誼活動：花藝課程｜在花香中找到知心人',
-    img: IMG + '2023/07/195087_副本.jpg',
+    img: BASE + '2023/07/195087_副本.jpg',
     excerpt: '每一朵花都有它的語言，在插花的過程中，讓花香傳遞你心中的那份情意。',
     date: '2024/10/12',
     cat: '手作體驗',
@@ -479,7 +478,7 @@ export const articles: Article[] = [
   {
     slug: 'pasta-making',
     title: '單身聯誼活動：義大利麵手工課｜揉麵中的默契',
-    img: IMG + '2023/09/20231014手作蘋果塔.jpg',
+    img: BASE + '2017/05/honey-toast.jpg',
     excerpt: '親手揉製義大利麵，在麵粉和笑聲中發現你們共同的默契與笑點。',
     date: '2024/10/26',
     cat: '美食廚藝',
@@ -530,7 +529,7 @@ export const articles: Article[] = [
   {
     slug: 'movie-appreciation',
     title: '單身聯誼活動：電影賞析派對｜在故事中尋找共鳴',
-    img: IMG + '2023/12/5428FC8C-F122-41da-9737-D5FA3F69EA5A.png',
+    img: BASE + '2023/07/ev_ff0cc384c9_1577755844-1024x684.jpg',
     excerpt: '同一部電影，不同的感受——你的那份感動，也許正是找到共鳴的另一半的開始。',
     date: '2024/12/07',
     cat: '室內活動',
@@ -547,7 +546,7 @@ export const articles: Article[] = [
   {
     slug: 'jazz-night',
     title: '單身聯誼活動：爵士樂欣賞之夜｜音樂氛圍中的交流',
-    img: IMG + '2023/07/222225-scaled.jpg',
+    img: BASE + '2023/07/ev_ecbfd5e3b9_1546591688.jpg',
     excerpt: '爵士樂的即興與自由，讓每個人都在音符中找到最真實的自己，也找到最對的人。',
     date: '2024/12/21',
     cat: '舞蹈音樂',
@@ -564,7 +563,7 @@ export const articles: Article[] = [
   {
     slug: 'ikebana-workshop',
     title: '單身聯誼活動：插花體驗｜一束花的感動',
-    img: IMG + '2023/07/195087_副本.jpg',
+    img: BASE + '2023/07/195087_副本.jpg',
     excerpt: '在靜謐的插花課中，讓每一枝花都訴說你的心意，也讓花香牽引你找到那個對的人。',
     date: '2025/01/11',
     cat: '手作體驗',
@@ -581,7 +580,7 @@ export const articles: Article[] = [
   {
     slug: 'photo-shoot-experience',
     title: '單身聯誼活動：寫真拍攝體驗｜鏡頭前的自信綻放',
-    img: IMG + '2024/09/攝影聯誼_m.jpg',
+    img: BASE + '2024/09/photography-dating.jpg',
     excerpt: '在鏡頭面前展現最美的自己，自信的你，就是最吸引人的模樣。',
     date: '2025/01/18',
     cat: '藝術創作',
@@ -615,7 +614,7 @@ export const articles: Article[] = [
   {
     slug: 'perfume-making',
     title: '單身聯誼活動：香水調配工作坊｜專屬你的愛情香氛',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2023/09/188281_0.jpg',
     excerpt: '調製一瓶只屬於你的香水，讓這個獨特的氣味成為你留在記憶中最難忘的印記。',
     date: '2025/03/22',
     cat: '手作體驗',
@@ -649,7 +648,7 @@ export const articles: Article[] = [
   {
     slug: 'matcha-ceremony',
     title: '單身聯誼活動：抹茶道體驗｜日式靜謐中的相遇',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2023/09/1863-1152x1536.jpg',
     excerpt: '在一碗抹茶的香氣中，感受日式美學的靜謐之美，也感受眼前這個人的溫柔。',
     date: '2024/04/06',
     cat: '文化體驗',
@@ -683,7 +682,7 @@ export const articles: Article[] = [
   {
     slug: 'woodworking-class',
     title: '單身聯誼活動：木工手作課｜打造愛情小物',
-    img: IMG + '2023/09/20231014手作蘋果塔.jpg',
+    img: BASE + '2023/07/workshop-attraction.jpg',
     excerpt: '用雙手打磨出一件木作，在木屑的香氣中，感受用心打造的美麗。',
     date: '2024/06/15',
     cat: '手作體驗',
@@ -700,7 +699,7 @@ export const articles: Article[] = [
   {
     slug: 'ice-cream-making',
     title: '單身聯誼活動：冰淇淋製作體驗｜甜蜜時光',
-    img: IMG + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg',
+    img: BASE + '2023/07/chocolate-cake.jpg',
     excerpt: '親手製作一球甜蜜的冰淇淋，在每一口的滿足中，感受這段相遇帶來的甜蜜。',
     date: '2024/07/13',
     cat: '美食廚藝',
@@ -717,7 +716,7 @@ export const articles: Article[] = [
   {
     slug: 'calligraphy-workshop',
     title: '單身聯誼活動：書法體驗課｜墨香中的緣分',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2023/09/1644923913495522.jpg',
     excerpt: '一筆一劃中，感受最深沉的自我，也感受身旁那個與你氣質相符的人。',
     date: '2024/08/24',
     cat: '文化體驗',
@@ -751,7 +750,7 @@ export const articles: Article[] = [
   {
     slug: 'aromatherapy-workshop',
     title: '單身聯誼活動：芳療精油課｜香氛能量的引導',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2023/09/188283_0-1014x1536.jpg',
     excerpt: '讓精油的能量引導你找到內心的平靜，也引導你找到那個同頻的靈魂伴侶。',
     date: '2024/10/05',
     cat: '手作體驗',
@@ -768,7 +767,7 @@ export const articles: Article[] = [
   {
     slug: 'ukulele-lesson',
     title: '單身聯誼活動：烏克麗麗入門課｜音符中的甜蜜',
-    img: IMG + '2023/07/222225-scaled.jpg',
+    img: BASE + '2018/08/happy-go-karaoke.jpg',
     excerpt: '四條弦，一首歌，讓音樂成為你和另一半之間最甜蜜的共同語言。',
     date: '2024/11/02',
     cat: '舞蹈音樂',
@@ -785,7 +784,7 @@ export const articles: Article[] = [
   {
     slug: 'cookie-decorating',
     title: '單身聯誼活動：創意餅乾裝飾｜甜點藝術中的笑容',
-    img: IMG + '2023/11/pngtree-the-french-eiffel-tower-and-macarons-on-table-top-image_13161076.jpg',
+    img: BASE + '2023/09/188280_0.jpg',
     excerpt: '用糖霜繪出最甜蜜的圖案，也用笑容繪出這段最甜蜜的相遇。',
     date: '2024/11/16',
     cat: '手作體驗',
@@ -802,7 +801,7 @@ export const articles: Article[] = [
   {
     slug: 'wool-felting',
     title: '單身聯誼活動：羊毛氈手工課｜溫暖觸感的相遇',
-    img: IMG + '2023/07/195087_副本.jpg',
+    img: BASE + '2023/07/195087_副本.jpg',
     excerpt: '羊毛氈的溫暖觸感，讓你在每一針的戳刺中，感受到那份用心對待的溫柔。',
     date: '2024/12/14',
     cat: '手作體驗',
@@ -836,7 +835,7 @@ export const articles: Article[] = [
   {
     slug: 'astrology-workshop',
     title: '單身聯誼活動：占星能量工作坊｜星座中解讀你的緣分',
-    img: IMG + '2024/08/香氛盲測.jpg',
+    img: BASE + '2023/07/numerology-06.png',
     excerpt: '星空中藏著你的命運密碼，也藏著你和某個人的緣分故事——讓我們一起解讀。',
     date: '2025/04/19',
     cat: '文化體驗',
@@ -853,7 +852,7 @@ export const articles: Article[] = [
   {
     slug: 'teppanyaki-dinner',
     title: '單身聯誼活動：鐵板燒晚宴派對｜美食夜晚中的邂逅',
-    img: IMG + '2023/07/1.webp',
+    img: BASE + '2019/10/salmon-cuisine-heart.jpg',
     excerpt: '在鐵板燒師傅的精湛技藝下，享用一頓美味晚宴，讓美食成為你們愛情的序曲。',
     date: '2025/05/03',
     cat: '美食廚藝',

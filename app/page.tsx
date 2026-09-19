@@ -8,25 +8,24 @@ import { consultArticles } from '@/lib/consulting';
 
 const LINE_URL = 'https://lin.ee/iweaTucb';
 const BASE = '/dating/images/original/ek21.com/dating/wp-content/uploads/';
-const IMG = 'https://ek21.com/dating/wp-content/uploads/';
 
 // 3 most-recent events shown on homepage — linked to local article pages
 const homeEvents = [
   {
     title: '單身聯誼活動：推理冒險｜身臨其境的角色扮演遊戲',
-    img: IMG + '2025/02/劇本殺-scaled.jpg',
+    img: BASE + '2025/02/mystery-adventure.jpg',
     desc: '「解謎 × 戀愛」沉浸式角色扮演遊戲，在謎題中認識彼此，建立獨特的感情連結！',
     url: '/dating/party/mystery-adventure',
   },
   {
     title: '單身聯誼活動：酒精墨水畫｜藝術過程浪漫的節奏',
-    img: IMG + '2025/02/酒精墨水娜米_男.png',
+    img: BASE + '2025/02/alcohol-ink-art.png',
     desc: '藝術與愛情的邂逅：用酒精墨水畫創作屬於你們的獨特作品，在藝術中找到共鳴。',
     url: '/dating/party/alcohol-ink-art',
   },
   {
     title: '單身聯誼活動：動感閃動格子｜未來科技派對遊戲',
-    img: IMG + '2025/02/閃動格娜米_男.png',
+    img: BASE + '2025/02/flash-grid-party.png',
     desc: '速度 × 戀愛 × 科技！動感科技派對，在互動遊戲中展現你的魅力，快速認識異性。',
     url: '/dating/party/flash-grid-party',
   },

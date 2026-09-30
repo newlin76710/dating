@@ -1,8 +1,9 @@
 name = "dating"
-main = ".open-next/worker.js"
+main = "worker/index.js"
 compatibility_date = "2026-09-18"
-compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
 
+# 靜態檔案（npm run build 產生在 dist/）直接由 Workers Static Assets 回應，不計入 Worker 請求數
 [assets]
-directory = ".open-next/assets"
+directory = "./dist"
 binding = "ASSETS"
+html_handling = "auto-trailing-slash"

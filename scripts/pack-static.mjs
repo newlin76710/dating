@@ -1,7 +1,9 @@
 // 把 next build 的靜態輸出（out/）放到 dist/dating/，對應網址的 /dating 路徑（basePath）
-import { cpSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 
-rmSync('dist', { recursive: true, force: true });
+// 只清空 dist 裡的內容（Windows 上 dist 資料夾本身常被編輯器鎖住而刪不掉）
+mkdirSync('dist', { recursive: true });
+for (const f of readdirSync('dist')) rmSync(`dist/${f}`, { recursive: true, force: true });
 cpSync('out', 'dist/dating', { recursive: true });
 // 靜態資源長期快取（原本寫在 vercel.json）
 writeFileSync(

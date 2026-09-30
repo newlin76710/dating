@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/pack-static.mjs",
+    "cf:build": "npm run build",
     "deploy": "npm run build && wrangler deploy",
     "start": "next start",
     "lint": "next lint",
